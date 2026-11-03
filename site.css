@@ -1,0 +1,9 @@
+/* The page-specific styles preserve the published Desktop/Tablet/Phone layout.
+   This file contains browser interactions formerly provided by Framer. */
+a { -webkit-tap-highlight-color: transparent; }
+a:focus-visible { outline: 2px solid currentColor; outline-offset: 4px; }
+a[data-highlight] > div[style*="opacity:0"] { transition: opacity .15s ease; }
+a[data-highlight]:hover > div[style*="opacity:0"],
+a[data-highlight]:focus-visible > div[style*="opacity:0"] { opacity: 1 !important; }
+#__framer-badge-container, #__framer-editorbar-container { display: none !important; }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; transition: none !important; } }
