@@ -12,6 +12,7 @@ document.querySelectorAll('video').forEach(video => {
   video.muted = true;
   video.playsInline = true;
   video.preload = 'metadata';
+  if (matchMedia('(prefers-reduced-motion: reduce)').matches) video.controls = true;
   visibleVideos.observe(video);
 });
 document.querySelectorAll('iframe').forEach((frame, index) => {
