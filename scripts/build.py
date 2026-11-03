@@ -44,7 +44,9 @@ def head(title,description,slug):
   <meta property="og:title" content="{e(title)}">
   <meta property="og:description" content="{e(description)}">
   <meta property="og:type" content="website">
-  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="favicon.ico?v=16" sizes="16x16 32x32 48x48">
+  <link rel="icon" href="favicon.svg?v=16" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png?v=16">
   <link rel="stylesheet" href="site.css?v={CSS}">
   <title>{e(title)}</title>
   <script src="site.js?v={JS}" defer></script>
