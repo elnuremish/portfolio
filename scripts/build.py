@@ -14,7 +14,7 @@ def image(key, alt='', eager=False, profile=False, extra=''):
     data = IMAGES[key]
     files = data['files']
     fallback = files[-1 if profile else min(1, len(files) - 1)]
-    sizes = ('(max-width:379px) 88px, (max-width:809px) 124px, 246px'
+    sizes = ('(max-width:809px) 124px, 246px'
              if profile else '(max-width:809px) calc(100vw - 36px), 100vw')
     attributes = {
         'src': fallback['src'],
