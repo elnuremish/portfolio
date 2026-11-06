@@ -35,7 +35,7 @@ python3 -m http.server 8000
 
 ## Публикация
 
-GitHub Pages: Settings → Pages → Deploy from a branch → main → /(root).
-Изменения в `main` публикуются автоматически. Файл `.nojekyll` отключает ненужную обработку Jekyll. Все ссылки поддерживают папку `/portfolio/`.
+GitHub Pages: Settings → Pages → Source → GitHub Actions.
+Публикацией управляет `.github/workflows/pages.yml`. После изменений в `main` он пересобирает страницы из `content/`, собирает готовый сайт в `_site/` и публикует его. В опубликованную папку входят только HTML, стили, JavaScript, иконки и медиафайлы. Все ссылки поддерживают папку `/portfolio/`.
 
 Изменения во Framer не синхронизируются с этой самостоятельной копией. Материалы портфолио принадлежат их правообладателям.
