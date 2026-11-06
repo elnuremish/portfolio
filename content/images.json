@@ -5,21 +5,22 @@
     "height": 535,
     "files": [
       {
-        "src": "assets/portrait-160.webp",
+        "src": "assets/portrait-hq-160.webp",
         "width": 160,
-        "bytes": 1860
+        "bytes": 3882
       },
       {
-        "src": "assets/portrait-320.webp",
+        "src": "assets/portrait-hq-320.webp",
         "width": 320,
-        "bytes": 7530
+        "bytes": 17172
       },
       {
-        "src": "assets/portrait-535.webp",
+        "src": "assets/portrait-original.jpg",
         "width": 535,
-        "bytes": 26204
+        "bytes": 42961
       }
-    ]
+    ],
+    "source": "assets/portrait-original.jpg"
   },
   "scherdakov-cover": {
     "name": "scherdakov-cover",
@@ -27,21 +28,32 @@
     "height": 1800,
     "files": [
       {
-        "src": "assets/scherdakov-cover-480.webp",
-        "width": 480,
-        "bytes": 36020
+        "src": "assets/scherdakov-cover-hq-640.webp",
+        "width": 640,
+        "bytes": 104602
       },
       {
-        "src": "assets/scherdakov-cover-960.webp",
-        "width": 960,
-        "bytes": 116176
+        "src": "assets/scherdakov-cover-hq-1280.webp",
+        "width": 1280,
+        "bytes": 389470
       },
       {
-        "src": "assets/scherdakov-cover-1920.webp",
+        "src": "assets/scherdakov-cover-hq-1920.webp",
         "width": 1920,
-        "bytes": 398072
+        "bytes": 798980
+      },
+      {
+        "src": "assets/scherdakov-cover-hq-2560.webp",
+        "width": 2560,
+        "bytes": 1157228
+      },
+      {
+        "src": "assets/scherdakov-cover-original.jpg",
+        "width": 3200,
+        "bytes": 1366851
       }
-    ]
+    ],
+    "source": "assets/scherdakov-cover-original.jpg"
   },
   "adat-cover": {
     "name": "adat-cover",
@@ -49,21 +61,22 @@
     "height": 850,
     "files": [
       {
-        "src": "assets/adat-cover-480.webp",
-        "width": 480,
-        "bytes": 28268
+        "src": "assets/adat-cover-hq-640.webp",
+        "width": 640,
+        "bytes": 79988
       },
       {
-        "src": "assets/adat-cover-960.webp",
-        "width": 960,
-        "bytes": 80870
+        "src": "assets/adat-cover-hq-1280.webp",
+        "width": 1280,
+        "bytes": 274914
       },
       {
-        "src": "assets/adat-cover-1512.webp",
+        "src": "assets/adat-cover-original.jpg",
         "width": 1512,
-        "bytes": 185936
+        "bytes": 310905
       }
-    ]
+    ],
+    "source": "assets/adat-cover-original.jpg"
   },
   "nebesnaya-cover": {
     "name": "nebesnaya-cover",
@@ -71,21 +84,22 @@
     "height": 1080,
     "files": [
       {
-        "src": "assets/nebesnaya-cover-480.webp",
-        "width": 480,
-        "bytes": 11594
+        "src": "assets/nebesnaya-cover-hq-640.webp",
+        "width": 640,
+        "bytes": 35848
       },
       {
-        "src": "assets/nebesnaya-cover-960.webp",
-        "width": 960,
-        "bytes": 36756
+        "src": "assets/nebesnaya-cover-hq-1280.webp",
+        "width": 1280,
+        "bytes": 112964
       },
       {
-        "src": "assets/nebesnaya-cover-1920.webp",
+        "src": "assets/nebesnaya-cover-original.jpg",
         "width": 1920,
-        "bytes": 107840
+        "bytes": 207004
       }
-    ]
+    ],
+    "source": "assets/nebesnaya-cover-original.jpg"
   },
   "other-cover": {
     "name": "other-cover",
@@ -93,21 +107,32 @@
     "height": 4032,
     "files": [
       {
-        "src": "assets/other-cover-480.webp",
-        "width": 480,
-        "bytes": 46700
+        "src": "assets/other-cover-hq-640.webp",
+        "width": 640,
+        "bytes": 132998
       },
       {
-        "src": "assets/other-cover-960.webp",
-        "width": 960,
-        "bytes": 182006
+        "src": "assets/other-cover-hq-1280.webp",
+        "width": 1280,
+        "bytes": 507588
       },
       {
-        "src": "assets/other-cover-1920.webp",
+        "src": "assets/other-cover-hq-1920.webp",
         "width": 1920,
-        "bytes": 597272
+        "bytes": 1048786
+      },
+      {
+        "src": "assets/other-cover-hq-2560.webp",
+        "width": 2560,
+        "bytes": 1685376
+      },
+      {
+        "src": "assets/other-cover-original.jpg",
+        "width": 3024,
+        "bytes": 1920236
       }
-    ]
+    ],
+    "source": "assets/other-cover-original.jpg"
   },
   "scherdakov-03": {
     "name": "scherdakov-03",
@@ -115,21 +140,32 @@
     "height": 1800,
     "files": [
       {
-        "src": "assets/scherdakov-03-480.webp",
-        "width": 480,
-        "bytes": 31640
+        "src": "assets/scherdakov-03-hq-640.webp",
+        "width": 640,
+        "bytes": 81116
       },
       {
-        "src": "assets/scherdakov-03-960.webp",
-        "width": 960,
-        "bytes": 93110
+        "src": "assets/scherdakov-03-hq-1280.webp",
+        "width": 1280,
+        "bytes": 266886
       },
       {
-        "src": "assets/scherdakov-03-1920.webp",
+        "src": "assets/scherdakov-03-hq-1920.webp",
         "width": 1920,
-        "bytes": 277926
+        "bytes": 563698
+      },
+      {
+        "src": "assets/scherdakov-03-hq-2560.webp",
+        "width": 2560,
+        "bytes": 931730
+      },
+      {
+        "src": "assets/scherdakov-03-original.jpg",
+        "width": 3200,
+        "bytes": 1219030
       }
-    ]
+    ],
+    "source": "assets/scherdakov-03-original.jpg"
   },
   "scherdakov-05": {
     "name": "scherdakov-05",
@@ -137,21 +173,32 @@
     "height": 1800,
     "files": [
       {
-        "src": "assets/scherdakov-05-480.webp",
-        "width": 480,
-        "bytes": 22144
+        "src": "assets/scherdakov-05-hq-640.webp",
+        "width": 640,
+        "bytes": 65760
       },
       {
-        "src": "assets/scherdakov-05-960.webp",
-        "width": 960,
-        "bytes": 68070
+        "src": "assets/scherdakov-05-hq-1280.webp",
+        "width": 1280,
+        "bytes": 243210
       },
       {
-        "src": "assets/scherdakov-05-1920.webp",
+        "src": "assets/scherdakov-05-hq-1920.webp",
         "width": 1920,
-        "bytes": 235600
+        "bytes": 570498
+      },
+      {
+        "src": "assets/scherdakov-05-hq-2560.webp",
+        "width": 2560,
+        "bytes": 994764
+      },
+      {
+        "src": "assets/scherdakov-05-original.jpg",
+        "width": 3200,
+        "bytes": 1262006
       }
-    ]
+    ],
+    "source": "assets/scherdakov-05-original.jpg"
   },
   "scherdakov-07": {
     "name": "scherdakov-07",
@@ -159,21 +206,32 @@
     "height": 1800,
     "files": [
       {
-        "src": "assets/scherdakov-07-480.webp",
-        "width": 480,
-        "bytes": 31404
+        "src": "assets/scherdakov-07-hq-640.webp",
+        "width": 640,
+        "bytes": 78530
       },
       {
-        "src": "assets/scherdakov-07-960.webp",
-        "width": 960,
-        "bytes": 94804
+        "src": "assets/scherdakov-07-hq-1280.webp",
+        "width": 1280,
+        "bytes": 287506
       },
       {
-        "src": "assets/scherdakov-07-1920.webp",
+        "src": "assets/scherdakov-07-hq-1920.webp",
         "width": 1920,
-        "bytes": 314246
+        "bytes": 657614
+      },
+      {
+        "src": "assets/scherdakov-07-hq-2560.webp",
+        "width": 2560,
+        "bytes": 1144438
+      },
+      {
+        "src": "assets/scherdakov-07-original.jpg",
+        "width": 3200,
+        "bytes": 1397348
       }
-    ]
+    ],
+    "source": "assets/scherdakov-07-original.jpg"
   },
   "scherdakov-08": {
     "name": "scherdakov-08",
@@ -181,21 +239,32 @@
     "height": 1800,
     "files": [
       {
-        "src": "assets/scherdakov-08-480.webp",
-        "width": 480,
-        "bytes": 40632
+        "src": "assets/scherdakov-08-hq-640.webp",
+        "width": 640,
+        "bytes": 112718
       },
       {
-        "src": "assets/scherdakov-08-960.webp",
-        "width": 960,
-        "bytes": 144080
+        "src": "assets/scherdakov-08-hq-1280.webp",
+        "width": 1280,
+        "bytes": 424770
       },
       {
-        "src": "assets/scherdakov-08-1920.webp",
+        "src": "assets/scherdakov-08-hq-1920.webp",
         "width": 1920,
-        "bytes": 633744
+        "bytes": 1009030
+      },
+      {
+        "src": "assets/scherdakov-08-hq-2560.webp",
+        "width": 2560,
+        "bytes": 1876628
+      },
+      {
+        "src": "assets/scherdakov-08-original.jpg",
+        "width": 3200,
+        "bytes": 2448960
       }
-    ]
+    ],
+    "source": "assets/scherdakov-08-original.jpg"
   },
   "scherdakov-09": {
     "name": "scherdakov-09",
@@ -203,21 +272,32 @@
     "height": 1800,
     "files": [
       {
-        "src": "assets/scherdakov-09-480.webp",
-        "width": 480,
-        "bytes": 18362
+        "src": "assets/scherdakov-09-hq-640.webp",
+        "width": 640,
+        "bytes": 44214
       },
       {
-        "src": "assets/scherdakov-09-960.webp",
-        "width": 960,
-        "bytes": 47964
+        "src": "assets/scherdakov-09-hq-1280.webp",
+        "width": 1280,
+        "bytes": 152982
       },
       {
-        "src": "assets/scherdakov-09-1920.webp",
+        "src": "assets/scherdakov-09-hq-1920.webp",
         "width": 1920,
-        "bytes": 154682
+        "bytes": 341024
+      },
+      {
+        "src": "assets/scherdakov-09-hq-2560.webp",
+        "width": 2560,
+        "bytes": 604992
+      },
+      {
+        "src": "assets/scherdakov-09-original.jpg",
+        "width": 3200,
+        "bytes": 804833
       }
-    ]
+    ],
+    "source": "assets/scherdakov-09-original.jpg"
   },
   "scherdakov-10": {
     "name": "scherdakov-10",
@@ -225,21 +305,32 @@
     "height": 1800,
     "files": [
       {
-        "src": "assets/scherdakov-10-480.webp",
-        "width": 480,
-        "bytes": 4410
+        "src": "assets/scherdakov-10-hq-640.webp",
+        "width": 640,
+        "bytes": 8958
       },
       {
-        "src": "assets/scherdakov-10-960.webp",
-        "width": 960,
-        "bytes": 8954
+        "src": "assets/scherdakov-10-hq-1280.webp",
+        "width": 1280,
+        "bytes": 18586
       },
       {
-        "src": "assets/scherdakov-10-1920.webp",
+        "src": "assets/scherdakov-10-hq-1920.webp",
         "width": 1920,
-        "bytes": 19422
+        "bytes": 30008
+      },
+      {
+        "src": "assets/scherdakov-10-hq-2560.webp",
+        "width": 2560,
+        "bytes": 41162
+      },
+      {
+        "src": "assets/scherdakov-10-original.jpg",
+        "width": 3200,
+        "bytes": 135537
       }
-    ]
+    ],
+    "source": "assets/scherdakov-10-original.jpg"
   },
   "scherdakov-11": {
     "name": "scherdakov-11",
@@ -247,21 +338,32 @@
     "height": 1800,
     "files": [
       {
-        "src": "assets/scherdakov-11-480.webp",
-        "width": 480,
-        "bytes": 30110
+        "src": "assets/scherdakov-11-hq-640.webp",
+        "width": 640,
+        "bytes": 82182
       },
       {
-        "src": "assets/scherdakov-11-960.webp",
-        "width": 960,
-        "bytes": 93490
+        "src": "assets/scherdakov-11-hq-1280.webp",
+        "width": 1280,
+        "bytes": 322454
       },
       {
-        "src": "assets/scherdakov-11-1920.webp",
+        "src": "assets/scherdakov-11-hq-1920.webp",
         "width": 1920,
-        "bytes": 426128
+        "bytes": 774072
+      },
+      {
+        "src": "assets/scherdakov-11-hq-2560.webp",
+        "width": 2560,
+        "bytes": 1441136
+      },
+      {
+        "src": "assets/scherdakov-11-original.jpg",
+        "width": 3200,
+        "bytes": 1885842
       }
-    ]
+    ],
+    "source": "assets/scherdakov-11-original.jpg"
   },
   "scherdakov-12": {
     "name": "scherdakov-12",
@@ -269,21 +371,32 @@
     "height": 1800,
     "files": [
       {
-        "src": "assets/scherdakov-12-480.webp",
-        "width": 480,
-        "bytes": 5254
+        "src": "assets/scherdakov-12-hq-640.webp",
+        "width": 640,
+        "bytes": 12842
       },
       {
-        "src": "assets/scherdakov-12-960.webp",
-        "width": 960,
-        "bytes": 13334
+        "src": "assets/scherdakov-12-hq-1280.webp",
+        "width": 1280,
+        "bytes": 59496
       },
       {
-        "src": "assets/scherdakov-12-1920.webp",
+        "src": "assets/scherdakov-12-hq-1920.webp",
         "width": 1920,
-        "bytes": 66116
+        "bytes": 158050
+      },
+      {
+        "src": "assets/scherdakov-12-hq-2560.webp",
+        "width": 2560,
+        "bytes": 308296
+      },
+      {
+        "src": "assets/scherdakov-12-original.jpg",
+        "width": 3200,
+        "bytes": 437273
       }
-    ]
+    ],
+    "source": "assets/scherdakov-12-original.jpg"
   },
   "scherdakov-13": {
     "name": "scherdakov-13",
@@ -291,21 +404,32 @@
     "height": 1800,
     "files": [
       {
-        "src": "assets/scherdakov-13-480.webp",
-        "width": 480,
-        "bytes": 18124
+        "src": "assets/scherdakov-13-hq-640.webp",
+        "width": 640,
+        "bytes": 38610
       },
       {
-        "src": "assets/scherdakov-13-960.webp",
-        "width": 960,
-        "bytes": 41992
+        "src": "assets/scherdakov-13-hq-1280.webp",
+        "width": 1280,
+        "bytes": 88434
       },
       {
-        "src": "assets/scherdakov-13-1920.webp",
+        "src": "assets/scherdakov-13-hq-1920.webp",
         "width": 1920,
-        "bytes": 94204
+        "bytes": 148146
+      },
+      {
+        "src": "assets/scherdakov-13-hq-2560.webp",
+        "width": 2560,
+        "bytes": 220112
+      },
+      {
+        "src": "assets/scherdakov-13-original.jpg",
+        "width": 3200,
+        "bytes": 353913
       }
-    ]
+    ],
+    "source": "assets/scherdakov-13-original.jpg"
   },
   "scherdakov-15": {
     "name": "scherdakov-15",
@@ -313,21 +437,32 @@
     "height": 1800,
     "files": [
       {
-        "src": "assets/scherdakov-15-480.webp",
-        "width": 480,
-        "bytes": 32922
+        "src": "assets/scherdakov-15-hq-640.webp",
+        "width": 640,
+        "bytes": 102644
       },
       {
-        "src": "assets/scherdakov-15-960.webp",
-        "width": 960,
-        "bytes": 119150
+        "src": "assets/scherdakov-15-hq-1280.webp",
+        "width": 1280,
+        "bytes": 403084
       },
       {
-        "src": "assets/scherdakov-15-1920.webp",
+        "src": "assets/scherdakov-15-hq-1920.webp",
         "width": 1920,
-        "bytes": 444776
+        "bytes": 876566
+      },
+      {
+        "src": "assets/scherdakov-15-hq-2560.webp",
+        "width": 2560,
+        "bytes": 1553738
+      },
+      {
+        "src": "assets/scherdakov-15-original.jpg",
+        "width": 3200,
+        "bytes": 1710617
       }
-    ]
+    ],
+    "source": "assets/scherdakov-15-original.jpg"
   },
   "scherdakov-16": {
     "name": "scherdakov-16",
@@ -335,21 +470,32 @@
     "height": 1800,
     "files": [
       {
-        "src": "assets/scherdakov-16-480.webp",
-        "width": 480,
-        "bytes": 6028
+        "src": "assets/scherdakov-16-hq-640.webp",
+        "width": 640,
+        "bytes": 11530
       },
       {
-        "src": "assets/scherdakov-16-960.webp",
-        "width": 960,
-        "bytes": 13212
+        "src": "assets/scherdakov-16-hq-1280.webp",
+        "width": 1280,
+        "bytes": 26904
       },
       {
-        "src": "assets/scherdakov-16-1920.webp",
+        "src": "assets/scherdakov-16-hq-1920.webp",
         "width": 1920,
-        "bytes": 28922
+        "bytes": 44556
+      },
+      {
+        "src": "assets/scherdakov-16-hq-2560.webp",
+        "width": 2560,
+        "bytes": 64948
+      },
+      {
+        "src": "assets/scherdakov-16-original.jpg",
+        "width": 3200,
+        "bytes": 151248
       }
-    ]
+    ],
+    "source": "assets/scherdakov-16-original.jpg"
   },
   "scherdakov-17": {
     "name": "scherdakov-17",
@@ -357,21 +503,32 @@
     "height": 1800,
     "files": [
       {
-        "src": "assets/scherdakov-17-480.webp",
-        "width": 480,
-        "bytes": 16066
+        "src": "assets/scherdakov-17-hq-640.webp",
+        "width": 640,
+        "bytes": 33076
       },
       {
-        "src": "assets/scherdakov-17-960.webp",
-        "width": 960,
-        "bytes": 34064
+        "src": "assets/scherdakov-17-hq-1280.webp",
+        "width": 1280,
+        "bytes": 67118
       },
       {
-        "src": "assets/scherdakov-17-1920.webp",
+        "src": "assets/scherdakov-17-hq-1920.webp",
         "width": 1920,
-        "bytes": 67898
+        "bytes": 113184
+      },
+      {
+        "src": "assets/scherdakov-17-hq-2560.webp",
+        "width": 2560,
+        "bytes": 160354
+      },
+      {
+        "src": "assets/scherdakov-17-original.jpg",
+        "width": 3200,
+        "bytes": 302559
       }
-    ]
+    ],
+    "source": "assets/scherdakov-17-original.jpg"
   },
   "scherdakov-19": {
     "name": "scherdakov-19",
@@ -379,21 +536,32 @@
     "height": 1800,
     "files": [
       {
-        "src": "assets/scherdakov-19-480.webp",
-        "width": 480,
-        "bytes": 5220
+        "src": "assets/scherdakov-19-hq-640.webp",
+        "width": 640,
+        "bytes": 10030
       },
       {
-        "src": "assets/scherdakov-19-960.webp",
-        "width": 960,
-        "bytes": 10024
+        "src": "assets/scherdakov-19-hq-1280.webp",
+        "width": 1280,
+        "bytes": 20724
       },
       {
-        "src": "assets/scherdakov-19-1920.webp",
+        "src": "assets/scherdakov-19-hq-1920.webp",
         "width": 1920,
-        "bytes": 21856
+        "bytes": 34896
+      },
+      {
+        "src": "assets/scherdakov-19-hq-2560.webp",
+        "width": 2560,
+        "bytes": 49844
+      },
+      {
+        "src": "assets/scherdakov-19-original.jpg",
+        "width": 3200,
+        "bytes": 112929
       }
-    ]
+    ],
+    "source": "assets/scherdakov-19-original.jpg"
   },
   "scherdakov-20": {
     "name": "scherdakov-20",
@@ -401,21 +569,32 @@
     "height": 1800,
     "files": [
       {
-        "src": "assets/scherdakov-20-480.webp",
-        "width": 480,
-        "bytes": 24254
+        "src": "assets/scherdakov-20-hq-640.webp",
+        "width": 640,
+        "bytes": 54222
       },
       {
-        "src": "assets/scherdakov-20-960.webp",
-        "width": 960,
-        "bytes": 62124
+        "src": "assets/scherdakov-20-hq-1280.webp",
+        "width": 1280,
+        "bytes": 142408
       },
       {
-        "src": "assets/scherdakov-20-1920.webp",
+        "src": "assets/scherdakov-20-hq-1920.webp",
         "width": 1920,
-        "bytes": 146778
+        "bytes": 252798
+      },
+      {
+        "src": "assets/scherdakov-20-hq-2560.webp",
+        "width": 2560,
+        "bytes": 363840
+      },
+      {
+        "src": "assets/scherdakov-20-original.jpg",
+        "width": 3200,
+        "bytes": 570935
       }
-    ]
+    ],
+    "source": "assets/scherdakov-20-original.jpg"
   },
   "scherdakov-21": {
     "name": "scherdakov-21",
@@ -423,21 +602,32 @@
     "height": 1800,
     "files": [
       {
-        "src": "assets/scherdakov-21-480.webp",
-        "width": 480,
-        "bytes": 15762
+        "src": "assets/scherdakov-21-hq-640.webp",
+        "width": 640,
+        "bytes": 44460
       },
       {
-        "src": "assets/scherdakov-21-960.webp",
-        "width": 960,
-        "bytes": 40426
+        "src": "assets/scherdakov-21-hq-1280.webp",
+        "width": 1280,
+        "bytes": 216856
       },
       {
-        "src": "assets/scherdakov-21-1920.webp",
+        "src": "assets/scherdakov-21-hq-1920.webp",
         "width": 1920,
-        "bytes": 174884
+        "bytes": 554712
+      },
+      {
+        "src": "assets/scherdakov-21-hq-2560.webp",
+        "width": 2560,
+        "bytes": 940666
+      },
+      {
+        "src": "assets/scherdakov-21-original.jpg",
+        "width": 3200,
+        "bytes": 1189448
       }
-    ]
+    ],
+    "source": "assets/scherdakov-21-original.jpg"
   },
   "scherdakov-23": {
     "name": "scherdakov-23",
@@ -445,21 +635,32 @@
     "height": 1800,
     "files": [
       {
-        "src": "assets/scherdakov-23-480.webp",
-        "width": 480,
-        "bytes": 5658
+        "src": "assets/scherdakov-23-hq-640.webp",
+        "width": 640,
+        "bytes": 11758
       },
       {
-        "src": "assets/scherdakov-23-960.webp",
-        "width": 960,
-        "bytes": 12016
+        "src": "assets/scherdakov-23-hq-1280.webp",
+        "width": 1280,
+        "bytes": 25698
       },
       {
-        "src": "assets/scherdakov-23-1920.webp",
+        "src": "assets/scherdakov-23-hq-1920.webp",
         "width": 1920,
-        "bytes": 25862
+        "bytes": 42194
+      },
+      {
+        "src": "assets/scherdakov-23-hq-2560.webp",
+        "width": 2560,
+        "bytes": 60190
+      },
+      {
+        "src": "assets/scherdakov-23-original.jpg",
+        "width": 3200,
+        "bytes": 105048
       }
-    ]
+    ],
+    "source": "assets/scherdakov-23-original.jpg"
   },
   "scherdakov-24": {
     "name": "scherdakov-24",
@@ -467,21 +668,32 @@
     "height": 1800,
     "files": [
       {
-        "src": "assets/scherdakov-24-480.webp",
-        "width": 480,
-        "bytes": 37624
+        "src": "assets/scherdakov-24-hq-640.webp",
+        "width": 640,
+        "bytes": 109384
       },
       {
-        "src": "assets/scherdakov-24-960.webp",
-        "width": 960,
-        "bytes": 133680
+        "src": "assets/scherdakov-24-hq-1280.webp",
+        "width": 1280,
+        "bytes": 416326
       },
       {
-        "src": "assets/scherdakov-24-1920.webp",
+        "src": "assets/scherdakov-24-hq-1920.webp",
         "width": 1920,
-        "bytes": 491792
+        "bytes": 898270
+      },
+      {
+        "src": "assets/scherdakov-24-hq-2560.webp",
+        "width": 2560,
+        "bytes": 1564762
+      },
+      {
+        "src": "assets/scherdakov-24-original.jpg",
+        "width": 3200,
+        "bytes": 1730576
       }
-    ]
+    ],
+    "source": "assets/scherdakov-24-original.jpg"
   },
   "scherdakov-26": {
     "name": "scherdakov-26",
@@ -489,21 +701,32 @@
     "height": 1800,
     "files": [
       {
-        "src": "assets/scherdakov-26-480.webp",
-        "width": 480,
-        "bytes": 42232
+        "src": "assets/scherdakov-26-hq-640.webp",
+        "width": 640,
+        "bytes": 115208
       },
       {
-        "src": "assets/scherdakov-26-960.webp",
-        "width": 960,
-        "bytes": 137494
+        "src": "assets/scherdakov-26-hq-1280.webp",
+        "width": 1280,
+        "bytes": 427464
       },
       {
-        "src": "assets/scherdakov-26-1920.webp",
+        "src": "assets/scherdakov-26-hq-1920.webp",
         "width": 1920,
-        "bytes": 496874
+        "bytes": 917950
+      },
+      {
+        "src": "assets/scherdakov-26-hq-2560.webp",
+        "width": 2560,
+        "bytes": 1532074
+      },
+      {
+        "src": "assets/scherdakov-26-original.jpg",
+        "width": 3200,
+        "bytes": 1727615
       }
-    ]
+    ],
+    "source": "assets/scherdakov-26-original.jpg"
   },
   "scherdakov-27": {
     "name": "scherdakov-27",
@@ -511,21 +734,32 @@
     "height": 1800,
     "files": [
       {
-        "src": "assets/scherdakov-27-480.webp",
-        "width": 480,
-        "bytes": 26060
+        "src": "assets/scherdakov-27-hq-640.webp",
+        "width": 640,
+        "bytes": 63666
       },
       {
-        "src": "assets/scherdakov-27-960.webp",
-        "width": 960,
-        "bytes": 64780
+        "src": "assets/scherdakov-27-hq-1280.webp",
+        "width": 1280,
+        "bytes": 202630
       },
       {
-        "src": "assets/scherdakov-27-1920.webp",
+        "src": "assets/scherdakov-27-hq-1920.webp",
         "width": 1920,
-        "bytes": 189408
+        "bytes": 411066
+      },
+      {
+        "src": "assets/scherdakov-27-hq-2560.webp",
+        "width": 2560,
+        "bytes": 651092
+      },
+      {
+        "src": "assets/scherdakov-27-original.jpg",
+        "width": 3200,
+        "bytes": 808586
       }
-    ]
+    ],
+    "source": "assets/scherdakov-27-original.jpg"
   },
   "scherdakov-28": {
     "name": "scherdakov-28",
@@ -533,21 +767,32 @@
     "height": 1800,
     "files": [
       {
-        "src": "assets/scherdakov-28-480.webp",
-        "width": 480,
-        "bytes": 37680
+        "src": "assets/scherdakov-28-hq-640.webp",
+        "width": 640,
+        "bytes": 88506
       },
       {
-        "src": "assets/scherdakov-28-960.webp",
-        "width": 960,
-        "bytes": 102900
+        "src": "assets/scherdakov-28-hq-1280.webp",
+        "width": 1280,
+        "bytes": 238472
       },
       {
-        "src": "assets/scherdakov-28-1920.webp",
+        "src": "assets/scherdakov-28-hq-1920.webp",
         "width": 1920,
-        "bytes": 252614
+        "bytes": 437196
+      },
+      {
+        "src": "assets/scherdakov-28-hq-2560.webp",
+        "width": 2560,
+        "bytes": 681502
+      },
+      {
+        "src": "assets/scherdakov-28-original.jpg",
+        "width": 3200,
+        "bytes": 1055063
       }
-    ]
+    ],
+    "source": "assets/scherdakov-28-original.jpg"
   },
   "scherdakov-29": {
     "name": "scherdakov-29",
@@ -555,21 +800,32 @@
     "height": 1800,
     "files": [
       {
-        "src": "assets/scherdakov-29-480.webp",
-        "width": 480,
-        "bytes": 26626
+        "src": "assets/scherdakov-29-hq-640.webp",
+        "width": 640,
+        "bytes": 65260
       },
       {
-        "src": "assets/scherdakov-29-960.webp",
-        "width": 960,
-        "bytes": 68088
+        "src": "assets/scherdakov-29-hq-1280.webp",
+        "width": 1280,
+        "bytes": 210932
       },
       {
-        "src": "assets/scherdakov-29-1920.webp",
+        "src": "assets/scherdakov-29-hq-1920.webp",
         "width": 1920,
-        "bytes": 201780
+        "bytes": 436784
+      },
+      {
+        "src": "assets/scherdakov-29-hq-2560.webp",
+        "width": 2560,
+        "bytes": 698172
+      },
+      {
+        "src": "assets/scherdakov-29-original.jpg",
+        "width": 3200,
+        "bytes": 832873
       }
-    ]
+    ],
+    "source": "assets/scherdakov-29-original.jpg"
   },
   "scherdakov-30": {
     "name": "scherdakov-30",
@@ -577,21 +833,32 @@
     "height": 1800,
     "files": [
       {
-        "src": "assets/scherdakov-30-480.webp",
-        "width": 480,
-        "bytes": 29190
+        "src": "assets/scherdakov-30-hq-640.webp",
+        "width": 640,
+        "bytes": 76680
       },
       {
-        "src": "assets/scherdakov-30-960.webp",
-        "width": 960,
-        "bytes": 88704
+        "src": "assets/scherdakov-30-hq-1280.webp",
+        "width": 1280,
+        "bytes": 320488
       },
       {
-        "src": "assets/scherdakov-30-1920.webp",
+        "src": "assets/scherdakov-30-hq-1920.webp",
         "width": 1920,
-        "bytes": 408532
+        "bytes": 781810
+      },
+      {
+        "src": "assets/scherdakov-30-hq-2560.webp",
+        "width": 2560,
+        "bytes": 1429864
+      },
+      {
+        "src": "assets/scherdakov-30-original.jpg",
+        "width": 3200,
+        "bytes": 1794569
       }
-    ]
+    ],
+    "source": "assets/scherdakov-30-original.jpg"
   },
   "scherdakov-31": {
     "name": "scherdakov-31",
@@ -599,21 +866,32 @@
     "height": 1800,
     "files": [
       {
-        "src": "assets/scherdakov-31-480.webp",
-        "width": 480,
-        "bytes": 25288
+        "src": "assets/scherdakov-31-hq-640.webp",
+        "width": 640,
+        "bytes": 64578
       },
       {
-        "src": "assets/scherdakov-31-960.webp",
-        "width": 960,
-        "bytes": 74110
+        "src": "assets/scherdakov-31-hq-1280.webp",
+        "width": 1280,
+        "bytes": 240316
       },
       {
-        "src": "assets/scherdakov-31-1920.webp",
+        "src": "assets/scherdakov-31-hq-1920.webp",
         "width": 1920,
-        "bytes": 306776
+        "bytes": 538528
+      },
+      {
+        "src": "assets/scherdakov-31-hq-2560.webp",
+        "width": 2560,
+        "bytes": 983546
+      },
+      {
+        "src": "assets/scherdakov-31-original.jpg",
+        "width": 3200,
+        "bytes": 1333786
       }
-    ]
+    ],
+    "source": "assets/scherdakov-31-original.jpg"
   },
   "scherdakov-32": {
     "name": "scherdakov-32",
@@ -621,21 +899,32 @@
     "height": 1800,
     "files": [
       {
-        "src": "assets/scherdakov-32-480.webp",
-        "width": 480,
-        "bytes": 42744
+        "src": "assets/scherdakov-32-hq-640.webp",
+        "width": 640,
+        "bytes": 112754
       },
       {
-        "src": "assets/scherdakov-32-960.webp",
-        "width": 960,
-        "bytes": 132554
+        "src": "assets/scherdakov-32-hq-1280.webp",
+        "width": 1280,
+        "bytes": 403764
       },
       {
-        "src": "assets/scherdakov-32-1920.webp",
+        "src": "assets/scherdakov-32-hq-1920.webp",
         "width": 1920,
-        "bytes": 419192
+        "bytes": 813142
+      },
+      {
+        "src": "assets/scherdakov-32-hq-2560.webp",
+        "width": 2560,
+        "bytes": 1332360
+      },
+      {
+        "src": "assets/scherdakov-32-original.jpg",
+        "width": 3200,
+        "bytes": 1483019
       }
-    ]
+    ],
+    "source": "assets/scherdakov-32-original.jpg"
   },
   "scherdakov-33": {
     "name": "scherdakov-33",
@@ -643,21 +932,32 @@
     "height": 1200,
     "files": [
       {
-        "src": "assets/scherdakov-33-480.webp",
-        "width": 480,
-        "bytes": 11158
+        "src": "assets/scherdakov-33-hq-640.webp",
+        "width": 640,
+        "bytes": 23660
       },
       {
-        "src": "assets/scherdakov-33-960.webp",
-        "width": 960,
-        "bytes": 28602
+        "src": "assets/scherdakov-33-hq-1280.webp",
+        "width": 1280,
+        "bytes": 62876
       },
       {
-        "src": "assets/scherdakov-33-1920.webp",
+        "src": "assets/scherdakov-33-hq-1920.webp",
         "width": 1920,
-        "bytes": 67140
+        "bytes": 106940
+      },
+      {
+        "src": "assets/scherdakov-33-hq-2560.webp",
+        "width": 2560,
+        "bytes": 160202
+      },
+      {
+        "src": "assets/scherdakov-33-original.png",
+        "width": 3414,
+        "bytes": 188922
       }
-    ]
+    ],
+    "source": "assets/scherdakov-33-original.png"
   },
   "adat-03": {
     "name": "adat-03",
@@ -665,21 +965,22 @@
     "height": 850,
     "files": [
       {
-        "src": "assets/adat-03-480.webp",
-        "width": 480,
-        "bytes": 36520
+        "src": "assets/adat-03-hq-640.webp",
+        "width": 640,
+        "bytes": 101066
       },
       {
-        "src": "assets/adat-03-960.webp",
-        "width": 960,
-        "bytes": 115960
+        "src": "assets/adat-03-hq-1280.webp",
+        "width": 1280,
+        "bytes": 345336
       },
       {
-        "src": "assets/adat-03-1512.webp",
+        "src": "assets/adat-03-original.jpg",
         "width": 1512,
-        "bytes": 260662
+        "bytes": 375686
       }
-    ]
+    ],
+    "source": "assets/adat-03-original.jpg"
   },
   "adat-04": {
     "name": "adat-04",
@@ -687,21 +988,22 @@
     "height": 850,
     "files": [
       {
-        "src": "assets/adat-04-480.webp",
-        "width": 480,
-        "bytes": 28906
+        "src": "assets/adat-04-hq-640.webp",
+        "width": 640,
+        "bytes": 78242
       },
       {
-        "src": "assets/adat-04-960.webp",
-        "width": 960,
-        "bytes": 77648
+        "src": "assets/adat-04-hq-1280.webp",
+        "width": 1280,
+        "bytes": 263120
       },
       {
-        "src": "assets/adat-04-1512.webp",
+        "src": "assets/adat-04-original.jpg",
         "width": 1512,
-        "bytes": 182566
+        "bytes": 302227
       }
-    ]
+    ],
+    "source": "assets/adat-04-original.jpg"
   },
   "adat-05": {
     "name": "adat-05",
@@ -709,21 +1011,22 @@
     "height": 850,
     "files": [
       {
-        "src": "assets/adat-05-480.webp",
-        "width": 480,
-        "bytes": 40134
+        "src": "assets/adat-05-hq-640.webp",
+        "width": 640,
+        "bytes": 105296
       },
       {
-        "src": "assets/adat-05-960.webp",
-        "width": 960,
-        "bytes": 127548
+        "src": "assets/adat-05-hq-1280.webp",
+        "width": 1280,
+        "bytes": 367380
       },
       {
-        "src": "assets/adat-05-1512.webp",
+        "src": "assets/adat-05-original.jpg",
         "width": 1512,
-        "bytes": 299338
+        "bytes": 402765
       }
-    ]
+    ],
+    "source": "assets/adat-05-original.jpg"
   },
   "adat-06": {
     "name": "adat-06",
@@ -731,21 +1034,22 @@
     "height": 850,
     "files": [
       {
-        "src": "assets/adat-06-480.webp",
-        "width": 480,
-        "bytes": 30312
+        "src": "assets/adat-06-hq-640.webp",
+        "width": 640,
+        "bytes": 81062
       },
       {
-        "src": "assets/adat-06-960.webp",
-        "width": 960,
-        "bytes": 86650
+        "src": "assets/adat-06-hq-1280.webp",
+        "width": 1280,
+        "bytes": 280010
       },
       {
-        "src": "assets/adat-06-1512.webp",
+        "src": "assets/adat-06-original.jpg",
         "width": 1512,
-        "bytes": 199834
+        "bytes": 313932
       }
-    ]
+    ],
+    "source": "assets/adat-06-original.jpg"
   },
   "adat-07": {
     "name": "adat-07",
@@ -753,21 +1057,22 @@
     "height": 850,
     "files": [
       {
-        "src": "assets/adat-07-480.webp",
-        "width": 480,
-        "bytes": 22330
+        "src": "assets/adat-07-hq-640.webp",
+        "width": 640,
+        "bytes": 71178
       },
       {
-        "src": "assets/adat-07-960.webp",
-        "width": 960,
-        "bytes": 64610
+        "src": "assets/adat-07-hq-1280.webp",
+        "width": 1280,
+        "bytes": 272856
       },
       {
-        "src": "assets/adat-07-1512.webp",
+        "src": "assets/adat-07-original.jpg",
         "width": 1512,
-        "bytes": 182236
+        "bytes": 289181
       }
-    ]
+    ],
+    "source": "assets/adat-07-original.jpg"
   },
   "adat-08": {
     "name": "adat-08",
@@ -775,21 +1080,22 @@
     "height": 850,
     "files": [
       {
-        "src": "assets/adat-08-480.webp",
-        "width": 480,
-        "bytes": 31840
+        "src": "assets/adat-08-hq-640.webp",
+        "width": 640,
+        "bytes": 88102
       },
       {
-        "src": "assets/adat-08-960.webp",
-        "width": 960,
-        "bytes": 87978
+        "src": "assets/adat-08-hq-1280.webp",
+        "width": 1280,
+        "bytes": 295648
       },
       {
-        "src": "assets/adat-08-1512.webp",
+        "src": "assets/adat-08-original.jpg",
         "width": 1512,
-        "bytes": 214496
+        "bytes": 324436
       }
-    ]
+    ],
+    "source": "assets/adat-08-original.jpg"
   },
   "adat-09": {
     "name": "adat-09",
@@ -797,21 +1103,22 @@
     "height": 850,
     "files": [
       {
-        "src": "assets/adat-09-480.webp",
-        "width": 480,
-        "bytes": 29394
+        "src": "assets/adat-09-hq-640.webp",
+        "width": 640,
+        "bytes": 92834
       },
       {
-        "src": "assets/adat-09-960.webp",
-        "width": 960,
-        "bytes": 116408
+        "src": "assets/adat-09-hq-1280.webp",
+        "width": 1280,
+        "bytes": 349686
       },
       {
-        "src": "assets/adat-09-1512.webp",
+        "src": "assets/adat-09-original.jpg",
         "width": 1512,
-        "bytes": 267548
+        "bytes": 362788
       }
-    ]
+    ],
+    "source": "assets/adat-09-original.jpg"
   },
   "adat-10": {
     "name": "adat-10",
@@ -819,21 +1126,22 @@
     "height": 850,
     "files": [
       {
-        "src": "assets/adat-10-480.webp",
-        "width": 480,
-        "bytes": 28896
+        "src": "assets/adat-10-hq-640.webp",
+        "width": 640,
+        "bytes": 88210
       },
       {
-        "src": "assets/adat-10-960.webp",
-        "width": 960,
-        "bytes": 100204
+        "src": "assets/adat-10-hq-1280.webp",
+        "width": 1280,
+        "bytes": 304972
       },
       {
-        "src": "assets/adat-10-1512.webp",
+        "src": "assets/adat-10-original.jpg",
         "width": 1512,
-        "bytes": 238700
+        "bytes": 331367
       }
-    ]
+    ],
+    "source": "assets/adat-10-original.jpg"
   },
   "adat-11": {
     "name": "adat-11",
@@ -841,21 +1149,22 @@
     "height": 850,
     "files": [
       {
-        "src": "assets/adat-11-480.webp",
-        "width": 480,
-        "bytes": 19738
+        "src": "assets/adat-11-hq-640.webp",
+        "width": 640,
+        "bytes": 70122
       },
       {
-        "src": "assets/adat-11-960.webp",
-        "width": 960,
-        "bytes": 84204
+        "src": "assets/adat-11-hq-1280.webp",
+        "width": 1280,
+        "bytes": 293152
       },
       {
-        "src": "assets/adat-11-1512.webp",
+        "src": "assets/adat-11-original.jpg",
         "width": 1512,
-        "bytes": 247874
+        "bytes": 331285
       }
-    ]
+    ],
+    "source": "assets/adat-11-original.jpg"
   },
   "adat-12": {
     "name": "adat-12",
@@ -863,21 +1172,22 @@
     "height": 850,
     "files": [
       {
-        "src": "assets/adat-12-480.webp",
-        "width": 480,
-        "bytes": 26720
+        "src": "assets/adat-12-hq-640.webp",
+        "width": 640,
+        "bytes": 90370
       },
       {
-        "src": "assets/adat-12-960.webp",
-        "width": 960,
-        "bytes": 115650
+        "src": "assets/adat-12-hq-1280.webp",
+        "width": 1280,
+        "bytes": 378764
       },
       {
-        "src": "assets/adat-12-1512.webp",
+        "src": "assets/adat-12-original.jpg",
         "width": 1512,
-        "bytes": 322220
+        "bytes": 403343
       }
-    ]
+    ],
+    "source": "assets/adat-12-original.jpg"
   },
   "adat-13": {
     "name": "adat-13",
@@ -885,21 +1195,22 @@
     "height": 850,
     "files": [
       {
-        "src": "assets/adat-13-480.webp",
-        "width": 480,
-        "bytes": 22996
+        "src": "assets/adat-13-hq-640.webp",
+        "width": 640,
+        "bytes": 58482
       },
       {
-        "src": "assets/adat-13-960.webp",
-        "width": 960,
-        "bytes": 64922
+        "src": "assets/adat-13-hq-1280.webp",
+        "width": 1280,
+        "bytes": 183724
       },
       {
-        "src": "assets/adat-13-1512.webp",
+        "src": "assets/adat-13-original.jpg",
         "width": 1512,
-        "bytes": 137260
+        "bytes": 235264
       }
-    ]
+    ],
+    "source": "assets/adat-13-original.jpg"
   },
   "adat-14": {
     "name": "adat-14",
@@ -907,21 +1218,22 @@
     "height": 850,
     "files": [
       {
-        "src": "assets/adat-14-480.webp",
-        "width": 480,
-        "bytes": 28176
+        "src": "assets/adat-14-hq-640.webp",
+        "width": 640,
+        "bytes": 76716
       },
       {
-        "src": "assets/adat-14-960.webp",
-        "width": 960,
-        "bytes": 77386
+        "src": "assets/adat-14-hq-1280.webp",
+        "width": 1280,
+        "bytes": 261252
       },
       {
-        "src": "assets/adat-14-1512.webp",
+        "src": "assets/adat-14-original.jpg",
         "width": 1512,
-        "bytes": 170314
+        "bytes": 291940
       }
-    ]
+    ],
+    "source": "assets/adat-14-original.jpg"
   },
   "adat-15": {
     "name": "adat-15",
@@ -929,21 +1241,22 @@
     "height": 850,
     "files": [
       {
-        "src": "assets/adat-15-480.webp",
-        "width": 480,
-        "bytes": 15714
+        "src": "assets/adat-15-hq-640.webp",
+        "width": 640,
+        "bytes": 56002
       },
       {
-        "src": "assets/adat-15-960.webp",
-        "width": 960,
-        "bytes": 50158
+        "src": "assets/adat-15-hq-1280.webp",
+        "width": 1280,
+        "bytes": 226428
       },
       {
-        "src": "assets/adat-15-1512.webp",
+        "src": "assets/adat-15-original.jpg",
         "width": 1512,
-        "bytes": 145144
+        "bytes": 253588
       }
-    ]
+    ],
+    "source": "assets/adat-15-original.jpg"
   },
   "adat-16": {
     "name": "adat-16",
@@ -951,21 +1264,22 @@
     "height": 850,
     "files": [
       {
-        "src": "assets/adat-16-480.webp",
-        "width": 480,
-        "bytes": 41396
+        "src": "assets/adat-16-hq-640.webp",
+        "width": 640,
+        "bytes": 114322
       },
       {
-        "src": "assets/adat-16-960.webp",
-        "width": 960,
-        "bytes": 137066
+        "src": "assets/adat-16-hq-1280.webp",
+        "width": 1280,
+        "bytes": 413856
       },
       {
-        "src": "assets/adat-16-1512.webp",
+        "src": "assets/adat-16-original.jpg",
         "width": 1512,
-        "bytes": 360308
+        "bytes": 448597
       }
-    ]
+    ],
+    "source": "assets/adat-16-original.jpg"
   },
   "adat-17": {
     "name": "adat-17",
@@ -973,21 +1287,22 @@
     "height": 850,
     "files": [
       {
-        "src": "assets/adat-17-480.webp",
-        "width": 480,
-        "bytes": 28084
+        "src": "assets/adat-17-hq-640.webp",
+        "width": 640,
+        "bytes": 87244
       },
       {
-        "src": "assets/adat-17-960.webp",
-        "width": 960,
-        "bytes": 112454
+        "src": "assets/adat-17-hq-1280.webp",
+        "width": 1280,
+        "bytes": 320830
       },
       {
-        "src": "assets/adat-17-1512.webp",
+        "src": "assets/adat-17-original.jpg",
         "width": 1512,
-        "bytes": 235102
+        "bytes": 338196
       }
-    ]
+    ],
+    "source": "assets/adat-17-original.jpg"
   },
   "adat-18": {
     "name": "adat-18",
@@ -995,21 +1310,22 @@
     "height": 850,
     "files": [
       {
-        "src": "assets/adat-18-480.webp",
-        "width": 480,
-        "bytes": 46590
+        "src": "assets/adat-18-hq-640.webp",
+        "width": 640,
+        "bytes": 125250
       },
       {
-        "src": "assets/adat-18-960.webp",
-        "width": 960,
-        "bytes": 166758
+        "src": "assets/adat-18-hq-1280.webp",
+        "width": 1280,
+        "bytes": 449926
       },
       {
-        "src": "assets/adat-18-1512.webp",
+        "src": "assets/adat-18-original.jpg",
         "width": 1512,
-        "bytes": 405876
+        "bytes": 479028
       }
-    ]
+    ],
+    "source": "assets/adat-18-original.jpg"
   },
   "adat-19": {
     "name": "adat-19",
@@ -1017,21 +1333,22 @@
     "height": 850,
     "files": [
       {
-        "src": "assets/adat-19-480.webp",
-        "width": 480,
-        "bytes": 14898
+        "src": "assets/adat-19-hq-640.webp",
+        "width": 640,
+        "bytes": 67640
       },
       {
-        "src": "assets/adat-19-960.webp",
-        "width": 960,
-        "bytes": 75472
+        "src": "assets/adat-19-hq-1280.webp",
+        "width": 1280,
+        "bytes": 333502
       },
       {
-        "src": "assets/adat-19-1512.webp",
+        "src": "assets/adat-19-original.jpg",
         "width": 1512,
-        "bytes": 293746
+        "bytes": 367617
       }
-    ]
+    ],
+    "source": "assets/adat-19-original.jpg"
   },
   "adat-20": {
     "name": "adat-20",
@@ -1039,21 +1356,22 @@
     "height": 850,
     "files": [
       {
-        "src": "assets/adat-20-480.webp",
-        "width": 480,
-        "bytes": 14868
+        "src": "assets/adat-20-hq-640.webp",
+        "width": 640,
+        "bytes": 49016
       },
       {
-        "src": "assets/adat-20-960.webp",
-        "width": 960,
-        "bytes": 47356
+        "src": "assets/adat-20-hq-1280.webp",
+        "width": 1280,
+        "bytes": 216070
       },
       {
-        "src": "assets/adat-20-1512.webp",
+        "src": "assets/adat-20-original.jpg",
         "width": 1512,
-        "bytes": 147218
+        "bytes": 253598
       }
-    ]
+    ],
+    "source": "assets/adat-20-original.jpg"
   },
   "nebesnaya-01": {
     "name": "nebesnaya-01",
@@ -1061,21 +1379,22 @@
     "height": 1080,
     "files": [
       {
-        "src": "assets/nebesnaya-01-480.webp",
-        "width": 480,
-        "bytes": 17150
+        "src": "assets/nebesnaya-01-hq-640.webp",
+        "width": 640,
+        "bytes": 59096
       },
       {
-        "src": "assets/nebesnaya-01-960.webp",
-        "width": 960,
-        "bytes": 50702
+        "src": "assets/nebesnaya-01-hq-1280.webp",
+        "width": 1280,
+        "bytes": 200688
       },
       {
-        "src": "assets/nebesnaya-01-1920.webp",
+        "src": "assets/nebesnaya-01-original.jpg",
         "width": 1920,
-        "bytes": 153762
+        "bytes": 335785
       }
-    ]
+    ],
+    "source": "assets/nebesnaya-01-original.jpg"
   },
   "nebesnaya-03": {
     "name": "nebesnaya-03",
@@ -1083,21 +1402,22 @@
     "height": 1080,
     "files": [
       {
-        "src": "assets/nebesnaya-03-480.webp",
-        "width": 480,
-        "bytes": 5832
+        "src": "assets/nebesnaya-03-hq-640.webp",
+        "width": 640,
+        "bytes": 15364
       },
       {
-        "src": "assets/nebesnaya-03-960.webp",
-        "width": 960,
-        "bytes": 17786
+        "src": "assets/nebesnaya-03-hq-1280.webp",
+        "width": 1280,
+        "bytes": 57590
       },
       {
-        "src": "assets/nebesnaya-03-1920.webp",
+        "src": "assets/nebesnaya-03-original.jpg",
         "width": 1920,
-        "bytes": 57986
+        "bytes": 145725
       }
-    ]
+    ],
+    "source": "assets/nebesnaya-03-original.jpg"
   },
   "nebesnaya-04": {
     "name": "nebesnaya-04",
@@ -1105,21 +1425,22 @@
     "height": 1080,
     "files": [
       {
-        "src": "assets/nebesnaya-04-480.webp",
-        "width": 480,
-        "bytes": 13132
+        "src": "assets/nebesnaya-04-hq-640.webp",
+        "width": 640,
+        "bytes": 41528
       },
       {
-        "src": "assets/nebesnaya-04-960.webp",
-        "width": 960,
-        "bytes": 34758
+        "src": "assets/nebesnaya-04-hq-1280.webp",
+        "width": 1280,
+        "bytes": 105534
       },
       {
-        "src": "assets/nebesnaya-04-1920.webp",
+        "src": "assets/nebesnaya-04-original.jpg",
         "width": 1920,
-        "bytes": 86264
+        "bytes": 241180
       }
-    ]
+    ],
+    "source": "assets/nebesnaya-04-original.jpg"
   },
   "nebesnaya-06": {
     "name": "nebesnaya-06",
@@ -1127,21 +1448,22 @@
     "height": 1080,
     "files": [
       {
-        "src": "assets/nebesnaya-06-480.webp",
-        "width": 480,
-        "bytes": 3624
+        "src": "assets/nebesnaya-06-hq-640.webp",
+        "width": 640,
+        "bytes": 9582
       },
       {
-        "src": "assets/nebesnaya-06-960.webp",
-        "width": 960,
-        "bytes": 9886
+        "src": "assets/nebesnaya-06-hq-1280.webp",
+        "width": 1280,
+        "bytes": 40902
       },
       {
-        "src": "assets/nebesnaya-06-1920.webp",
+        "src": "assets/nebesnaya-06-original.jpg",
         "width": 1920,
-        "bytes": 48992
+        "bytes": 105739
       }
-    ]
+    ],
+    "source": "assets/nebesnaya-06-original.jpg"
   },
   "nebesnaya-07": {
     "name": "nebesnaya-07",
@@ -1149,21 +1471,22 @@
     "height": 1080,
     "files": [
       {
-        "src": "assets/nebesnaya-07-480.webp",
-        "width": 480,
-        "bytes": 6254
+        "src": "assets/nebesnaya-07-hq-640.webp",
+        "width": 640,
+        "bytes": 19010
       },
       {
-        "src": "assets/nebesnaya-07-960.webp",
-        "width": 960,
-        "bytes": 16246
+        "src": "assets/nebesnaya-07-hq-1280.webp",
+        "width": 1280,
+        "bytes": 82434
       },
       {
-        "src": "assets/nebesnaya-07-1920.webp",
+        "src": "assets/nebesnaya-07-original.jpg",
         "width": 1920,
-        "bytes": 101612
+        "bytes": 185651
       }
-    ]
+    ],
+    "source": "assets/nebesnaya-07-original.jpg"
   },
   "nebesnaya-09": {
     "name": "nebesnaya-09",
@@ -1171,21 +1494,22 @@
     "height": 1080,
     "files": [
       {
-        "src": "assets/nebesnaya-09-480.webp",
-        "width": 480,
-        "bytes": 5872
+        "src": "assets/nebesnaya-09-hq-640.webp",
+        "width": 640,
+        "bytes": 22450
       },
       {
-        "src": "assets/nebesnaya-09-960.webp",
-        "width": 960,
-        "bytes": 21026
+        "src": "assets/nebesnaya-09-hq-1280.webp",
+        "width": 1280,
+        "bytes": 76324
       },
       {
-        "src": "assets/nebesnaya-09-1920.webp",
+        "src": "assets/nebesnaya-09-original.jpg",
         "width": 1920,
-        "bytes": 64228
+        "bytes": 153516
       }
-    ]
+    ],
+    "source": "assets/nebesnaya-09-original.jpg"
   },
   "nebesnaya-10": {
     "name": "nebesnaya-10",
@@ -1193,21 +1517,22 @@
     "height": 1080,
     "files": [
       {
-        "src": "assets/nebesnaya-10-480.webp",
-        "width": 480,
-        "bytes": 21020
+        "src": "assets/nebesnaya-10-hq-640.webp",
+        "width": 640,
+        "bytes": 56472
       },
       {
-        "src": "assets/nebesnaya-10-960.webp",
-        "width": 960,
-        "bytes": 52354
+        "src": "assets/nebesnaya-10-hq-1280.webp",
+        "width": 1280,
+        "bytes": 151628
       },
       {
-        "src": "assets/nebesnaya-10-1920.webp",
+        "src": "assets/nebesnaya-10-original.jpg",
         "width": 1920,
-        "bytes": 125354
+        "bytes": 299674
       }
-    ]
+    ],
+    "source": "assets/nebesnaya-10-original.jpg"
   },
   "nebesnaya-11": {
     "name": "nebesnaya-11",
@@ -1215,21 +1540,22 @@
     "height": 1080,
     "files": [
       {
-        "src": "assets/nebesnaya-11-480.webp",
-        "width": 480,
-        "bytes": 3524
+        "src": "assets/nebesnaya-11-hq-640.webp",
+        "width": 640,
+        "bytes": 8342
       },
       {
-        "src": "assets/nebesnaya-11-960.webp",
-        "width": 960,
-        "bytes": 8912
+        "src": "assets/nebesnaya-11-hq-1280.webp",
+        "width": 1280,
+        "bytes": 23514
       },
       {
-        "src": "assets/nebesnaya-11-1920.webp",
+        "src": "assets/nebesnaya-11-original.jpg",
         "width": 1920,
-        "bytes": 22294
+        "bytes": 71148
       }
-    ]
+    ],
+    "source": "assets/nebesnaya-11-original.jpg"
   },
   "nebesnaya-12": {
     "name": "nebesnaya-12",
@@ -1237,21 +1563,22 @@
     "height": 1080,
     "files": [
       {
-        "src": "assets/nebesnaya-12-480.webp",
-        "width": 480,
-        "bytes": 10382
+        "src": "assets/nebesnaya-12-hq-640.webp",
+        "width": 640,
+        "bytes": 46186
       },
       {
-        "src": "assets/nebesnaya-12-960.webp",
-        "width": 960,
-        "bytes": 38460
+        "src": "assets/nebesnaya-12-hq-1280.webp",
+        "width": 1280,
+        "bytes": 141492
       },
       {
-        "src": "assets/nebesnaya-12-1920.webp",
+        "src": "assets/nebesnaya-12-original.jpg",
         "width": 1920,
-        "bytes": 108712
+        "bytes": 260118
       }
-    ]
+    ],
+    "source": "assets/nebesnaya-12-original.jpg"
   },
   "nebesnaya-13": {
     "name": "nebesnaya-13",
@@ -1259,21 +1586,22 @@
     "height": 1080,
     "files": [
       {
-        "src": "assets/nebesnaya-13-480.webp",
-        "width": 480,
-        "bytes": 11326
+        "src": "assets/nebesnaya-13-hq-640.webp",
+        "width": 640,
+        "bytes": 30968
       },
       {
-        "src": "assets/nebesnaya-13-960.webp",
-        "width": 960,
-        "bytes": 30544
+        "src": "assets/nebesnaya-13-hq-1280.webp",
+        "width": 1280,
+        "bytes": 92804
       },
       {
-        "src": "assets/nebesnaya-13-1920.webp",
+        "src": "assets/nebesnaya-13-original.jpg",
         "width": 1920,
-        "bytes": 87628
+        "bytes": 187672
       }
-    ]
+    ],
+    "source": "assets/nebesnaya-13-original.jpg"
   },
   "nebesnaya-14": {
     "name": "nebesnaya-14",
@@ -1281,21 +1609,22 @@
     "height": 1080,
     "files": [
       {
-        "src": "assets/nebesnaya-14-480.webp",
-        "width": 480,
-        "bytes": 13062
+        "src": "assets/nebesnaya-14-hq-640.webp",
+        "width": 640,
+        "bytes": 39004
       },
       {
-        "src": "assets/nebesnaya-14-960.webp",
-        "width": 960,
-        "bytes": 31572
+        "src": "assets/nebesnaya-14-hq-1280.webp",
+        "width": 1280,
+        "bytes": 107832
       },
       {
-        "src": "assets/nebesnaya-14-1920.webp",
+        "src": "assets/nebesnaya-14-original.jpg",
         "width": 1920,
-        "bytes": 79390
+        "bytes": 238877
       }
-    ]
+    ],
+    "source": "assets/nebesnaya-14-original.jpg"
   },
   "nebesnaya-15": {
     "name": "nebesnaya-15",
@@ -1303,21 +1632,22 @@
     "height": 1080,
     "files": [
       {
-        "src": "assets/nebesnaya-15-480.webp",
-        "width": 480,
-        "bytes": 11282
+        "src": "assets/nebesnaya-15-hq-640.webp",
+        "width": 640,
+        "bytes": 34226
       },
       {
-        "src": "assets/nebesnaya-15-960.webp",
-        "width": 960,
-        "bytes": 35008
+        "src": "assets/nebesnaya-15-hq-1280.webp",
+        "width": 1280,
+        "bytes": 112156
       },
       {
-        "src": "assets/nebesnaya-15-1920.webp",
+        "src": "assets/nebesnaya-15-original.jpg",
         "width": 1920,
-        "bytes": 97422
+        "bytes": 200352
       }
-    ]
+    ],
+    "source": "assets/nebesnaya-15-original.jpg"
   },
   "nebesnaya-16": {
     "name": "nebesnaya-16",
@@ -1325,21 +1655,22 @@
     "height": 1086,
     "files": [
       {
-        "src": "assets/nebesnaya-16-480.webp",
-        "width": 480,
-        "bytes": 10568
+        "src": "assets/nebesnaya-16-hq-640.webp",
+        "width": 640,
+        "bytes": 49214
       },
       {
-        "src": "assets/nebesnaya-16-960.webp",
-        "width": 960,
-        "bytes": 46522
+        "src": "assets/nebesnaya-16-hq-1280.webp",
+        "width": 1280,
+        "bytes": 250174
       },
       {
-        "src": "assets/nebesnaya-16-1920.webp",
+        "src": "assets/nebesnaya-16-original.jpg",
         "width": 1920,
-        "bytes": 299920
+        "bytes": 456558
       }
-    ]
+    ],
+    "source": "assets/nebesnaya-16-original.jpg"
   },
   "nebesnaya-17": {
     "name": "nebesnaya-17",
@@ -1347,21 +1678,22 @@
     "height": 1080,
     "files": [
       {
-        "src": "assets/nebesnaya-17-480.webp",
-        "width": 480,
-        "bytes": 5056
+        "src": "assets/nebesnaya-17-hq-640.webp",
+        "width": 640,
+        "bytes": 19188
       },
       {
-        "src": "assets/nebesnaya-17-960.webp",
-        "width": 960,
-        "bytes": 18378
+        "src": "assets/nebesnaya-17-hq-1280.webp",
+        "width": 1280,
+        "bytes": 97552
       },
       {
-        "src": "assets/nebesnaya-17-1920.webp",
+        "src": "assets/nebesnaya-17-original.jpg",
         "width": 1920,
-        "bytes": 142798
+        "bytes": 227036
       }
-    ]
+    ],
+    "source": "assets/nebesnaya-17-original.jpg"
   },
   "nebesnaya-18": {
     "name": "nebesnaya-18",
@@ -1369,21 +1701,22 @@
     "height": 1080,
     "files": [
       {
-        "src": "assets/nebesnaya-18-480.webp",
-        "width": 480,
-        "bytes": 18518
+        "src": "assets/nebesnaya-18-hq-640.webp",
+        "width": 640,
+        "bytes": 56792
       },
       {
-        "src": "assets/nebesnaya-18-960.webp",
-        "width": 960,
-        "bytes": 50534
+        "src": "assets/nebesnaya-18-hq-1280.webp",
+        "width": 1280,
+        "bytes": 151606
       },
       {
-        "src": "assets/nebesnaya-18-1920.webp",
+        "src": "assets/nebesnaya-18-original.jpg",
         "width": 1920,
-        "bytes": 124734
+        "bytes": 287685
       }
-    ]
+    ],
+    "source": "assets/nebesnaya-18-original.jpg"
   },
   "nebesnaya-20": {
     "name": "nebesnaya-20",
@@ -1391,21 +1724,22 @@
     "height": 1080,
     "files": [
       {
-        "src": "assets/nebesnaya-20-480.webp",
-        "width": 480,
-        "bytes": 13218
+        "src": "assets/nebesnaya-20-hq-640.webp",
+        "width": 640,
+        "bytes": 41596
       },
       {
-        "src": "assets/nebesnaya-20-960.webp",
-        "width": 960,
-        "bytes": 47238
+        "src": "assets/nebesnaya-20-hq-1280.webp",
+        "width": 1280,
+        "bytes": 228572
       },
       {
-        "src": "assets/nebesnaya-20-1920.webp",
+        "src": "assets/nebesnaya-20-original.jpg",
         "width": 1920,
-        "bytes": 368930
+        "bytes": 475433
       }
-    ]
+    ],
+    "source": "assets/nebesnaya-20-original.jpg"
   },
   "nebesnaya-21": {
     "name": "nebesnaya-21",
@@ -1413,21 +1747,22 @@
     "height": 1080,
     "files": [
       {
-        "src": "assets/nebesnaya-21-480.webp",
-        "width": 480,
-        "bytes": 9466
+        "src": "assets/nebesnaya-21-hq-640.webp",
+        "width": 640,
+        "bytes": 28784
       },
       {
-        "src": "assets/nebesnaya-21-960.webp",
-        "width": 960,
-        "bytes": 31106
+        "src": "assets/nebesnaya-21-hq-1280.webp",
+        "width": 1280,
+        "bytes": 124806
       },
       {
-        "src": "assets/nebesnaya-21-1920.webp",
+        "src": "assets/nebesnaya-21-original.jpg",
         "width": 1920,
-        "bytes": 146780
+        "bytes": 241965
       }
-    ]
+    ],
+    "source": "assets/nebesnaya-21-original.jpg"
   },
   "nebesnaya-22": {
     "name": "nebesnaya-22",
@@ -1435,21 +1770,22 @@
     "height": 1080,
     "files": [
       {
-        "src": "assets/nebesnaya-22-480.webp",
-        "width": 480,
-        "bytes": 10464
+        "src": "assets/nebesnaya-22-hq-640.webp",
+        "width": 640,
+        "bytes": 23750
       },
       {
-        "src": "assets/nebesnaya-22-960.webp",
-        "width": 960,
-        "bytes": 24480
+        "src": "assets/nebesnaya-22-hq-1280.webp",
+        "width": 1280,
+        "bytes": 60746
       },
       {
-        "src": "assets/nebesnaya-22-1920.webp",
+        "src": "assets/nebesnaya-22-original.jpg",
         "width": 1920,
-        "bytes": 55064
+        "bytes": 134617
       }
-    ]
+    ],
+    "source": "assets/nebesnaya-22-original.jpg"
   },
   "nebesnaya-23": {
     "name": "nebesnaya-23",
@@ -1457,21 +1793,22 @@
     "height": 1080,
     "files": [
       {
-        "src": "assets/nebesnaya-23-480.webp",
-        "width": 480,
-        "bytes": 8774
+        "src": "assets/nebesnaya-23-hq-640.webp",
+        "width": 640,
+        "bytes": 29088
       },
       {
-        "src": "assets/nebesnaya-23-960.webp",
-        "width": 960,
-        "bytes": 28560
+        "src": "assets/nebesnaya-23-hq-1280.webp",
+        "width": 1280,
+        "bytes": 93186
       },
       {
-        "src": "assets/nebesnaya-23-1920.webp",
+        "src": "assets/nebesnaya-23-original.jpg",
         "width": 1920,
-        "bytes": 84258
+        "bytes": 181138
       }
-    ]
+    ],
+    "source": "assets/nebesnaya-23-original.jpg"
   },
   "nebesnaya-24": {
     "name": "nebesnaya-24",
@@ -1479,21 +1816,22 @@
     "height": 1080,
     "files": [
       {
-        "src": "assets/nebesnaya-24-480.webp",
-        "width": 480,
-        "bytes": 13064
+        "src": "assets/nebesnaya-24-hq-640.webp",
+        "width": 640,
+        "bytes": 42086
       },
       {
-        "src": "assets/nebesnaya-24-960.webp",
-        "width": 960,
-        "bytes": 39864
+        "src": "assets/nebesnaya-24-hq-1280.webp",
+        "width": 1280,
+        "bytes": 134784
       },
       {
-        "src": "assets/nebesnaya-24-1920.webp",
+        "src": "assets/nebesnaya-24-original.jpg",
         "width": 1920,
-        "bytes": 105296
+        "bytes": 243582
       }
-    ]
+    ],
+    "source": "assets/nebesnaya-24-original.jpg"
   },
   "nebesnaya-25": {
     "name": "nebesnaya-25",
@@ -1501,21 +1839,22 @@
     "height": 1080,
     "files": [
       {
-        "src": "assets/nebesnaya-25-480.webp",
-        "width": 480,
-        "bytes": 20224
+        "src": "assets/nebesnaya-25-hq-640.webp",
+        "width": 640,
+        "bytes": 48098
       },
       {
-        "src": "assets/nebesnaya-25-960.webp",
-        "width": 960,
-        "bytes": 51890
+        "src": "assets/nebesnaya-25-hq-1280.webp",
+        "width": 1280,
+        "bytes": 140930
       },
       {
-        "src": "assets/nebesnaya-25-1920.webp",
+        "src": "assets/nebesnaya-25-original.jpg",
         "width": 1920,
-        "bytes": 140976
+        "bytes": 291492
       }
-    ]
+    ],
+    "source": "assets/nebesnaya-25-original.jpg"
   },
   "other-03": {
     "name": "other-03",
@@ -1523,21 +1862,32 @@
     "height": 1620,
     "files": [
       {
-        "src": "assets/other-03-480.webp",
-        "width": 480,
-        "bytes": 20778
+        "src": "assets/other-03-hq-640.webp",
+        "width": 640,
+        "bytes": 76676
       },
       {
-        "src": "assets/other-03-960.webp",
-        "width": 960,
-        "bytes": 95584
+        "src": "assets/other-03-hq-1280.webp",
+        "width": 1280,
+        "bytes": 335206
       },
       {
-        "src": "assets/other-03-1920.webp",
+        "src": "assets/other-03-hq-1920.webp",
         "width": 1920,
-        "bytes": 452292
+        "bytes": 788660
+      },
+      {
+        "src": "assets/other-03-hq-2560.webp",
+        "width": 2560,
+        "bytes": 1240282
+      },
+      {
+        "src": "assets/other-03-original.jpg",
+        "width": 2880,
+        "bytes": 1282964
       }
-    ]
+    ],
+    "source": "assets/other-03-original.jpg"
   },
   "other-04": {
     "name": "other-04",
@@ -1545,21 +1895,32 @@
     "height": 1620,
     "files": [
       {
-        "src": "assets/other-04-480.webp",
-        "width": 480,
-        "bytes": 29664
+        "src": "assets/other-04-hq-640.webp",
+        "width": 640,
+        "bytes": 84878
       },
       {
-        "src": "assets/other-04-960.webp",
-        "width": 960,
-        "bytes": 91574
+        "src": "assets/other-04-hq-1280.webp",
+        "width": 1280,
+        "bytes": 282284
       },
       {
-        "src": "assets/other-04-1920.webp",
+        "src": "assets/other-04-hq-1920.webp",
         "width": 1920,
-        "bytes": 285442
+        "bytes": 554106
+      },
+      {
+        "src": "assets/other-04-hq-2560.webp",
+        "width": 2560,
+        "bytes": 867570
+      },
+      {
+        "src": "assets/other-04-original.jpg",
+        "width": 2880,
+        "bytes": 884230
       }
-    ]
+    ],
+    "source": "assets/other-04-original.jpg"
   },
   "other-05": {
     "name": "other-05",
@@ -1567,21 +1928,32 @@
     "height": 1620,
     "files": [
       {
-        "src": "assets/other-05-480.webp",
-        "width": 480,
-        "bytes": 15396
+        "src": "assets/other-05-hq-640.webp",
+        "width": 640,
+        "bytes": 34516
       },
       {
-        "src": "assets/other-05-960.webp",
-        "width": 960,
-        "bytes": 37518
+        "src": "assets/other-05-hq-1280.webp",
+        "width": 1280,
+        "bytes": 87786
       },
       {
-        "src": "assets/other-05-1920.webp",
+        "src": "assets/other-05-hq-1920.webp",
         "width": 1920,
-        "bytes": 91688
+        "bytes": 156706
+      },
+      {
+        "src": "assets/other-05-hq-2560.webp",
+        "width": 2560,
+        "bytes": 244728
+      },
+      {
+        "src": "assets/other-05-original.jpg",
+        "width": 2880,
+        "bytes": 403791
       }
-    ]
+    ],
+    "source": "assets/other-05-original.jpg"
   },
   "other-06": {
     "name": "other-06",
@@ -1589,21 +1961,32 @@
     "height": 1620,
     "files": [
       {
-        "src": "assets/other-06-480.webp",
-        "width": 480,
-        "bytes": 27762
+        "src": "assets/other-06-hq-640.webp",
+        "width": 640,
+        "bytes": 76612
       },
       {
-        "src": "assets/other-06-960.webp",
-        "width": 960,
-        "bytes": 89504
+        "src": "assets/other-06-hq-1280.webp",
+        "width": 1280,
+        "bytes": 257652
       },
       {
-        "src": "assets/other-06-1920.webp",
+        "src": "assets/other-06-hq-1920.webp",
         "width": 1920,
-        "bytes": 279598
+        "bytes": 530456
+      },
+      {
+        "src": "assets/other-06-hq-2560.webp",
+        "width": 2560,
+        "bytes": 847164
+      },
+      {
+        "src": "assets/other-06-original.jpg",
+        "width": 2880,
+        "bytes": 945912
       }
-    ]
+    ],
+    "source": "assets/other-06-original.jpg"
   },
   "other-08": {
     "name": "other-08",
@@ -1611,21 +1994,22 @@
     "height": 1080,
     "files": [
       {
-        "src": "assets/other-08-480.webp",
-        "width": 480,
-        "bytes": 2004
+        "src": "assets/other-08-hq-640.webp",
+        "width": 640,
+        "bytes": 3464
       },
       {
-        "src": "assets/other-08-960.webp",
-        "width": 960,
-        "bytes": 4578
+        "src": "assets/other-08-hq-1280.webp",
+        "width": 1280,
+        "bytes": 8290
       },
       {
-        "src": "assets/other-08-1920.webp",
+        "src": "assets/other-08-original.jpg",
         "width": 1920,
-        "bytes": 11402
+        "bytes": 27010
       }
-    ]
+    ],
+    "source": "assets/other-08-original.jpg"
   },
   "other-09": {
     "name": "other-09",
@@ -1633,21 +2017,22 @@
     "height": 1080,
     "files": [
       {
-        "src": "assets/other-09-480.webp",
-        "width": 480,
-        "bytes": 24332
+        "src": "assets/other-09-hq-640.webp",
+        "width": 640,
+        "bytes": 78512
       },
       {
-        "src": "assets/other-09-960.webp",
-        "width": 960,
-        "bytes": 93816
+        "src": "assets/other-09-hq-1280.webp",
+        "width": 1280,
+        "bytes": 343982
       },
       {
-        "src": "assets/other-09-1920.webp",
+        "src": "assets/other-09-original.jpg",
         "width": 1920,
-        "bytes": 570522
+        "bytes": 707958
       }
-    ]
+    ],
+    "source": "assets/other-09-original.jpg"
   },
   "other-10": {
     "name": "other-10",
@@ -1655,21 +2040,22 @@
     "height": 1080,
     "files": [
       {
-        "src": "assets/other-10-480.webp",
-        "width": 480,
-        "bytes": 18754
+        "src": "assets/other-10-hq-640.webp",
+        "width": 640,
+        "bytes": 73698
       },
       {
-        "src": "assets/other-10-960.webp",
-        "width": 960,
-        "bytes": 83216
+        "src": "assets/other-10-hq-1280.webp",
+        "width": 1280,
+        "bytes": 329134
       },
       {
-        "src": "assets/other-10-1920.webp",
+        "src": "assets/other-10-original.jpg",
         "width": 1920,
-        "bytes": 533988
+        "bytes": 620660
       }
-    ]
+    ],
+    "source": "assets/other-10-original.jpg"
   },
   "other-11": {
     "name": "other-11",
@@ -1677,21 +2063,22 @@
     "height": 1080,
     "files": [
       {
-        "src": "assets/other-11-480.webp",
-        "width": 480,
-        "bytes": 6188
+        "src": "assets/other-11-hq-640.webp",
+        "width": 640,
+        "bytes": 14352
       },
       {
-        "src": "assets/other-11-960.webp",
-        "width": 960,
-        "bytes": 15340
+        "src": "assets/other-11-hq-1280.webp",
+        "width": 1280,
+        "bytes": 38456
       },
       {
-        "src": "assets/other-11-1920.webp",
+        "src": "assets/other-11-original.jpg",
         "width": 1920,
-        "bytes": 36996
+        "bytes": 85993
       }
-    ]
+    ],
+    "source": "assets/other-11-original.jpg"
   },
   "other-12": {
     "name": "other-12",
@@ -1699,20 +2086,21 @@
     "height": 1080,
     "files": [
       {
-        "src": "assets/other-12-480.webp",
-        "width": 480,
-        "bytes": 3498
+        "src": "assets/other-12-hq-640.webp",
+        "width": 640,
+        "bytes": 14230
       },
       {
-        "src": "assets/other-12-960.webp",
-        "width": 960,
-        "bytes": 16646
+        "src": "assets/other-12-hq-1280.webp",
+        "width": 1280,
+        "bytes": 87018
       },
       {
-        "src": "assets/other-12-1920.webp",
+        "src": "assets/other-12-original.jpg",
         "width": 1920,
-        "bytes": 136914
+        "bytes": 190395
       }
-    ]
+    ],
+    "source": "assets/other-12-original.jpg"
   }
 }

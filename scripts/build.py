@@ -18,7 +18,18 @@ BOUND_WORDS = frozenset('''
 около от ото перед передо по под подо позади после посредством при про против
 путём путем ради с со сверх сквозь согласно среди спустя у через
 но да не ни бы же ли
+меня тебе тебя нами вами себя мной мною тобой тобою собой собою него нему нею ними
+мой моя моё мои твой твоя твоё твои свой своя своё свои моего моей моему моим
+твоего твоей твоему твоим своего своей своему своим своих нашего нашей наших
+вашего вашей ваших этому этого этой этим этих
+наша наше наши ваша ваше ваши этот эта это эти этого этому этой этим этих
+такой такая такие который которая которое которые которого которой которым которых которую которыми
 '''.split())
+
+
+def is_bound_word(token):
+    word = token.strip('«»„“"()[]{}.,!?;:…‘’').casefold()
+    return word in BOUND_WORDS or re.fullmatch(r'[а-яёa-z]{2,3}', word) is not None
 
 
 def prose(value):
@@ -29,14 +40,12 @@ def prose(value):
     cursor = 0
     index = 0
     while index < len(words) - 1:
-        word = words[index].group().lstrip('«„“"(‘').casefold()
-        if word not in BOUND_WORDS:
+        if not is_bound_word(words[index].group()):
             index += 1
             continue
         start = words[index].start()
         while index < len(words) - 1:
-            word = words[index].group().lstrip('«„“"(‘').casefold()
-            if word not in BOUND_WORDS:
+            if not is_bound_word(words[index].group()):
                 break
             index += 1
         end = words[index].end()
@@ -129,7 +138,7 @@ def render_project(slug):
 </div>''')
  parts.append('</main>')
  next_slug=ORDER[(ORDER.index(slug)+1)%len(ORDER)]
- parts.append('<footer class="project-footer"><a href="index.html"><span>'+prose('Вернуться на главную')+'</span></a><a class="next-project" href="'+next_slug+'.html"><span>Следующий проект</span></a></footer></body></html>')
+ parts.append('<footer class="project-footer"><a href="index.html"><svg class="footer-arrow" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 4-5 5 5 5M4 9h10a6 6 0 0 1 0 12"/></svg><span>'+prose('Вернуться на главную')+'</span></a><a class="next-project" href="'+next_slug+'.html"><span>Следующий проект</span><svg class="footer-arrow" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 4 5 5-5 5m5-5H10a6 6 0 0 0 0 12"/></svg></a></footer></body></html>')
  (ROOT/(slug+'.html')).write_text('\n'.join(parts)+'\n')
 if __name__=='__main__':
  render_home()

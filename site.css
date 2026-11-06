@@ -239,8 +239,9 @@ a.text-link:hover {
 }
 .project-footer {
   display:grid;
-  grid-template-columns:repeat(2,minmax(0,1fr));
-  gap:12px;
+  grid-template-columns:repeat(2,minmax(0,240px));
+  justify-content:center;
+  gap:20px;
   padding:36px var(--gutter);
   background:#fff
 }
@@ -249,17 +250,28 @@ a.text-link:hover {
   align-items:center;
   justify-content:center;
   min-height:54px;
-  padding:16px;
+  gap:10px;
+  padding:14px 18px;
   text-align:center;
-  border:1px solid #000;
+  border:1px solid #e6e6e6;
+  border-radius:14px;
+  box-shadow:0 1px 2px #00000008;
+  color:#000;
+  background:#fff;
   transition:background-color .2s ease,color .2s ease
 }
-.project-footer .next-project {
+.project-footer a:active {
   color:#fff;
-  background:#000
+  background:#000;
+  border-color:#000
 }
 .project-footer a > span {
   min-width:0
+}
+.project-footer .footer-arrow {
+  flex:none;
+  width:20px;
+  height:20px
 }
 /* Video placeholders keep their final dimensions before any media arrives. */
 .video-preview {
@@ -347,11 +359,8 @@ a.text-link:hover {
   }
   .project-footer a:hover {
     color:#fff;
-    background:#000
-  }
-  .project-footer .next-project:hover {
-    color:#000;
-    background:#fff
+    background:#000;
+    border-color:#000
   }
   .video-button:hover .play-icon {
     transform:scale(1.1)
@@ -447,11 +456,13 @@ a.text-link:hover {
     max-width:60ch
   }
   .project-footer {
-    padding:24px var(--gutter)
+    padding:24px var(--gutter);
+    gap:12px
   }
   .project-footer a {
     font-size:13px;
-    padding:12px;
+    padding:10px;
+    gap:6px;
     min-height:60px
   }
   .video-link {
