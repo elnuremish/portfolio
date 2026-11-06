@@ -9,7 +9,7 @@ IMAGES=json.loads((ROOT/'content/images.json').read_text())
 ORDER=['scherdakov','adat','nebesnaya','other']
 def e(value):return escape(str(value),quote=True)
 
-# Bind Russian prepositions and short function words to the following word.
+# Bind Russian prepositions, pronouns and short words to the following word.
 # This is applied to prose only; attributes, URLs and metadata stay plain text.
 BOUND_WORDS = frozenset('''
 а без безо благодаря близ в во вдоль взамен включая вместо вне внутри вокруг
@@ -18,7 +18,7 @@ BOUND_WORDS = frozenset('''
 около от ото перед передо по под подо позади после посредством при про против
 путём путем ради с со сверх сквозь согласно среди спустя у через
 но да не ни бы же ли
-меня тебе тебя нами вами себя мной мною тобой тобою собой собою него нему нею ними
+я меня тебе тебя нами вами себя мной мною тобой тобою собой собою него нему нею ними
 мой моя моё мои твой твоя твоё твои свой своя своё свои моего моей моему моим
 твоего твоей твоему твоим своего своей своему своим своих нашего нашей наших
 вашего вашей ваших этому этого этой этим этих
