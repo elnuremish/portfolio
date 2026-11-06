@@ -58,9 +58,9 @@ def prose(value):
 
 def revision(path):return hashlib.sha256((ROOT/path).read_bytes()).hexdigest()[:10]
 CSS=revision('site.css');JS=revision('site.js')
-def image(key, alt='', eager=False, profile=False, extra=''):
+def image(key, alt='', eager=False, profile=False, extra='', case=False):
     data = IMAGES[key]
-    files = data['files']
+    files = data.get('case_files', data['files']) if case else data['files']
     fallback = files[-1 if profile else min(1, len(files) - 1)]
     sizes = ('(max-width:809px) 124px, 246px'
              if profile else '(max-width:809px) calc(100vw - 36px), 100vw')
@@ -77,7 +77,11 @@ def image(key, alt='', eager=False, profile=False, extra=''):
     if eager and not profile:
         attributes['fetchpriority'] = 'high'
     markup = ' '.join(f'{name}="{e(value)}"' for name, value in attributes.items())
-    return '<img ' + markup + (' ' + extra if extra else '') + '>'
+    img = '<img ' + markup + (' ' + extra if extra else '') + '>'
+    if case and data.get('case_avif'):
+        srcset = ', '.join(f'{entry["src"]} {entry["width"]}w' for entry in data['case_avif'])
+        return f'<picture><source type="image/avif" srcset="{e(srcset)}" sizes="{e(sizes)}">{img}</picture>'
+    return img
 
 def contacts():
  return '<nav class="contact-links" aria-label="Контакты"><a class="text-link" href="https://t.me/elnuremish" target="_blank" rel="noopener noreferrer">контакт</a><a class="text-link" href="https://t.me/em16sh" target="_blank" rel="noopener noreferrer">телеграм канал</a><a class="text-link" href="mailto:elnuremish@gmail.com">почта</a></nav>'
@@ -125,7 +129,7 @@ def render_project(slug):
    parts.append('<section class="project-about"><'+heading+'>'+prose(item['title'])+'</'+heading+'><div class="project-description">'+''.join('<p>'+prose(p)+'</p>' for p in item['paragraphs'])+'</div></section>')
   elif kind=='image':
    sizes='(max-width:809px) 100vw, 100vw'
-   parts.append(f'<figure class="media gallery-image" style="--ratio:{ratio}">'+image(item['image'],f'{title} — {index+1}',index==first_image).replace('sizes="(max-width:809px) calc(100vw - 36px), 100vw"',f'sizes="{sizes}"')+'</figure>')
+   parts.append(f'<figure class="media gallery-image" style="--ratio:{ratio}">'+image(item['image'],f'{title} — {index+1}',index==first_image,case=True).replace('sizes="(max-width:809px) calc(100vw - 36px), 100vw"',f'sizes="{sizes}"')+'</figure>')
   elif kind=='embed':
    video_title=f'{title} — видео {index+1}'
    poster = item.get('poster')
