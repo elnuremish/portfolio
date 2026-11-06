@@ -104,7 +104,7 @@ def head(title,description,slug):
 <body>
 <a class="skip-link" href="#main">{prose('К содержимому')}</a>'''
 def render_home():
- home=CONTENT['home'];parts=[head(home['name']+' — Портфолио','Портфолио коммуникационного и продуктового дизайнера Эльнура Агабалаева.','index')]
+ home=CONTENT['home'];parts=[head(home['title'],home['description'],'index')]
  parts.append('<aside class="profile" aria-label="Профиль дизайнера">')
  parts.append(image(home['portrait'],home['name'],True,True,'class="portrait"'))
  parts.append('<div class="profile-info"><h1>'+prose(home['name'])+'</h1><p class="profile-bio">'+'<br>'.join(prose(s) for s in home['bio'])+'</p></div>'+contacts()+'</aside>')
