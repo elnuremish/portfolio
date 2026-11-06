@@ -1,0 +1,48 @@
+name: Publish portfolio
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: portfolio-pages
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v6
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
+      - name: Build static site
+        run: |
+          python3 scripts/build.py
+          mkdir -p _site
+          cp ./*.html site.css site.js favicon.ico favicon.svg apple-touch-icon.png _site/
+          cp -R assets _site/assets
+          touch _site/.nojekyll
+
+      - name: Upload site
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: _site
+
+      - name: Publish site
+        id: deployment
+        uses: actions/deploy-pages@v4
