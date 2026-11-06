@@ -1,9 +1,21 @@
-// Create only nearby players. The provider handles adaptive streaming and pauses
-// videos outside the viewport; no player code is requested on the home page.
+// Load visible players after the first gallery image, so video downloads do not
+// compete with the initial content. Autoplay works on mobile and desktop.
 const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
 const connection = navigator.connection;
 const saveData = Boolean(connection?.saveData);
 const slowConnection = saveData || /(^|-)2g$/.test(connection?.effectiveType || '');
+// Keep this separate from window.load, which can wait for unrelated images.
+const firstImage = document.querySelector('.gallery-image img[fetchpriority="high"]');
+const initialMediaReady = new Promise(resolve => {
+  if (!firstImage || firstImage.complete) resolve();
+  else {
+    firstImage.addEventListener('load', resolve, {once:true});
+    firstImage.addEventListener('error', resolve, {once:true});
+  }
+}).then(() => new Promise(resolve => {
+  if ('requestIdleCallback' in window) requestIdleCallback(resolve, {timeout:1000});
+  else setTimeout(resolve, 0);
+}));
 let playerFactoryPromise;
 function getPlayerFactory() {
   if (playerFactoryPromise) return playerFactoryPromise;
@@ -62,18 +74,29 @@ async function loadEmbed(container, userInitiated = false) {
     container.setAttribute('aria-busy', 'false');
   }
 }
-const nearbyEmbeds = 'IntersectionObserver' in window ? new IntersectionObserver(entries => {
+const visibleEmbeds = new Set();
+const startVisibleEmbed = container => {
+  initialMediaReady.then(() => {
+    if (visibleEmbeds.has(container) && !document.hidden && !slowConnection && !reducedMotion.matches) {
+      loadEmbed(container);
+    }
+  });
+};
+const visibleObserver = 'IntersectionObserver' in window ? new IntersectionObserver(entries => {
   for (const entry of entries) {
-    if (!entry.isIntersecting) continue;
-    if (!slowConnection) loadEmbed(entry.target);
-    nearbyEmbeds.unobserve(entry.target);
+    if (entry.isIntersecting) {
+      visibleEmbeds.add(entry.target);
+      startVisibleEmbed(entry.target);
+    } else visibleEmbeds.delete(entry.target);
   }
-}, {rootMargin: '400px 0px'}) : null;
+}, {threshold:0.1}) : null;
 for (const embed of document.querySelectorAll('[data-embed]')) {
   embed.querySelector('button').addEventListener('click', () => loadEmbed(embed, true));
-  if (nearbyEmbeds) nearbyEmbeds.observe(embed);
-  else if (!slowConnection) loadEmbed(embed);
+  if (visibleObserver) visibleObserver.observe(embed);
 }
+document.addEventListener('visibilitychange', () => {
+  if (!document.hidden) visibleEmbeds.forEach(startVisibleEmbed);
+});
 
 // The local loop has two encodings. Mobile/slow networks receive the smaller one.
 for (const video of document.querySelectorAll('video[data-src]')) {
@@ -105,16 +128,14 @@ for (const video of document.querySelectorAll('video[data-src]')) {
     else { manuallyPaused = false; play(); }
   });
   const update = () => {
-    if (inView && !document.hidden && !reducedMotion.matches && !slowConnection && !manuallyPaused) play();
+    if (inView && !document.hidden && !reducedMotion.matches && !slowConnection && !manuallyPaused) {
+      initialMediaReady.then(() => {
+        if (inView && !document.hidden && !reducedMotion.matches && !slowConnection && !manuallyPaused) play();
+      });
+    }
     else { video.pause(); toggle.textContent = 'Воспроизвести'; }
   };
   if ('IntersectionObserver' in window) {
-    const prepareObserver = new IntersectionObserver(entries => {
-      if (!entries.some(e => e.isIntersecting)) return;
-      if (!slowConnection) prepare();
-      prepareObserver.disconnect();
-    }, {rootMargin: '500px 0px'});
-    prepareObserver.observe(video);
     new IntersectionObserver(entries => { inView = entries[0].isIntersecting; update(); }, {threshold: .1}).observe(video);
   } else { video.controls = true; prepare(); }
   document.addEventListener('visibilitychange', update);

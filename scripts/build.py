@@ -95,6 +95,8 @@ def head(title,description,slug):
   <link rel="icon" href="favicon.ico?v=16" sizes="16x16 32x32 48x48">
   <link rel="icon" href="favicon.svg?v=16" type="image/svg+xml">
   <link rel="apple-touch-icon" href="apple-touch-icon.png?v=16">
+  <link rel="preload" href="assets/V3j1L0o5vPFKe26Sw4HcpXCfHo.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/UjFZPDy3qGuDktQM4q9CxhKfIa8.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="site.css?v={CSS}">
   <title>{e(title)}</title>
   <script src="site.js?v={JS}" defer></script>
@@ -115,6 +117,7 @@ def render_project(slug):
  project=CONTENT[slug];title=project['title'];first_about=next(i for i in project['items'] if i['type']=='about');description=' '.join(first_about['paragraphs'])
  parts=[head(title+' — Агабалаев Эльнур',description,slug),'<header class="project-header"><a class="text-link" href="index.html">Назад</a>'+contacts()+'</header>','<main id="main" class="project-gallery">']
  about_count=0
+ first_image=next((i for i,item in enumerate(project['items']) if item['type']=='image'),None)
  for index,item in enumerate(project['items']):
   kind=item['type'];ratio=item.get('ratio',16/9)
   if kind=='about':
@@ -122,10 +125,13 @@ def render_project(slug):
    parts.append('<section class="project-about"><'+heading+'>'+prose(item['title'])+'</'+heading+'><div class="project-description">'+''.join('<p>'+prose(p)+'</p>' for p in item['paragraphs'])+'</div></section>')
   elif kind=='image':
    sizes='(max-width:809px) 100vw, 100vw'
-   parts.append(f'<figure class="media gallery-image" style="--ratio:{ratio}">'+image(item['image'],f'{title} — {index+1}',index==0).replace('sizes="(max-width:809px) calc(100vw - 36px), 100vw"',f'sizes="{sizes}"')+'</figure>')
+   parts.append(f'<figure class="media gallery-image" style="--ratio:{ratio}">'+image(item['image'],f'{title} — {index+1}',index==first_image).replace('sizes="(max-width:809px) calc(100vw - 36px), 100vw"',f'sizes="{sizes}"')+'</figure>')
   elif kind=='embed':
    video_title=f'{title} — видео {index+1}'
+   poster = item.get('poster')
+   preview = (f'<img class="video-preview" src="{e(poster)}" width="1280" height="720" alt="" loading="{"eager" if index==0 else "lazy"}" decoding="async">' if poster else '')
    parts.append(f'''<div class="media embedded-video" style="--ratio:{ratio}" data-embed="{e(item['id'])}" data-title="{e(video_title)}">
+  {preview}
   <button class="video-button" type="button" aria-label="Воспроизвести: {e(video_title)}"><span class="play-icon" aria-hidden="true">▶</span><span>Смотреть видео</span></button>
   <span class="video-status" role="status"></span>
   <a class="video-link" href="https://kinescope.io/{e(item['id'])}" target="_blank" rel="noopener noreferrer">{prose('Открыть в Kinescope ↗')}</a>
