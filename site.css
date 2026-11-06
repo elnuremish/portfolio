@@ -233,10 +233,14 @@ a.text-link:hover {
 .project-description p+p {
   margin-top:1.3em
 }
+.text-keep {
+  white-space:nowrap;
+  overflow-wrap:normal
+}
 .project-footer {
   display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:0;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:12px;
   padding:36px var(--gutter);
   background:#fff
 }
@@ -253,6 +257,9 @@ a.text-link:hover {
 .project-footer .next-project {
   color:#fff;
   background:#000
+}
+.project-footer a > span {
+  min-width:0
 }
 /* Video placeholders keep their final dimensions before any media arrives. */
 .video-preview {
@@ -415,15 +422,18 @@ a.text-link:hover {
     gap:12px
   }
   .project-header .contact-links {
-    flex-direction:row;
-    flex-wrap:wrap;
-    justify-content:flex-end;
-    gap:0 14px
+    flex-direction:column;
+    align-items:flex-end;
+    gap:3px;
+    text-align:right
   }
   .project-header a {
     display:flex;
     align-items:center;
     min-height:44px
+  }
+  .project-header .contact-links a {
+    min-height:24px
   }
   .project-about {
     grid-template-columns:1fr;
@@ -457,7 +467,6 @@ a.text-link:hover {
     font-size:13px
   }
   .project-header .contact-links {
-    gap:0 10px;
     font-size:12px
   }
   .project-about {

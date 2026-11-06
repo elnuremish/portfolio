@@ -2,12 +2,51 @@
 """Build all static pages from content/ using only Python's standard library."""
 from pathlib import Path
 from html import escape
-import hashlib,json
+import hashlib,json,re
 ROOT=Path(__file__).resolve().parents[1]
 CONTENT=json.loads((ROOT/'content/portfolio.json').read_text())
 IMAGES=json.loads((ROOT/'content/images.json').read_text())
 ORDER=['scherdakov','adat','nebesnaya','other']
 def e(value):return escape(str(value),quote=True)
+
+# Bind Russian prepositions and short function words to the following word.
+# This is applied to prose only; attributes, URLs and metadata stay plain text.
+BOUND_WORDS = frozenset('''
+а без безо благодаря близ в во вдоль взамен включая вместо вне внутри вокруг
+вопреки вслед вследствие для до за и из из-за из-под исключая к ко касательно
+кроме меж между на над надо напротив насчёт насчет невзирая несмотря о об обо
+около от ото перед передо по под подо позади после посредством при про против
+путём путем ради с со сверх сквозь согласно среди спустя у через
+но да не ни бы же ли
+'''.split())
+
+
+def prose(value):
+    """Escape visible text and keep a function-word group on one line."""
+    value = str(value)
+    words = list(re.finditer(r'\S+', value))
+    parts = []
+    cursor = 0
+    index = 0
+    while index < len(words) - 1:
+        word = words[index].group().lstrip('«„“"(‘').casefold()
+        if word not in BOUND_WORDS:
+            index += 1
+            continue
+        start = words[index].start()
+        while index < len(words) - 1:
+            word = words[index].group().lstrip('«„“"(‘').casefold()
+            if word not in BOUND_WORDS:
+                break
+            index += 1
+        end = words[index].end()
+        group = re.sub(r'\s+', '\u00a0', value[start:end])
+        parts.extend((e(value[cursor:start]), '<span class="text-keep">', e(group), '</span>'))
+        cursor = end
+        index += 1
+    parts.append(e(value[cursor:]))
+    return ''.join(parts)
+
 def revision(path):return hashlib.sha256((ROOT/path).read_bytes()).hexdigest()[:10]
 CSS=revision('site.css');JS=revision('site.js')
 def image(key, alt='', eager=False, profile=False, extra=''):
@@ -52,15 +91,15 @@ def head(title,description,slug):
   <script src="site.js?v={JS}" defer></script>
 </head>
 <body>
-<a class="skip-link" href="#main">К содержимому</a>'''
+<a class="skip-link" href="#main">{prose('К содержимому')}</a>'''
 def render_home():
  home=CONTENT['home'];parts=[head(home['name']+' — Портфолио','Портфолио коммуникационного и продуктового дизайнера Эльнура Агабалаева.','index')]
  parts.append('<aside class="profile" aria-label="Профиль дизайнера">')
  parts.append(image(home['portrait'],home['name'],True,True,'class="portrait"'))
- parts.append('<div class="profile-info"><h1>'+e(home['name'])+'</h1><p class="profile-bio">'+'<br>'.join(e(s) for s in home['bio'])+'</p></div>'+contacts()+'</aside>')
+ parts.append('<div class="profile-info"><h1>'+prose(home['name'])+'</h1><p class="profile-bio">'+'<br>'.join(prose(s) for s in home['bio'])+'</p></div>'+contacts()+'</aside>')
  parts.append('<main id="main" class="portfolio"><div class="project-feed">')
  for number,card in enumerate(home['cards']):
-  slug=card['slug'];title=CONTENT[slug]['title'];parts.append(f'<figure class="project-card"><a class="project-cover" href="{slug}.html" aria-label="Открыть проект {e(title)}">'+image(card['image'],title,eager=number==0)+('<span class="project-badge">Новый проект</span>' if number==0 else '')+'</a><figcaption>'+e(card['caption'])+'</figcaption></figure>')
+  slug=card['slug'];title=CONTENT[slug]['title'];parts.append(f'<figure class="project-card"><a class="project-cover" href="{slug}.html" aria-label="Открыть проект {e(title)}">'+image(card['image'],title,eager=number==0)+('<span class="project-badge">Новый проект</span>' if number==0 else '')+'</a><figcaption>'+prose(card['caption'])+'</figcaption></figure>')
  parts.append('</div></main></body></html>')
  (ROOT/'index.html').write_text('\n'.join(parts)+'\n')
 def render_project(slug):
@@ -71,7 +110,7 @@ def render_project(slug):
   kind=item['type'];ratio=item.get('ratio',16/9)
   if kind=='about':
    heading='h1' if about_count==0 else 'h2';about_count+=1
-   parts.append('<section class="project-about"><'+heading+'>'+e(item['title'])+'</'+heading+'><div class="project-description">'+''.join('<p>'+e(p)+'</p>' for p in item['paragraphs'])+'</div></section>')
+   parts.append('<section class="project-about"><'+heading+'>'+prose(item['title'])+'</'+heading+'><div class="project-description">'+''.join('<p>'+prose(p)+'</p>' for p in item['paragraphs'])+'</div></section>')
   elif kind=='image':
    sizes='(max-width:809px) 100vw, 100vw'
    parts.append(f'<figure class="media gallery-image" style="--ratio:{ratio}">'+image(item['image'],f'{title} — {index+1}',index==0).replace('sizes="(max-width:809px) calc(100vw - 36px), 100vw"',f'sizes="{sizes}"')+'</figure>')
@@ -80,7 +119,7 @@ def render_project(slug):
    parts.append(f'''<div class="media embedded-video" style="--ratio:{ratio}" data-embed="{e(item['id'])}" data-title="{e(video_title)}">
   <button class="video-button" type="button" aria-label="Воспроизвести: {e(video_title)}"><span class="play-icon" aria-hidden="true">▶</span><span>Смотреть видео</span></button>
   <span class="video-status" role="status"></span>
-  <a class="video-link" href="https://kinescope.io/{e(item['id'])}" target="_blank" rel="noopener noreferrer">Открыть в Kinescope ↗</a>
+  <a class="video-link" href="https://kinescope.io/{e(item['id'])}" target="_blank" rel="noopener noreferrer">{prose('Открыть в Kinescope ↗')}</a>
 </div>''')
   elif kind=='video':
    parts.append(f'''<div class="media local-video" style="--ratio:{ratio}">
@@ -90,7 +129,7 @@ def render_project(slug):
 </div>''')
  parts.append('</main>')
  next_slug=ORDER[(ORDER.index(slug)+1)%len(ORDER)]
- parts.append('<footer class="project-footer"><a href="index.html">Вернуться на главную</a><a class="next-project" href="'+next_slug+'.html">Следующий проект</a></footer></body></html>')
+ parts.append('<footer class="project-footer"><a href="index.html"><span>'+prose('Вернуться на главную')+'</span></a><a class="next-project" href="'+next_slug+'.html"><span>Следующий проект</span></a></footer></body></html>')
  (ROOT/(slug+'.html')).write_text('\n'.join(parts)+'\n')
 if __name__=='__main__':
  render_home()

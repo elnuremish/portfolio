@@ -24,7 +24,7 @@ async function loadEmbed(container, userInitiated = false) {
   const status = container.querySelector('.video-status');
   status.textContent = 'Загрузка видео…';
   const timer = setTimeout(() => {
-    status.textContent = 'Видео загружается. Можно открыть его в Kinescope ↗';
+    status.textContent = 'Видео загружается. Можно открыть его в\u00a0Kinescope ↗';
   }, 15000);
   try {
     const factory = await getPlayerFactory();
@@ -55,7 +55,7 @@ async function loadEmbed(container, userInitiated = false) {
     document.addEventListener('visibilitychange', pauseWhenHidden);
     reducedMotion.addEventListener('change', event => { if (event.matches) player.pause().catch(() => {}); });
   } catch {
-    status.textContent = 'Плеер недоступен. Откройте видео в Kinescope ↗';
+    status.textContent = 'Плеер недоступен. Откройте видео в\u00a0Kinescope ↗';
     container.querySelector('.video-button').hidden = true;
   } finally {
     clearTimeout(timer);
