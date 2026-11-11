@@ -37,9 +37,9 @@ def prepare_case(item):
                          'bytes': target.stat().st_size}
                 # Never make the WebP/JPEG fallback heavier than before.
                 old = previous.get(size)
-                if extension == 'webp' and old and old['bytes'] < entry['bytes']:
-                    if old['src'] != entry['src']:
-                        target.unlink()
+                if (extension == 'webp' and old and old['src'] != entry['src']
+                        and old['bytes'] < entry['bytes']):
+                    target.unlink()
                     entry = old
                 entries.append(entry)
     metadata.update(width=width, height=height, case_files=files, case_avif=avif)
@@ -51,6 +51,11 @@ def prepare(item):
     name, metadata = item
     if name in CASE_IMAGES:
         return prepare_case(item)
+    if metadata.get('optimized'):
+        name, metadata = prepare_case(item)
+        metadata['files'] = metadata.pop('case_files')
+        metadata['avif'] = metadata.pop('case_avif')
+        return name, metadata
     source = ROOT / metadata['source']
     old_files = {entry['src'] for entry in metadata['files']}
     files = []
@@ -77,10 +82,14 @@ def prepare(item):
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--cases-only', action='store_true', help='Leave home images unchanged')
+    parser.add_argument('--image', action='append', help='Prepare only the named catalog image (repeatable)')
     args = parser.parse_args()
     images = json.loads(CATALOG.read_text())
+    if args.image and set(args.image) - images.keys():
+        parser.error('Unknown image: ' + ', '.join(sorted(set(args.image) - images.keys())))
     selected = [(name, data) for name, data in images.items()
-                if not args.cases_only or name in CASE_IMAGES]
+                if (not args.cases_only or name in CASE_IMAGES)
+                and (not args.image or name in args.image)]
     with ThreadPoolExecutor(max_workers=4) as pool:
         images.update(pool.map(prepare, selected))
     CATALOG.write_text(json.dumps(images, ensure_ascii=False, indent=2) + '\n')

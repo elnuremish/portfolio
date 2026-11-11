@@ -5232,5 +5232,46 @@
         "bytes": 172872
       }
     ]
+  },
+  "other-cover-shirt": {
+    "name": "other-cover-shirt",
+    "width": 1920,
+    "height": 1080,
+    "source": "assets/other-cover-shirt-original.jpg",
+    "optimized": true,
+    "files": [
+      {
+        "src": "assets/other-cover-shirt-opt-640.webp",
+        "width": 640,
+        "bytes": 21192
+      },
+      {
+        "src": "assets/other-cover-shirt-opt-1280.webp",
+        "width": 1280,
+        "bytes": 89446
+      },
+      {
+        "src": "assets/other-cover-shirt-opt-1920.webp",
+        "width": 1920,
+        "bytes": 202834
+      }
+    ],
+    "avif": [
+      {
+        "src": "assets/other-cover-shirt-opt-640.avif",
+        "width": 640,
+        "bytes": 16920
+      },
+      {
+        "src": "assets/other-cover-shirt-opt-1280.avif",
+        "width": 1280,
+        "bytes": 72248
+      },
+      {
+        "src": "assets/other-cover-shirt-opt-1920.avif",
+        "width": 1920,
+        "bytes": 158237
+      }
+    ]
   }
 }

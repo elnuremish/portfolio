@@ -1,6 +1,93 @@
 // Load visible players after the first gallery image, so video downloads do not
 // compete with the initial content. Autoplay works on mobile and desktop.
 const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
+
+// Only the home page has a profile. Scroll direction uses a small dead zone so
+// trackpad noise and the mobile overscroll bounce do not toggle the card.
+function setupProfile() {
+  const profile = document.querySelector('.profile');
+  if (!profile) return;
+  const slot = profile.parentElement;
+  const expanded = profile.querySelector('.profile-expanded');
+  const compact = profile.querySelector('.profile-compact');
+  let collapsed = false;
+  let previousY = Math.max(0, window.scrollY);
+  let travel = 0;
+  let direction = 0;
+  let scrollFrame = 0;
+  let resizeFrame = 0;
+  let maxScroll = 0;
+
+  const setCollapsed = value => {
+    if (value === collapsed) return;
+    // A keyboard user must not lose focus when a panel becomes inert.
+    const active = document.activeElement;
+    const links = [...(collapsed ? compact : expanded).querySelectorAll('a')];
+    const focusIndex = links.indexOf(active);
+    collapsed = value;
+    const shown = collapsed ? compact : expanded;
+    const hidden = collapsed ? expanded : compact;
+    shown.inert = false;
+    shown.removeAttribute('aria-hidden');
+    profile.classList.toggle('is-collapsed', collapsed);
+    if (focusIndex !== -1) shown.querySelectorAll('a')[focusIndex].focus({preventScroll:true});
+    hidden.inert = true;
+    hidden.setAttribute('aria-hidden', 'true');
+  };
+
+  const measure = () => {
+    resizeFrame = 0;
+    // Measure the untransformed content, including when it is folded away.
+    profile.style.setProperty('--profile-viewport-width', `${document.documentElement.clientWidth}px`);
+    profile.style.setProperty('--profile-expanded-width', `${expanded.offsetWidth}px`);
+    profile.style.setProperty('--profile-expanded-height', `${expanded.offsetHeight}px`);
+    profile.style.setProperty('--profile-compact-width', `${compact.offsetWidth}px`);
+    slot.style.setProperty('--profile-expanded-height', `${expanded.offsetHeight}px`);
+    maxScroll = Math.max(0, document.documentElement.scrollHeight - window.innerHeight);
+    previousY = Math.min(maxScroll, Math.max(0, window.scrollY));
+    travel = 0;
+  };
+
+  const update = () => {
+    scrollFrame = 0;
+    const y = Math.min(maxScroll, Math.max(0, window.scrollY));
+    const delta = y - previousY;
+    previousY = y;
+    if (y <= 24) {
+      setCollapsed(false);
+      travel = 0;
+      return;
+    }
+    if (!delta) return;
+    const nextDirection = Math.sign(delta);
+    travel = nextDirection === direction ? travel + Math.abs(delta) : Math.abs(delta);
+    direction = nextDirection;
+    if (travel >= 28) {
+      if (direction < 0 || y > 80) setCollapsed(direction > 0);
+      travel = 0;
+    }
+  };
+
+  compact.hidden = false;
+  profile.classList.add('is-enhanced');
+  slot.classList.add('is-enhanced');
+  measure();
+  setCollapsed(previousY > 80);
+  requestAnimationFrame(() => profile.classList.add('is-animated'));
+  window.addEventListener('scroll', () => {
+    if (!scrollFrame) scrollFrame = requestAnimationFrame(update);
+  }, {passive:true});
+  window.addEventListener('resize', () => {
+    if (!resizeFrame) resizeFrame = requestAnimationFrame(measure);
+  }, {passive:true});
+  window.addEventListener('pageshow', () => {
+    measure();
+    setCollapsed(previousY > 80);
+  });
+  document.fonts.ready.then(measure);
+}
+setupProfile();
+
 const connection = navigator.connection;
 const saveData = Boolean(connection?.saveData);
 const slowConnection = saveData || /(^|-)2g$/.test(connection?.effectiveType || '');

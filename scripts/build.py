@@ -78,8 +78,9 @@ def image(key, alt='', eager=False, profile=False, extra='', case=False):
         attributes['fetchpriority'] = 'high'
     markup = ' '.join(f'{name}="{e(value)}"' for name, value in attributes.items())
     img = '<img ' + markup + (' ' + extra if extra else '') + '>'
-    if case and data.get('case_avif'):
-        srcset = ', '.join(f'{entry["src"]} {entry["width"]}w' for entry in data['case_avif'])
+    avif = data.get('case_avif') if case else data.get('avif')
+    if avif:
+        srcset = ', '.join(f'{entry["src"]} {entry["width"]}w' for entry in avif)
         return f'<picture><source type="image/avif" srcset="{e(srcset)}" sizes="{e(sizes)}">{img}</picture>'
     return img
 
@@ -109,9 +110,10 @@ def head(title,description,slug):
 <a class="skip-link" href="#main">{prose('К содержимому')}</a>'''
 def render_home():
  home=CONTENT['home'];parts=[head(home['title'],home['description'],'index')]
- parts.append('<aside class="profile" aria-label="Профиль дизайнера">')
+ parts.append('<div class="profile-slot"><aside class="profile" aria-label="Профиль дизайнера"><div class="profile-expanded">')
  parts.append(image(home['portrait'],home['name'],True,True,'class="portrait"'))
- parts.append('<div class="profile-info"><h1>'+prose(home['name'])+'</h1><p class="profile-bio">'+'<br>'.join(prose(s) for s in home['bio'])+'</p></div>'+contacts()+'</aside>')
+ parts.append('<div class="profile-info"><h1>'+prose(home['name'])+'</h1><p class="profile-bio">'+'<br>'.join(prose(s) for s in home['bio'])+'</p></div>'+contacts()+'</div>')
+ parts.append('<div class="profile-compact" hidden inert aria-hidden="true">'+contacts()+'</div></aside></div>')
  parts.append('<main id="main" class="portfolio"><div class="project-feed">')
  for number,card in enumerate(home['cards']):
   slug=card['slug'];title=CONTENT[slug]['title'];parts.append(f'<figure class="project-card"><a class="project-cover" href="{slug}.html" aria-label="Открыть проект {e(title)}">'+image(card['image'],title,eager=number==0)+('<span class="project-badge">Новый проект</span>' if number==0 else '')+'</a><figcaption>'+prose(card['caption'])+'</figcaption></figure>')
