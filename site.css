@@ -347,12 +347,16 @@ a.text-link:hover {
   transition:background-color .2s ease
 }
 /* Hover feedback belongs to interactive elements, not gallery artwork. */
-.project-cover:focus-visible img {
-  filter:grayscale(1)
+@media (min-width:810px) and (hover:hover) and (pointer:fine) {
+  .project-cover img {
+    filter:grayscale(1)
+  }
+  .project-cover:hover img,.project-cover:focus-visible img {
+    filter:grayscale(0)
+  }
 }
 @media (hover:hover) and (pointer:fine) {
   .project-cover:hover img {
-    filter:grayscale(1);
     transform:scale(1.015)
   }
   .text-link:hover {
