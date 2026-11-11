@@ -88,6 +88,30 @@ function setupProfile() {
 }
 setupProfile();
 
+// One observer for mobile covers; no work on every scroll frame.
+function setupCoverVisibility() {
+  const feed = document.querySelector('.project-feed');
+  if (!feed || !('IntersectionObserver' in window)) return;
+  const mobile = matchMedia('(max-width:809.98px)');
+  const covers = feed.querySelectorAll('.project-cover');
+  let observer;
+  const update = () => {
+    observer?.disconnect();
+    feed.classList.toggle('has-scroll-color', mobile.matches);
+    covers.forEach(cover => cover.classList.remove('is-visible'));
+    if (!mobile.matches) return;
+    observer = new IntersectionObserver(entries => {
+      for (const entry of entries) {
+        entry.target.classList.toggle('is-visible', entry.intersectionRatio >= .5);
+      }
+    }, {threshold:.5});
+    covers.forEach(cover => observer.observe(cover));
+  };
+  update();
+  mobile.addEventListener('change', update);
+}
+setupCoverVisibility();
+
 const connection = navigator.connection;
 const saveData = Boolean(connection?.saveData);
 const slowConnection = saveData || /(^|-)2g$/.test(connection?.effectiveType || '');

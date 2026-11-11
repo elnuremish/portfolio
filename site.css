@@ -347,6 +347,14 @@ a.text-link:hover {
   transition:background-color .2s ease
 }
 /* Hover feedback belongs to interactive elements, not gallery artwork. */
+@media (max-width:809.98px) {
+  .has-scroll-color .project-cover img {
+    filter:grayscale(1)
+  }
+  .has-scroll-color .project-cover.is-visible img {
+    filter:grayscale(0)
+  }
+}
 @media (min-width:810px) and (hover:hover) and (pointer:fine) {
   .project-cover img {
     filter:grayscale(1)
