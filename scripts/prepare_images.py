@@ -47,6 +47,28 @@ def prepare_case(item):
     return name, metadata
 
 
+def prepare_mobile(item):
+    """Retina-sized phone assets; keep the desktop encodings untouched."""
+    name, metadata = item
+    files, avif = [], []
+    with Image.open(ROOT / metadata['source']) as original:
+        image = ImageOps.exif_transpose(original).convert('RGB')
+        for width in sorted({min(size, image.width) for size in (480, 800, 1200)}):
+            scaled = image.resize((width, round(image.height * width / image.width)),
+                                  Image.Resampling.LANCZOS)
+            for extension, options, entries in (
+                ('webp', {'quality': 84, 'method': 6}, files),
+                ('avif', {'quality': 65, 'speed': 6, 'subsampling': '4:4:4', 'max_threads': 1}, avif),
+            ):
+                target = ROOT / f'assets/{name}-mobile-{width}.{extension}'
+                scaled.save(target, extension.upper(), **options)
+                entries.append({'src': target.relative_to(ROOT).as_posix(),
+                                'width': width, 'bytes': target.stat().st_size})
+    metadata.update(mobile_files=files, mobile_avif=avif)
+    print(f'Prepared mobile {name}', flush=True)
+    return name, metadata
+
+
 def prepare(item):
     name, metadata = item
     if name in CASE_IMAGES:
@@ -81,6 +103,7 @@ def prepare(item):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--mobile-only', action='store_true', help='Prepare phone assets only')
     parser.add_argument('--cases-only', action='store_true', help='Leave home images unchanged')
     parser.add_argument('--image', action='append', help='Prepare only the named catalog image (repeatable)')
     args = parser.parse_args()
@@ -89,8 +112,9 @@ if __name__ == '__main__':
         parser.error('Unknown image: ' + ', '.join(sorted(set(args.image) - images.keys())))
     selected = [(name, data) for name, data in images.items()
                 if (not args.cases_only or name in CASE_IMAGES)
-                and (not args.image or name in args.image)]
+                and (not args.image or name in args.image)
+                and (not args.mobile_only or name != 'portrait')]
     with ThreadPoolExecutor(max_workers=4) as pool:
-        images.update(pool.map(prepare, selected))
+        images.update(pool.map(prepare_mobile if args.mobile_only else prepare, selected))
     CATALOG.write_text(json.dumps(images, ensure_ascii=False, indent=2) + '\n')
     print(f'Prepared {len(selected)} images; original files retained.')

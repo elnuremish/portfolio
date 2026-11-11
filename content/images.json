@@ -53,7 +53,41 @@
         "bytes": 1366851
       }
     ],
-    "source": "assets/scherdakov-cover-original.jpg"
+    "source": "assets/scherdakov-cover-original.jpg",
+    "mobile_files": [
+      {
+        "src": "assets/scherdakov-cover-mobile-480.webp",
+        "width": 480,
+        "bytes": 32724
+      },
+      {
+        "src": "assets/scherdakov-cover-mobile-800.webp",
+        "width": 800,
+        "bytes": 74166
+      },
+      {
+        "src": "assets/scherdakov-cover-mobile-1200.webp",
+        "width": 1200,
+        "bytes": 148612
+      }
+    ],
+    "mobile_avif": [
+      {
+        "src": "assets/scherdakov-cover-mobile-480.avif",
+        "width": 480,
+        "bytes": 22838
+      },
+      {
+        "src": "assets/scherdakov-cover-mobile-800.avif",
+        "width": 800,
+        "bytes": 52822
+      },
+      {
+        "src": "assets/scherdakov-cover-mobile-1200.avif",
+        "width": 1200,
+        "bytes": 110214
+      }
+    ]
   },
   "adat-cover": {
     "name": "adat-cover",
@@ -109,6 +143,40 @@
         "src": "assets/adat-cover-opt-1512.webp",
         "width": 1512,
         "bytes": 253494
+      }
+    ],
+    "mobile_files": [
+      {
+        "src": "assets/adat-cover-mobile-480.webp",
+        "width": 480,
+        "bytes": 26032
+      },
+      {
+        "src": "assets/adat-cover-mobile-800.webp",
+        "width": 800,
+        "bytes": 53760
+      },
+      {
+        "src": "assets/adat-cover-mobile-1200.webp",
+        "width": 1200,
+        "bytes": 100790
+      }
+    ],
+    "mobile_avif": [
+      {
+        "src": "assets/adat-cover-mobile-480.avif",
+        "width": 480,
+        "bytes": 18272
+      },
+      {
+        "src": "assets/adat-cover-mobile-800.avif",
+        "width": 800,
+        "bytes": 40264
+      },
+      {
+        "src": "assets/adat-cover-mobile-1200.avif",
+        "width": 1200,
+        "bytes": 81673
       }
     ]
   },
@@ -167,6 +235,40 @@
         "width": 1920,
         "bytes": 139836
       }
+    ],
+    "mobile_files": [
+      {
+        "src": "assets/nebesnaya-cover-mobile-480.webp",
+        "width": 480,
+        "bytes": 10808
+      },
+      {
+        "src": "assets/nebesnaya-cover-mobile-800.webp",
+        "width": 800,
+        "bytes": 24186
+      },
+      {
+        "src": "assets/nebesnaya-cover-mobile-1200.webp",
+        "width": 1200,
+        "bytes": 47070
+      }
+    ],
+    "mobile_avif": [
+      {
+        "src": "assets/nebesnaya-cover-mobile-480.avif",
+        "width": 480,
+        "bytes": 6296
+      },
+      {
+        "src": "assets/nebesnaya-cover-mobile-800.avif",
+        "width": 800,
+        "bytes": 15623
+      },
+      {
+        "src": "assets/nebesnaya-cover-mobile-1200.avif",
+        "width": 1200,
+        "bytes": 30963
+      }
     ]
   },
   "other-cover": {
@@ -200,7 +302,41 @@
         "bytes": 1920236
       }
     ],
-    "source": "assets/other-cover-original.jpg"
+    "source": "assets/other-cover-original.jpg",
+    "mobile_files": [
+      {
+        "src": "assets/other-cover-mobile-480.webp",
+        "width": 480,
+        "bytes": 42832
+      },
+      {
+        "src": "assets/other-cover-mobile-800.webp",
+        "width": 800,
+        "bytes": 117636
+      },
+      {
+        "src": "assets/other-cover-mobile-1200.webp",
+        "width": 1200,
+        "bytes": 251558
+      }
+    ],
+    "mobile_avif": [
+      {
+        "src": "assets/other-cover-mobile-480.avif",
+        "width": 480,
+        "bytes": 27794
+      },
+      {
+        "src": "assets/other-cover-mobile-800.avif",
+        "width": 800,
+        "bytes": 77090
+      },
+      {
+        "src": "assets/other-cover-mobile-1200.avif",
+        "width": 1200,
+        "bytes": 167904
+      }
+    ]
   },
   "scherdakov-03": {
     "name": "scherdakov-03",
@@ -286,6 +422,40 @@
         "src": "assets/scherdakov-03-opt-3200.webp",
         "width": 3200,
         "bytes": 840178
+      }
+    ],
+    "mobile_files": [
+      {
+        "src": "assets/scherdakov-03-mobile-480.webp",
+        "width": 480,
+        "bytes": 29108
+      },
+      {
+        "src": "assets/scherdakov-03-mobile-800.webp",
+        "width": 800,
+        "bytes": 63912
+      },
+      {
+        "src": "assets/scherdakov-03-mobile-1200.webp",
+        "width": 1200,
+        "bytes": 122370
+      }
+    ],
+    "mobile_avif": [
+      {
+        "src": "assets/scherdakov-03-mobile-480.avif",
+        "width": 480,
+        "bytes": 20841
+      },
+      {
+        "src": "assets/scherdakov-03-mobile-800.avif",
+        "width": 800,
+        "bytes": 47621
+      },
+      {
+        "src": "assets/scherdakov-03-mobile-1200.avif",
+        "width": 1200,
+        "bytes": 90871
       }
     ]
   },
@@ -374,6 +544,40 @@
         "width": 3200,
         "bytes": 1097998
       }
+    ],
+    "mobile_files": [
+      {
+        "src": "assets/scherdakov-05-mobile-480.webp",
+        "width": 480,
+        "bytes": 20616
+      },
+      {
+        "src": "assets/scherdakov-05-mobile-800.webp",
+        "width": 800,
+        "bytes": 45862
+      },
+      {
+        "src": "assets/scherdakov-05-mobile-1200.webp",
+        "width": 1200,
+        "bytes": 87440
+      }
+    ],
+    "mobile_avif": [
+      {
+        "src": "assets/scherdakov-05-mobile-480.avif",
+        "width": 480,
+        "bytes": 15174
+      },
+      {
+        "src": "assets/scherdakov-05-mobile-800.avif",
+        "width": 800,
+        "bytes": 33206
+      },
+      {
+        "src": "assets/scherdakov-05-mobile-1200.avif",
+        "width": 1200,
+        "bytes": 65809
+      }
     ]
   },
   "scherdakov-07": {
@@ -460,6 +664,40 @@
         "src": "assets/scherdakov-07-opt-3200.webp",
         "width": 3200,
         "bytes": 1198326
+      }
+    ],
+    "mobile_files": [
+      {
+        "src": "assets/scherdakov-07-mobile-480.webp",
+        "width": 480,
+        "bytes": 28912
+      },
+      {
+        "src": "assets/scherdakov-07-mobile-800.webp",
+        "width": 800,
+        "bytes": 64792
+      },
+      {
+        "src": "assets/scherdakov-07-mobile-1200.webp",
+        "width": 1200,
+        "bytes": 125470
+      }
+    ],
+    "mobile_avif": [
+      {
+        "src": "assets/scherdakov-07-mobile-480.avif",
+        "width": 480,
+        "bytes": 20009
+      },
+      {
+        "src": "assets/scherdakov-07-mobile-800.avif",
+        "width": 800,
+        "bytes": 45312
+      },
+      {
+        "src": "assets/scherdakov-07-mobile-1200.avif",
+        "width": 1200,
+        "bytes": 89030
       }
     ]
   },
@@ -548,6 +786,40 @@
         "width": 3200,
         "bytes": 2448960
       }
+    ],
+    "mobile_files": [
+      {
+        "src": "assets/scherdakov-08-mobile-480.webp",
+        "width": 480,
+        "bytes": 37884
+      },
+      {
+        "src": "assets/scherdakov-08-mobile-800.webp",
+        "width": 800,
+        "bytes": 93890
+      },
+      {
+        "src": "assets/scherdakov-08-mobile-1200.webp",
+        "width": 1200,
+        "bytes": 209176
+      }
+    ],
+    "mobile_avif": [
+      {
+        "src": "assets/scherdakov-08-mobile-480.avif",
+        "width": 480,
+        "bytes": 25759
+      },
+      {
+        "src": "assets/scherdakov-08-mobile-800.avif",
+        "width": 800,
+        "bytes": 64838
+      },
+      {
+        "src": "assets/scherdakov-08-mobile-1200.avif",
+        "width": 1200,
+        "bytes": 141222
+      }
     ]
   },
   "scherdakov-09": {
@@ -634,6 +906,40 @@
         "src": "assets/scherdakov-09-opt-3200.webp",
         "width": 3200,
         "bytes": 594000
+      }
+    ],
+    "mobile_files": [
+      {
+        "src": "assets/scherdakov-09-mobile-480.webp",
+        "width": 480,
+        "bytes": 16960
+      },
+      {
+        "src": "assets/scherdakov-09-mobile-800.webp",
+        "width": 800,
+        "bytes": 34734
+      },
+      {
+        "src": "assets/scherdakov-09-mobile-1200.webp",
+        "width": 1200,
+        "bytes": 61216
+      }
+    ],
+    "mobile_avif": [
+      {
+        "src": "assets/scherdakov-09-mobile-480.avif",
+        "width": 480,
+        "bytes": 13705
+      },
+      {
+        "src": "assets/scherdakov-09-mobile-800.avif",
+        "width": 800,
+        "bytes": 27506
+      },
+      {
+        "src": "assets/scherdakov-09-mobile-1200.avif",
+        "width": 1200,
+        "bytes": 50790
       }
     ]
   },
@@ -722,6 +1028,40 @@
         "width": 3200,
         "bytes": 41208
       }
+    ],
+    "mobile_files": [
+      {
+        "src": "assets/scherdakov-10-mobile-480.webp",
+        "width": 480,
+        "bytes": 4130
+      },
+      {
+        "src": "assets/scherdakov-10-mobile-800.webp",
+        "width": 800,
+        "bytes": 7308
+      },
+      {
+        "src": "assets/scherdakov-10-mobile-1200.webp",
+        "width": 1200,
+        "bytes": 11124
+      }
+    ],
+    "mobile_avif": [
+      {
+        "src": "assets/scherdakov-10-mobile-480.avif",
+        "width": 480,
+        "bytes": 3070
+      },
+      {
+        "src": "assets/scherdakov-10-mobile-800.avif",
+        "width": 800,
+        "bytes": 5009
+      },
+      {
+        "src": "assets/scherdakov-10-mobile-1200.avif",
+        "width": 1200,
+        "bytes": 7463
+      }
     ]
   },
   "scherdakov-11": {
@@ -808,6 +1148,40 @@
         "src": "assets/scherdakov-11-opt-3200.webp",
         "width": 3200,
         "bytes": 1858476
+      }
+    ],
+    "mobile_files": [
+      {
+        "src": "assets/scherdakov-11-mobile-480.webp",
+        "width": 480,
+        "bytes": 27810
+      },
+      {
+        "src": "assets/scherdakov-11-mobile-800.webp",
+        "width": 800,
+        "bytes": 62190
+      },
+      {
+        "src": "assets/scherdakov-11-mobile-1200.webp",
+        "width": 1200,
+        "bytes": 128832
+      }
+    ],
+    "mobile_avif": [
+      {
+        "src": "assets/scherdakov-11-mobile-480.avif",
+        "width": 480,
+        "bytes": 19528
+      },
+      {
+        "src": "assets/scherdakov-11-mobile-800.avif",
+        "width": 800,
+        "bytes": 44110
+      },
+      {
+        "src": "assets/scherdakov-11-mobile-1200.avif",
+        "width": 1200,
+        "bytes": 92802
       }
     ]
   },
@@ -896,6 +1270,40 @@
         "width": 3200,
         "bytes": 380158
       }
+    ],
+    "mobile_files": [
+      {
+        "src": "assets/scherdakov-12-mobile-480.webp",
+        "width": 480,
+        "bytes": 4944
+      },
+      {
+        "src": "assets/scherdakov-12-mobile-800.webp",
+        "width": 800,
+        "bytes": 9442
+      },
+      {
+        "src": "assets/scherdakov-12-mobile-1200.webp",
+        "width": 1200,
+        "bytes": 17436
+      }
+    ],
+    "mobile_avif": [
+      {
+        "src": "assets/scherdakov-12-mobile-480.avif",
+        "width": 480,
+        "bytes": 4036
+      },
+      {
+        "src": "assets/scherdakov-12-mobile-800.avif",
+        "width": 800,
+        "bytes": 7706
+      },
+      {
+        "src": "assets/scherdakov-12-mobile-1200.avif",
+        "width": 1200,
+        "bytes": 14697
+      }
     ]
   },
   "scherdakov-13": {
@@ -982,6 +1390,40 @@
         "src": "assets/scherdakov-13-opt-3200.webp",
         "width": 3200,
         "bytes": 202936
+      }
+    ],
+    "mobile_files": [
+      {
+        "src": "assets/scherdakov-13-mobile-480.webp",
+        "width": 480,
+        "bytes": 16784
+      },
+      {
+        "src": "assets/scherdakov-13-mobile-800.webp",
+        "width": 800,
+        "bytes": 31582
+      },
+      {
+        "src": "assets/scherdakov-13-mobile-1200.webp",
+        "width": 1200,
+        "bytes": 51024
+      }
+    ],
+    "mobile_avif": [
+      {
+        "src": "assets/scherdakov-13-mobile-480.avif",
+        "width": 480,
+        "bytes": 12761
+      },
+      {
+        "src": "assets/scherdakov-13-mobile-800.avif",
+        "width": 800,
+        "bytes": 24317
+      },
+      {
+        "src": "assets/scherdakov-13-mobile-1200.avif",
+        "width": 1200,
+        "bytes": 38543
       }
     ]
   },
@@ -1070,6 +1512,40 @@
         "width": 3200,
         "bytes": 1619756
       }
+    ],
+    "mobile_files": [
+      {
+        "src": "assets/scherdakov-15-mobile-480.webp",
+        "width": 480,
+        "bytes": 29384
+      },
+      {
+        "src": "assets/scherdakov-15-mobile-800.webp",
+        "width": 800,
+        "bytes": 74764
+      },
+      {
+        "src": "assets/scherdakov-15-mobile-1200.webp",
+        "width": 1200,
+        "bytes": 158952
+      }
+    ],
+    "mobile_avif": [
+      {
+        "src": "assets/scherdakov-15-mobile-480.avif",
+        "width": 480,
+        "bytes": 20702
+      },
+      {
+        "src": "assets/scherdakov-15-mobile-800.avif",
+        "width": 800,
+        "bytes": 53375
+      },
+      {
+        "src": "assets/scherdakov-15-mobile-1200.avif",
+        "width": 1200,
+        "bytes": 115849
+      }
     ]
   },
   "scherdakov-16": {
@@ -1156,6 +1632,40 @@
         "src": "assets/scherdakov-16-opt-3200.webp",
         "width": 3200,
         "bytes": 62686
+      }
+    ],
+    "mobile_files": [
+      {
+        "src": "assets/scherdakov-16-mobile-480.webp",
+        "width": 480,
+        "bytes": 5638
+      },
+      {
+        "src": "assets/scherdakov-16-mobile-800.webp",
+        "width": 800,
+        "bytes": 10186
+      },
+      {
+        "src": "assets/scherdakov-16-mobile-1200.webp",
+        "width": 1200,
+        "bytes": 16302
+      }
+    ],
+    "mobile_avif": [
+      {
+        "src": "assets/scherdakov-16-mobile-480.avif",
+        "width": 480,
+        "bytes": 4433
+      },
+      {
+        "src": "assets/scherdakov-16-mobile-800.avif",
+        "width": 800,
+        "bytes": 7666
+      },
+      {
+        "src": "assets/scherdakov-16-mobile-1200.avif",
+        "width": 1200,
+        "bytes": 12142
       }
     ]
   },
@@ -1244,6 +1754,40 @@
         "width": 3200,
         "bytes": 148234
       }
+    ],
+    "mobile_files": [
+      {
+        "src": "assets/scherdakov-17-mobile-480.webp",
+        "width": 480,
+        "bytes": 15128
+      },
+      {
+        "src": "assets/scherdakov-17-mobile-800.webp",
+        "width": 800,
+        "bytes": 26696
+      },
+      {
+        "src": "assets/scherdakov-17-mobile-1200.webp",
+        "width": 1200,
+        "bytes": 40270
+      }
+    ],
+    "mobile_avif": [
+      {
+        "src": "assets/scherdakov-17-mobile-480.avif",
+        "width": 480,
+        "bytes": 11539
+      },
+      {
+        "src": "assets/scherdakov-17-mobile-800.avif",
+        "width": 800,
+        "bytes": 19086
+      },
+      {
+        "src": "assets/scherdakov-17-mobile-1200.avif",
+        "width": 1200,
+        "bytes": 30351
+      }
     ]
   },
   "scherdakov-19": {
@@ -1330,6 +1874,40 @@
         "src": "assets/scherdakov-19-opt-3200.webp",
         "width": 3200,
         "bytes": 46944
+      }
+    ],
+    "mobile_files": [
+      {
+        "src": "assets/scherdakov-19-mobile-480.webp",
+        "width": 480,
+        "bytes": 4992
+      },
+      {
+        "src": "assets/scherdakov-19-mobile-800.webp",
+        "width": 800,
+        "bytes": 8190
+      },
+      {
+        "src": "assets/scherdakov-19-mobile-1200.webp",
+        "width": 1200,
+        "bytes": 12134
+      }
+    ],
+    "mobile_avif": [
+      {
+        "src": "assets/scherdakov-19-mobile-480.avif",
+        "width": 480,
+        "bytes": 4105
+      },
+      {
+        "src": "assets/scherdakov-19-mobile-800.avif",
+        "width": 800,
+        "bytes": 6127
+      },
+      {
+        "src": "assets/scherdakov-19-mobile-1200.avif",
+        "width": 1200,
+        "bytes": 9090
       }
     ]
   },
@@ -1418,6 +1996,40 @@
         "width": 3200,
         "bytes": 328072
       }
+    ],
+    "mobile_files": [
+      {
+        "src": "assets/scherdakov-20-mobile-480.webp",
+        "width": 480,
+        "bytes": 22834
+      },
+      {
+        "src": "assets/scherdakov-20-mobile-800.webp",
+        "width": 800,
+        "bytes": 45394
+      },
+      {
+        "src": "assets/scherdakov-20-mobile-1200.webp",
+        "width": 1200,
+        "bytes": 77224
+      }
+    ],
+    "mobile_avif": [
+      {
+        "src": "assets/scherdakov-20-mobile-480.avif",
+        "width": 480,
+        "bytes": 16269
+      },
+      {
+        "src": "assets/scherdakov-20-mobile-800.avif",
+        "width": 800,
+        "bytes": 32864
+      },
+      {
+        "src": "assets/scherdakov-20-mobile-1200.avif",
+        "width": 1200,
+        "bytes": 57238
+      }
     ]
   },
   "scherdakov-21": {
@@ -1504,6 +2116,40 @@
         "src": "assets/scherdakov-21-opt-3200.webp",
         "width": 3200,
         "bytes": 925520
+      }
+    ],
+    "mobile_files": [
+      {
+        "src": "assets/scherdakov-21-mobile-480.webp",
+        "width": 480,
+        "bytes": 14254
+      },
+      {
+        "src": "assets/scherdakov-21-mobile-800.webp",
+        "width": 800,
+        "bytes": 28318
+      },
+      {
+        "src": "assets/scherdakov-21-mobile-1200.webp",
+        "width": 1200,
+        "bytes": 50604
+      }
+    ],
+    "mobile_avif": [
+      {
+        "src": "assets/scherdakov-21-mobile-480.avif",
+        "width": 480,
+        "bytes": 10054
+      },
+      {
+        "src": "assets/scherdakov-21-mobile-800.avif",
+        "width": 800,
+        "bytes": 21076
+      },
+      {
+        "src": "assets/scherdakov-21-mobile-1200.avif",
+        "width": 1200,
+        "bytes": 40318
       }
     ]
   },
@@ -1592,6 +2238,40 @@
         "width": 3200,
         "bytes": 56250
       }
+    ],
+    "mobile_files": [
+      {
+        "src": "assets/scherdakov-23-mobile-480.webp",
+        "width": 480,
+        "bytes": 5382
+      },
+      {
+        "src": "assets/scherdakov-23-mobile-800.webp",
+        "width": 800,
+        "bytes": 9218
+      },
+      {
+        "src": "assets/scherdakov-23-mobile-1200.webp",
+        "width": 1200,
+        "bytes": 14360
+      }
+    ],
+    "mobile_avif": [
+      {
+        "src": "assets/scherdakov-23-mobile-480.avif",
+        "width": 480,
+        "bytes": 4582
+      },
+      {
+        "src": "assets/scherdakov-23-mobile-800.avif",
+        "width": 800,
+        "bytes": 7267
+      },
+      {
+        "src": "assets/scherdakov-23-mobile-1200.avif",
+        "width": 1200,
+        "bytes": 10387
+      }
     ]
   },
   "scherdakov-24": {
@@ -1678,6 +2358,40 @@
         "src": "assets/scherdakov-24-opt-3200.webp",
         "width": 3200,
         "bytes": 1675008
+      }
+    ],
+    "mobile_files": [
+      {
+        "src": "assets/scherdakov-24-mobile-480.webp",
+        "width": 480,
+        "bytes": 35022
+      },
+      {
+        "src": "assets/scherdakov-24-mobile-800.webp",
+        "width": 800,
+        "bytes": 87082
+      },
+      {
+        "src": "assets/scherdakov-24-mobile-1200.webp",
+        "width": 1200,
+        "bytes": 184096
+      }
+    ],
+    "mobile_avif": [
+      {
+        "src": "assets/scherdakov-24-mobile-480.avif",
+        "width": 480,
+        "bytes": 24083
+      },
+      {
+        "src": "assets/scherdakov-24-mobile-800.avif",
+        "width": 800,
+        "bytes": 59853
+      },
+      {
+        "src": "assets/scherdakov-24-mobile-1200.avif",
+        "width": 1200,
+        "bytes": 127037
       }
     ]
   },
@@ -1766,6 +2480,40 @@
         "width": 3200,
         "bytes": 1605968
       }
+    ],
+    "mobile_files": [
+      {
+        "src": "assets/scherdakov-26-mobile-480.webp",
+        "width": 480,
+        "bytes": 39246
+      },
+      {
+        "src": "assets/scherdakov-26-mobile-800.webp",
+        "width": 800,
+        "bytes": 94046
+      },
+      {
+        "src": "assets/scherdakov-26-mobile-1200.webp",
+        "width": 1200,
+        "bytes": 188728
+      }
+    ],
+    "mobile_avif": [
+      {
+        "src": "assets/scherdakov-26-mobile-480.avif",
+        "width": 480,
+        "bytes": 26586
+      },
+      {
+        "src": "assets/scherdakov-26-mobile-800.avif",
+        "width": 800,
+        "bytes": 61489
+      },
+      {
+        "src": "assets/scherdakov-26-mobile-1200.avif",
+        "width": 1200,
+        "bytes": 121556
+      }
     ]
   },
   "scherdakov-27": {
@@ -1852,6 +2600,40 @@
         "src": "assets/scherdakov-27-opt-3200.webp",
         "width": 3200,
         "bytes": 613170
+      }
+    ],
+    "mobile_files": [
+      {
+        "src": "assets/scherdakov-27-mobile-480.webp",
+        "width": 480,
+        "bytes": 24032
+      },
+      {
+        "src": "assets/scherdakov-27-mobile-800.webp",
+        "width": 800,
+        "bytes": 46934
+      },
+      {
+        "src": "assets/scherdakov-27-mobile-1200.webp",
+        "width": 1200,
+        "bytes": 82368
+      }
+    ],
+    "mobile_avif": [
+      {
+        "src": "assets/scherdakov-27-mobile-480.avif",
+        "width": 480,
+        "bytes": 18091
+      },
+      {
+        "src": "assets/scherdakov-27-mobile-800.avif",
+        "width": 800,
+        "bytes": 35306
+      },
+      {
+        "src": "assets/scherdakov-27-mobile-1200.avif",
+        "width": 1200,
+        "bytes": 63276
       }
     ]
   },
@@ -1940,6 +2722,40 @@
         "width": 3200,
         "bytes": 618064
       }
+    ],
+    "mobile_files": [
+      {
+        "src": "assets/scherdakov-28-mobile-480.webp",
+        "width": 480,
+        "bytes": 35044
+      },
+      {
+        "src": "assets/scherdakov-28-mobile-800.webp",
+        "width": 800,
+        "bytes": 74504
+      },
+      {
+        "src": "assets/scherdakov-28-mobile-1200.webp",
+        "width": 1200,
+        "bytes": 131118
+      }
+    ],
+    "mobile_avif": [
+      {
+        "src": "assets/scherdakov-28-mobile-480.avif",
+        "width": 480,
+        "bytes": 25692
+      },
+      {
+        "src": "assets/scherdakov-28-mobile-800.avif",
+        "width": 800,
+        "bytes": 54565
+      },
+      {
+        "src": "assets/scherdakov-28-mobile-1200.avif",
+        "width": 1200,
+        "bytes": 97207
+      }
     ]
   },
   "scherdakov-29": {
@@ -2026,6 +2842,40 @@
         "src": "assets/scherdakov-29-opt-3200.webp",
         "width": 3200,
         "bytes": 628262
+      }
+    ],
+    "mobile_files": [
+      {
+        "src": "assets/scherdakov-29-mobile-480.webp",
+        "width": 480,
+        "bytes": 24568
+      },
+      {
+        "src": "assets/scherdakov-29-mobile-800.webp",
+        "width": 800,
+        "bytes": 48704
+      },
+      {
+        "src": "assets/scherdakov-29-mobile-1200.webp",
+        "width": 1200,
+        "bytes": 86700
+      }
+    ],
+    "mobile_avif": [
+      {
+        "src": "assets/scherdakov-29-mobile-480.avif",
+        "width": 480,
+        "bytes": 18165
+      },
+      {
+        "src": "assets/scherdakov-29-mobile-800.avif",
+        "width": 800,
+        "bytes": 36348
+      },
+      {
+        "src": "assets/scherdakov-29-mobile-1200.avif",
+        "width": 1200,
+        "bytes": 66122
       }
     ]
   },
@@ -2114,6 +2964,40 @@
         "width": 3200,
         "bytes": 1792396
       }
+    ],
+    "mobile_files": [
+      {
+        "src": "assets/scherdakov-30-mobile-480.webp",
+        "width": 480,
+        "bytes": 26982
+      },
+      {
+        "src": "assets/scherdakov-30-mobile-800.webp",
+        "width": 800,
+        "bytes": 58802
+      },
+      {
+        "src": "assets/scherdakov-30-mobile-1200.webp",
+        "width": 1200,
+        "bytes": 125772
+      }
+    ],
+    "mobile_avif": [
+      {
+        "src": "assets/scherdakov-30-mobile-480.avif",
+        "width": 480,
+        "bytes": 18767
+      },
+      {
+        "src": "assets/scherdakov-30-mobile-800.avif",
+        "width": 800,
+        "bytes": 40974
+      },
+      {
+        "src": "assets/scherdakov-30-mobile-1200.avif",
+        "width": 1200,
+        "bytes": 84229
+      }
     ]
   },
   "scherdakov-31": {
@@ -2200,6 +3084,40 @@
         "src": "assets/scherdakov-31-opt-3200.webp",
         "width": 3200,
         "bytes": 1223760
+      }
+    ],
+    "mobile_files": [
+      {
+        "src": "assets/scherdakov-31-mobile-480.webp",
+        "width": 480,
+        "bytes": 23782
+      },
+      {
+        "src": "assets/scherdakov-31-mobile-800.webp",
+        "width": 800,
+        "bytes": 50890
+      },
+      {
+        "src": "assets/scherdakov-31-mobile-1200.webp",
+        "width": 1200,
+        "bytes": 102776
+      }
+    ],
+    "mobile_avif": [
+      {
+        "src": "assets/scherdakov-31-mobile-480.avif",
+        "width": 480,
+        "bytes": 18382
+      },
+      {
+        "src": "assets/scherdakov-31-mobile-800.avif",
+        "width": 800,
+        "bytes": 37360
+      },
+      {
+        "src": "assets/scherdakov-31-mobile-1200.avif",
+        "width": 1200,
+        "bytes": 68751
       }
     ]
   },
@@ -2288,6 +3206,40 @@
         "width": 3200,
         "bytes": 1227382
       }
+    ],
+    "mobile_files": [
+      {
+        "src": "assets/scherdakov-32-mobile-480.webp",
+        "width": 480,
+        "bytes": 38634
+      },
+      {
+        "src": "assets/scherdakov-32-mobile-800.webp",
+        "width": 800,
+        "bytes": 86724
+      },
+      {
+        "src": "assets/scherdakov-32-mobile-1200.webp",
+        "width": 1200,
+        "bytes": 169192
+      }
+    ],
+    "mobile_avif": [
+      {
+        "src": "assets/scherdakov-32-mobile-480.avif",
+        "width": 480,
+        "bytes": 26893
+      },
+      {
+        "src": "assets/scherdakov-32-mobile-800.avif",
+        "width": 800,
+        "bytes": 58769
+      },
+      {
+        "src": "assets/scherdakov-32-mobile-1200.avif",
+        "width": 1200,
+        "bytes": 116784
+      }
     ]
   },
   "scherdakov-33": {
@@ -2375,6 +3327,40 @@
         "width": 3414,
         "bytes": 170572
       }
+    ],
+    "mobile_files": [
+      {
+        "src": "assets/scherdakov-33-mobile-480.webp",
+        "width": 480,
+        "bytes": 10380
+      },
+      {
+        "src": "assets/scherdakov-33-mobile-800.webp",
+        "width": 800,
+        "bytes": 21720
+      },
+      {
+        "src": "assets/scherdakov-33-mobile-1200.webp",
+        "width": 1200,
+        "bytes": 36828
+      }
+    ],
+    "mobile_avif": [
+      {
+        "src": "assets/scherdakov-33-mobile-480.avif",
+        "width": 480,
+        "bytes": 12323
+      },
+      {
+        "src": "assets/scherdakov-33-mobile-800.avif",
+        "width": 800,
+        "bytes": 19460
+      },
+      {
+        "src": "assets/scherdakov-33-mobile-1200.avif",
+        "width": 1200,
+        "bytes": 29525
+      }
     ]
   },
   "adat-03": {
@@ -2431,6 +3417,40 @@
         "src": "assets/adat-03-opt-1512.webp",
         "width": 1512,
         "bytes": 329114
+      }
+    ],
+    "mobile_files": [
+      {
+        "src": "assets/adat-03-mobile-480.webp",
+        "width": 480,
+        "bytes": 33266
+      },
+      {
+        "src": "assets/adat-03-mobile-800.webp",
+        "width": 800,
+        "bytes": 77018
+      },
+      {
+        "src": "assets/adat-03-mobile-1200.webp",
+        "width": 1200,
+        "bytes": 149460
+      }
+    ],
+    "mobile_avif": [
+      {
+        "src": "assets/adat-03-mobile-480.avif",
+        "width": 480,
+        "bytes": 23151
+      },
+      {
+        "src": "assets/adat-03-mobile-800.avif",
+        "width": 800,
+        "bytes": 54672
+      },
+      {
+        "src": "assets/adat-03-mobile-1200.avif",
+        "width": 1200,
+        "bytes": 110375
       }
     ]
   },
@@ -2489,6 +3509,40 @@
         "width": 1512,
         "bytes": 247378
       }
+    ],
+    "mobile_files": [
+      {
+        "src": "assets/adat-04-mobile-480.webp",
+        "width": 480,
+        "bytes": 26496
+      },
+      {
+        "src": "assets/adat-04-mobile-800.webp",
+        "width": 800,
+        "bytes": 51756
+      },
+      {
+        "src": "assets/adat-04-mobile-1200.webp",
+        "width": 1200,
+        "bytes": 100100
+      }
+    ],
+    "mobile_avif": [
+      {
+        "src": "assets/adat-04-mobile-480.avif",
+        "width": 480,
+        "bytes": 18151
+      },
+      {
+        "src": "assets/adat-04-mobile-800.avif",
+        "width": 800,
+        "bytes": 38098
+      },
+      {
+        "src": "assets/adat-04-mobile-1200.avif",
+        "width": 1200,
+        "bytes": 76907
+      }
     ]
   },
   "adat-05": {
@@ -2545,6 +3599,40 @@
         "src": "assets/adat-05-opt-1512.webp",
         "width": 1512,
         "bytes": 370166
+      }
+    ],
+    "mobile_files": [
+      {
+        "src": "assets/adat-05-mobile-480.webp",
+        "width": 480,
+        "bytes": 36566
+      },
+      {
+        "src": "assets/adat-05-mobile-800.webp",
+        "width": 800,
+        "bytes": 85530
+      },
+      {
+        "src": "assets/adat-05-mobile-1200.webp",
+        "width": 1200,
+        "bytes": 170958
+      }
+    ],
+    "mobile_avif": [
+      {
+        "src": "assets/adat-05-mobile-480.avif",
+        "width": 480,
+        "bytes": 25144
+      },
+      {
+        "src": "assets/adat-05-mobile-800.avif",
+        "width": 800,
+        "bytes": 57796
+      },
+      {
+        "src": "assets/adat-05-mobile-1200.avif",
+        "width": 1200,
+        "bytes": 117782
       }
     ]
   },
@@ -2603,6 +3691,40 @@
         "width": 1512,
         "bytes": 258734
       }
+    ],
+    "mobile_files": [
+      {
+        "src": "assets/adat-06-mobile-480.webp",
+        "width": 480,
+        "bytes": 28118
+      },
+      {
+        "src": "assets/adat-06-mobile-800.webp",
+        "width": 800,
+        "bytes": 59654
+      },
+      {
+        "src": "assets/adat-06-mobile-1200.webp",
+        "width": 1200,
+        "bytes": 112752
+      }
+    ],
+    "mobile_avif": [
+      {
+        "src": "assets/adat-06-mobile-480.avif",
+        "width": 480,
+        "bytes": 19501
+      },
+      {
+        "src": "assets/adat-06-mobile-800.avif",
+        "width": 800,
+        "bytes": 42852
+      },
+      {
+        "src": "assets/adat-06-mobile-1200.avif",
+        "width": 1200,
+        "bytes": 86696
+      }
     ]
   },
   "adat-07": {
@@ -2659,6 +3781,40 @@
         "src": "assets/adat-07-opt-1512.webp",
         "width": 1512,
         "bytes": 240446
+      }
+    ],
+    "mobile_files": [
+      {
+        "src": "assets/adat-07-mobile-480.webp",
+        "width": 480,
+        "bytes": 20360
+      },
+      {
+        "src": "assets/adat-07-mobile-800.webp",
+        "width": 800,
+        "bytes": 40912
+      },
+      {
+        "src": "assets/adat-07-mobile-1200.webp",
+        "width": 1200,
+        "bytes": 85544
+      }
+    ],
+    "mobile_avif": [
+      {
+        "src": "assets/adat-07-mobile-480.avif",
+        "width": 480,
+        "bytes": 14764
+      },
+      {
+        "src": "assets/adat-07-mobile-800.avif",
+        "width": 800,
+        "bytes": 31651
+      },
+      {
+        "src": "assets/adat-07-mobile-1200.avif",
+        "width": 1200,
+        "bytes": 69837
       }
     ]
   },
@@ -2717,6 +3873,40 @@
         "width": 1512,
         "bytes": 272744
       }
+    ],
+    "mobile_files": [
+      {
+        "src": "assets/adat-08-mobile-480.webp",
+        "width": 480,
+        "bytes": 28692
+      },
+      {
+        "src": "assets/adat-08-mobile-800.webp",
+        "width": 800,
+        "bytes": 61632
+      },
+      {
+        "src": "assets/adat-08-mobile-1200.webp",
+        "width": 1200,
+        "bytes": 113070
+      }
+    ],
+    "mobile_avif": [
+      {
+        "src": "assets/adat-08-mobile-480.avif",
+        "width": 480,
+        "bytes": 21049
+      },
+      {
+        "src": "assets/adat-08-mobile-800.avif",
+        "width": 800,
+        "bytes": 46684
+      },
+      {
+        "src": "assets/adat-08-mobile-1200.avif",
+        "width": 1200,
+        "bytes": 90561
+      }
     ]
   },
   "adat-09": {
@@ -2773,6 +3963,40 @@
         "src": "assets/adat-09-opt-1512.webp",
         "width": 1512,
         "bytes": 330310
+      }
+    ],
+    "mobile_files": [
+      {
+        "src": "assets/adat-09-mobile-480.webp",
+        "width": 480,
+        "bytes": 26216
+      },
+      {
+        "src": "assets/adat-09-mobile-800.webp",
+        "width": 800,
+        "bytes": 74124
+      },
+      {
+        "src": "assets/adat-09-mobile-1200.webp",
+        "width": 1200,
+        "bytes": 154578
+      }
+    ],
+    "mobile_avif": [
+      {
+        "src": "assets/adat-09-mobile-480.avif",
+        "width": 480,
+        "bytes": 20077
+      },
+      {
+        "src": "assets/adat-09-mobile-800.avif",
+        "width": 800,
+        "bytes": 55169
+      },
+      {
+        "src": "assets/adat-09-mobile-1200.avif",
+        "width": 1200,
+        "bytes": 113903
       }
     ]
   },
@@ -2831,6 +4055,40 @@
         "width": 1512,
         "bytes": 309438
       }
+    ],
+    "mobile_files": [
+      {
+        "src": "assets/adat-10-mobile-480.webp",
+        "width": 480,
+        "bytes": 25868
+      },
+      {
+        "src": "assets/adat-10-mobile-800.webp",
+        "width": 800,
+        "bytes": 64546
+      },
+      {
+        "src": "assets/adat-10-mobile-1200.webp",
+        "width": 1200,
+        "bytes": 130994
+      }
+    ],
+    "mobile_avif": [
+      {
+        "src": "assets/adat-10-mobile-480.avif",
+        "width": 480,
+        "bytes": 18129
+      },
+      {
+        "src": "assets/adat-10-mobile-800.avif",
+        "width": 800,
+        "bytes": 46567
+      },
+      {
+        "src": "assets/adat-10-mobile-1200.avif",
+        "width": 1200,
+        "bytes": 98002
+      }
     ]
   },
   "adat-11": {
@@ -2887,6 +4145,40 @@
         "src": "assets/adat-11-opt-1512.webp",
         "width": 1512,
         "bytes": 311842
+      }
+    ],
+    "mobile_files": [
+      {
+        "src": "assets/adat-11-mobile-480.webp",
+        "width": 480,
+        "bytes": 16972
+      },
+      {
+        "src": "assets/adat-11-mobile-800.webp",
+        "width": 800,
+        "bytes": 48298
+      },
+      {
+        "src": "assets/adat-11-mobile-1200.webp",
+        "width": 1200,
+        "bytes": 123508
+      }
+    ],
+    "mobile_avif": [
+      {
+        "src": "assets/adat-11-mobile-480.avif",
+        "width": 480,
+        "bytes": 13602
+      },
+      {
+        "src": "assets/adat-11-mobile-800.avif",
+        "width": 800,
+        "bytes": 36702
+      },
+      {
+        "src": "assets/adat-11-mobile-1200.avif",
+        "width": 1200,
+        "bytes": 91300
       }
     ]
   },
@@ -2945,6 +4237,40 @@
         "width": 1512,
         "bytes": 403343
       }
+    ],
+    "mobile_files": [
+      {
+        "src": "assets/adat-12-mobile-480.webp",
+        "width": 480,
+        "bytes": 24408
+      },
+      {
+        "src": "assets/adat-12-mobile-800.webp",
+        "width": 800,
+        "bytes": 67328
+      },
+      {
+        "src": "assets/adat-12-mobile-1200.webp",
+        "width": 1200,
+        "bytes": 172414
+      }
+    ],
+    "mobile_avif": [
+      {
+        "src": "assets/adat-12-mobile-480.avif",
+        "width": 480,
+        "bytes": 19161
+      },
+      {
+        "src": "assets/adat-12-mobile-800.avif",
+        "width": 800,
+        "bytes": 49541
+      },
+      {
+        "src": "assets/adat-12-mobile-1200.avif",
+        "width": 1200,
+        "bytes": 117832
+      }
     ]
   },
   "adat-13": {
@@ -3001,6 +4327,40 @@
         "src": "assets/adat-13-opt-1512.webp",
         "width": 1512,
         "bytes": 174786
+      }
+    ],
+    "mobile_files": [
+      {
+        "src": "assets/adat-13-mobile-480.webp",
+        "width": 480,
+        "bytes": 21344
+      },
+      {
+        "src": "assets/adat-13-mobile-800.webp",
+        "width": 800,
+        "bytes": 45726
+      },
+      {
+        "src": "assets/adat-13-mobile-1200.webp",
+        "width": 1200,
+        "bytes": 83610
+      }
+    ],
+    "mobile_avif": [
+      {
+        "src": "assets/adat-13-mobile-480.avif",
+        "width": 480,
+        "bytes": 16243
+      },
+      {
+        "src": "assets/adat-13-mobile-800.avif",
+        "width": 800,
+        "bytes": 33535
+      },
+      {
+        "src": "assets/adat-13-mobile-1200.avif",
+        "width": 1200,
+        "bytes": 63410
       }
     ]
   },
@@ -3059,6 +4419,40 @@
         "width": 1512,
         "bytes": 232784
       }
+    ],
+    "mobile_files": [
+      {
+        "src": "assets/adat-14-mobile-480.webp",
+        "width": 480,
+        "bytes": 25242
+      },
+      {
+        "src": "assets/adat-14-mobile-800.webp",
+        "width": 800,
+        "bytes": 53090
+      },
+      {
+        "src": "assets/adat-14-mobile-1200.webp",
+        "width": 1200,
+        "bytes": 99242
+      }
+    ],
+    "mobile_avif": [
+      {
+        "src": "assets/adat-14-mobile-480.avif",
+        "width": 480,
+        "bytes": 19424
+      },
+      {
+        "src": "assets/adat-14-mobile-800.avif",
+        "width": 800,
+        "bytes": 41977
+      },
+      {
+        "src": "assets/adat-14-mobile-1200.avif",
+        "width": 1200,
+        "bytes": 80343
+      }
     ]
   },
   "adat-15": {
@@ -3115,6 +4509,40 @@
         "src": "assets/adat-15-opt-1512.webp",
         "width": 1512,
         "bytes": 203770
+      }
+    ],
+    "mobile_files": [
+      {
+        "src": "assets/adat-15-mobile-480.webp",
+        "width": 480,
+        "bytes": 14060
+      },
+      {
+        "src": "assets/adat-15-mobile-800.webp",
+        "width": 800,
+        "bytes": 30006
+      },
+      {
+        "src": "assets/adat-15-mobile-1200.webp",
+        "width": 1200,
+        "bytes": 65316
+      }
+    ],
+    "mobile_avif": [
+      {
+        "src": "assets/adat-15-mobile-480.avif",
+        "width": 480,
+        "bytes": 11091
+      },
+      {
+        "src": "assets/adat-15-mobile-800.avif",
+        "width": 800,
+        "bytes": 24933
+      },
+      {
+        "src": "assets/adat-15-mobile-1200.avif",
+        "width": 1200,
+        "bytes": 58583
       }
     ]
   },
@@ -3173,6 +4601,40 @@
         "width": 1512,
         "bytes": 438660
       }
+    ],
+    "mobile_files": [
+      {
+        "src": "assets/adat-16-mobile-480.webp",
+        "width": 480,
+        "bytes": 38318
+      },
+      {
+        "src": "assets/adat-16-mobile-800.webp",
+        "width": 800,
+        "bytes": 93040
+      },
+      {
+        "src": "assets/adat-16-mobile-1200.webp",
+        "width": 1200,
+        "bytes": 192638
+      }
+    ],
+    "mobile_avif": [
+      {
+        "src": "assets/adat-16-mobile-480.avif",
+        "width": 480,
+        "bytes": 25987
+      },
+      {
+        "src": "assets/adat-16-mobile-800.avif",
+        "width": 800,
+        "bytes": 64440
+      },
+      {
+        "src": "assets/adat-16-mobile-1200.avif",
+        "width": 1200,
+        "bytes": 133801
+      }
     ]
   },
   "adat-17": {
@@ -3229,6 +4691,40 @@
         "src": "assets/adat-17-opt-1512.webp",
         "width": 1512,
         "bytes": 295710
+      }
+    ],
+    "mobile_files": [
+      {
+        "src": "assets/adat-17-mobile-480.webp",
+        "width": 480,
+        "bytes": 25672
+      },
+      {
+        "src": "assets/adat-17-mobile-800.webp",
+        "width": 800,
+        "bytes": 73436
+      },
+      {
+        "src": "assets/adat-17-mobile-1200.webp",
+        "width": 1200,
+        "bytes": 148084
+      }
+    ],
+    "mobile_avif": [
+      {
+        "src": "assets/adat-17-mobile-480.avif",
+        "width": 480,
+        "bytes": 19573
+      },
+      {
+        "src": "assets/adat-17-mobile-800.avif",
+        "width": 800,
+        "bytes": 52874
+      },
+      {
+        "src": "assets/adat-17-mobile-1200.avif",
+        "width": 1200,
+        "bytes": 103785
       }
     ]
   },
@@ -3287,6 +4783,40 @@
         "width": 1512,
         "bytes": 478816
       }
+    ],
+    "mobile_files": [
+      {
+        "src": "assets/adat-18-mobile-480.webp",
+        "width": 480,
+        "bytes": 42456
+      },
+      {
+        "src": "assets/adat-18-mobile-800.webp",
+        "width": 800,
+        "bytes": 109858
+      },
+      {
+        "src": "assets/adat-18-mobile-1200.webp",
+        "width": 1200,
+        "bytes": 230286
+      }
+    ],
+    "mobile_avif": [
+      {
+        "src": "assets/adat-18-mobile-480.avif",
+        "width": 480,
+        "bytes": 28215
+      },
+      {
+        "src": "assets/adat-18-mobile-800.avif",
+        "width": 800,
+        "bytes": 74358
+      },
+      {
+        "src": "assets/adat-18-mobile-1200.avif",
+        "width": 1200,
+        "bytes": 156577
+      }
     ]
   },
   "adat-19": {
@@ -3343,6 +4873,40 @@
         "src": "assets/adat-19-original.jpg",
         "width": 1512,
         "bytes": 367617
+      }
+    ],
+    "mobile_files": [
+      {
+        "src": "assets/adat-19-mobile-480.webp",
+        "width": 480,
+        "bytes": 13180
+      },
+      {
+        "src": "assets/adat-19-mobile-800.webp",
+        "width": 800,
+        "bytes": 37232
+      },
+      {
+        "src": "assets/adat-19-mobile-1200.webp",
+        "width": 1200,
+        "bytes": 125090
+      }
+    ],
+    "mobile_avif": [
+      {
+        "src": "assets/adat-19-mobile-480.avif",
+        "width": 480,
+        "bytes": 10208
+      },
+      {
+        "src": "assets/adat-19-mobile-800.avif",
+        "width": 800,
+        "bytes": 28749
+      },
+      {
+        "src": "assets/adat-19-mobile-1200.avif",
+        "width": 1200,
+        "bytes": 84455
       }
     ]
   },
@@ -3401,6 +4965,40 @@
         "width": 1512,
         "bytes": 196754
       }
+    ],
+    "mobile_files": [
+      {
+        "src": "assets/adat-20-mobile-480.webp",
+        "width": 480,
+        "bytes": 13278
+      },
+      {
+        "src": "assets/adat-20-mobile-800.webp",
+        "width": 800,
+        "bytes": 30524
+      },
+      {
+        "src": "assets/adat-20-mobile-1200.webp",
+        "width": 1200,
+        "bytes": 64866
+      }
+    ],
+    "mobile_avif": [
+      {
+        "src": "assets/adat-20-mobile-480.avif",
+        "width": 480,
+        "bytes": 11342
+      },
+      {
+        "src": "assets/adat-20-mobile-800.avif",
+        "width": 800,
+        "bytes": 26513
+      },
+      {
+        "src": "assets/adat-20-mobile-1200.avif",
+        "width": 1200,
+        "bytes": 58170
+      }
     ]
   },
   "nebesnaya-01": {
@@ -3457,6 +5055,40 @@
         "src": "assets/nebesnaya-01-opt-1920.webp",
         "width": 1920,
         "bytes": 204230
+      }
+    ],
+    "mobile_files": [
+      {
+        "src": "assets/nebesnaya-01-mobile-480.webp",
+        "width": 480,
+        "bytes": 15472
+      },
+      {
+        "src": "assets/nebesnaya-01-mobile-800.webp",
+        "width": 800,
+        "bytes": 33938
+      },
+      {
+        "src": "assets/nebesnaya-01-mobile-1200.webp",
+        "width": 1200,
+        "bytes": 61860
+      }
+    ],
+    "mobile_avif": [
+      {
+        "src": "assets/nebesnaya-01-mobile-480.avif",
+        "width": 480,
+        "bytes": 9795
+      },
+      {
+        "src": "assets/nebesnaya-01-mobile-800.avif",
+        "width": 800,
+        "bytes": 21931
+      },
+      {
+        "src": "assets/nebesnaya-01-mobile-1200.avif",
+        "width": 1200,
+        "bytes": 46330
       }
     ]
   },
@@ -3515,6 +5147,40 @@
         "width": 1920,
         "bytes": 79174
       }
+    ],
+    "mobile_files": [
+      {
+        "src": "assets/nebesnaya-03-mobile-480.webp",
+        "width": 480,
+        "bytes": 5246
+      },
+      {
+        "src": "assets/nebesnaya-03-mobile-800.webp",
+        "width": 800,
+        "bytes": 12030
+      },
+      {
+        "src": "assets/nebesnaya-03-mobile-1200.webp",
+        "width": 1200,
+        "bytes": 23682
+      }
+    ],
+    "mobile_avif": [
+      {
+        "src": "assets/nebesnaya-03-mobile-480.avif",
+        "width": 480,
+        "bytes": 4867
+      },
+      {
+        "src": "assets/nebesnaya-03-mobile-800.avif",
+        "width": 800,
+        "bytes": 11030
+      },
+      {
+        "src": "assets/nebesnaya-03-mobile-1200.avif",
+        "width": 1200,
+        "bytes": 21964
+      }
     ]
   },
   "nebesnaya-04": {
@@ -3571,6 +5237,40 @@
         "src": "assets/nebesnaya-04-opt-1920.webp",
         "width": 1920,
         "bytes": 120760
+      }
+    ],
+    "mobile_files": [
+      {
+        "src": "assets/nebesnaya-04-mobile-480.webp",
+        "width": 480,
+        "bytes": 11814
+      },
+      {
+        "src": "assets/nebesnaya-04-mobile-800.webp",
+        "width": 800,
+        "bytes": 23876
+      },
+      {
+        "src": "assets/nebesnaya-04-mobile-1200.webp",
+        "width": 1200,
+        "bytes": 41588
+      }
+    ],
+    "mobile_avif": [
+      {
+        "src": "assets/nebesnaya-04-mobile-480.avif",
+        "width": 480,
+        "bytes": 10766
+      },
+      {
+        "src": "assets/nebesnaya-04-mobile-800.avif",
+        "width": 800,
+        "bytes": 21878
+      },
+      {
+        "src": "assets/nebesnaya-04-mobile-1200.avif",
+        "width": 1200,
+        "bytes": 39099
       }
     ]
   },
@@ -3629,6 +5329,40 @@
         "width": 1920,
         "bytes": 68066
       }
+    ],
+    "mobile_files": [
+      {
+        "src": "assets/nebesnaya-06-mobile-480.webp",
+        "width": 480,
+        "bytes": 3396
+      },
+      {
+        "src": "assets/nebesnaya-06-mobile-800.webp",
+        "width": 800,
+        "bytes": 6806
+      },
+      {
+        "src": "assets/nebesnaya-06-mobile-1200.webp",
+        "width": 1200,
+        "bytes": 13336
+      }
+    ],
+    "mobile_avif": [
+      {
+        "src": "assets/nebesnaya-06-mobile-480.avif",
+        "width": 480,
+        "bytes": 3234
+      },
+      {
+        "src": "assets/nebesnaya-06-mobile-800.avif",
+        "width": 800,
+        "bytes": 5608
+      },
+      {
+        "src": "assets/nebesnaya-06-mobile-1200.avif",
+        "width": 1200,
+        "bytes": 11084
+      }
     ]
   },
   "nebesnaya-07": {
@@ -3685,6 +5419,40 @@
         "src": "assets/nebesnaya-07-opt-1920.webp",
         "width": 1920,
         "bytes": 137504
+      }
+    ],
+    "mobile_files": [
+      {
+        "src": "assets/nebesnaya-07-mobile-480.webp",
+        "width": 480,
+        "bytes": 5738
+      },
+      {
+        "src": "assets/nebesnaya-07-mobile-800.webp",
+        "width": 800,
+        "bytes": 10680
+      },
+      {
+        "src": "assets/nebesnaya-07-mobile-1200.webp",
+        "width": 1200,
+        "bytes": 22520
+      }
+    ],
+    "mobile_avif": [
+      {
+        "src": "assets/nebesnaya-07-mobile-480.avif",
+        "width": 480,
+        "bytes": 5010
+      },
+      {
+        "src": "assets/nebesnaya-07-mobile-800.avif",
+        "width": 800,
+        "bytes": 9553
+      },
+      {
+        "src": "assets/nebesnaya-07-mobile-1200.avif",
+        "width": 1200,
+        "bytes": 20392
       }
     ]
   },
@@ -3743,6 +5511,40 @@
         "width": 1920,
         "bytes": 86010
       }
+    ],
+    "mobile_files": [
+      {
+        "src": "assets/nebesnaya-09-mobile-480.webp",
+        "width": 480,
+        "bytes": 5144
+      },
+      {
+        "src": "assets/nebesnaya-09-mobile-800.webp",
+        "width": 800,
+        "bytes": 13278
+      },
+      {
+        "src": "assets/nebesnaya-09-mobile-1200.webp",
+        "width": 1200,
+        "bytes": 27552
+      }
+    ],
+    "mobile_avif": [
+      {
+        "src": "assets/nebesnaya-09-mobile-480.avif",
+        "width": 480,
+        "bytes": 4892
+      },
+      {
+        "src": "assets/nebesnaya-09-mobile-800.avif",
+        "width": 800,
+        "bytes": 12271
+      },
+      {
+        "src": "assets/nebesnaya-09-mobile-1200.avif",
+        "width": 1200,
+        "bytes": 25576
+      }
     ]
   },
   "nebesnaya-10": {
@@ -3799,6 +5601,40 @@
         "src": "assets/nebesnaya-10-opt-1920.webp",
         "width": 1920,
         "bytes": 162476
+      }
+    ],
+    "mobile_files": [
+      {
+        "src": "assets/nebesnaya-10-mobile-480.webp",
+        "width": 480,
+        "bytes": 18928
+      },
+      {
+        "src": "assets/nebesnaya-10-mobile-800.webp",
+        "width": 800,
+        "bytes": 37446
+      },
+      {
+        "src": "assets/nebesnaya-10-mobile-1200.webp",
+        "width": 1200,
+        "bytes": 62696
+      }
+    ],
+    "mobile_avif": [
+      {
+        "src": "assets/nebesnaya-10-mobile-480.avif",
+        "width": 480,
+        "bytes": 14587
+      },
+      {
+        "src": "assets/nebesnaya-10-mobile-800.avif",
+        "width": 800,
+        "bytes": 30016
+      },
+      {
+        "src": "assets/nebesnaya-10-mobile-1200.avif",
+        "width": 1200,
+        "bytes": 52634
       }
     ]
   },
@@ -3857,6 +5693,40 @@
         "width": 1920,
         "bytes": 28984
       }
+    ],
+    "mobile_files": [
+      {
+        "src": "assets/nebesnaya-11-mobile-480.webp",
+        "width": 480,
+        "bytes": 3282
+      },
+      {
+        "src": "assets/nebesnaya-11-mobile-800.webp",
+        "width": 800,
+        "bytes": 6466
+      },
+      {
+        "src": "assets/nebesnaya-11-mobile-1200.webp",
+        "width": 1200,
+        "bytes": 10930
+      }
+    ],
+    "mobile_avif": [
+      {
+        "src": "assets/nebesnaya-11-mobile-480.avif",
+        "width": 480,
+        "bytes": 3001
+      },
+      {
+        "src": "assets/nebesnaya-11-mobile-800.avif",
+        "width": 800,
+        "bytes": 5722
+      },
+      {
+        "src": "assets/nebesnaya-11-mobile-1200.avif",
+        "width": 1200,
+        "bytes": 9015
+      }
     ]
   },
   "nebesnaya-12": {
@@ -3913,6 +5783,40 @@
         "src": "assets/nebesnaya-12-opt-1920.webp",
         "width": 1920,
         "bytes": 149818
+      }
+    ],
+    "mobile_files": [
+      {
+        "src": "assets/nebesnaya-12-mobile-480.webp",
+        "width": 480,
+        "bytes": 9306
+      },
+      {
+        "src": "assets/nebesnaya-12-mobile-800.webp",
+        "width": 800,
+        "bytes": 23498
+      },
+      {
+        "src": "assets/nebesnaya-12-mobile-1200.webp",
+        "width": 1200,
+        "bytes": 47250
+      }
+    ],
+    "mobile_avif": [
+      {
+        "src": "assets/nebesnaya-12-mobile-480.avif",
+        "width": 480,
+        "bytes": 7646
+      },
+      {
+        "src": "assets/nebesnaya-12-mobile-800.avif",
+        "width": 800,
+        "bytes": 19319
+      },
+      {
+        "src": "assets/nebesnaya-12-mobile-1200.avif",
+        "width": 1200,
+        "bytes": 42675
       }
     ]
   },
@@ -3971,6 +5875,40 @@
         "width": 1920,
         "bytes": 117236
       }
+    ],
+    "mobile_files": [
+      {
+        "src": "assets/nebesnaya-13-mobile-480.webp",
+        "width": 480,
+        "bytes": 10552
+      },
+      {
+        "src": "assets/nebesnaya-13-mobile-800.webp",
+        "width": 800,
+        "bytes": 20946
+      },
+      {
+        "src": "assets/nebesnaya-13-mobile-1200.webp",
+        "width": 1200,
+        "bytes": 37886
+      }
+    ],
+    "mobile_avif": [
+      {
+        "src": "assets/nebesnaya-13-mobile-480.avif",
+        "width": 480,
+        "bytes": 8511
+      },
+      {
+        "src": "assets/nebesnaya-13-mobile-800.avif",
+        "width": 800,
+        "bytes": 17936
+      },
+      {
+        "src": "assets/nebesnaya-13-mobile-1200.avif",
+        "width": 1200,
+        "bytes": 33509
+      }
     ]
   },
   "nebesnaya-14": {
@@ -4027,6 +5965,40 @@
         "src": "assets/nebesnaya-14-opt-1920.webp",
         "width": 1920,
         "bytes": 111536
+      }
+    ],
+    "mobile_files": [
+      {
+        "src": "assets/nebesnaya-14-mobile-480.webp",
+        "width": 480,
+        "bytes": 11784
+      },
+      {
+        "src": "assets/nebesnaya-14-mobile-800.webp",
+        "width": 800,
+        "bytes": 22350
+      },
+      {
+        "src": "assets/nebesnaya-14-mobile-1200.webp",
+        "width": 1200,
+        "bytes": 37092
+      }
+    ],
+    "mobile_avif": [
+      {
+        "src": "assets/nebesnaya-14-mobile-480.avif",
+        "width": 480,
+        "bytes": 10630
+      },
+      {
+        "src": "assets/nebesnaya-14-mobile-800.avif",
+        "width": 800,
+        "bytes": 21302
+      },
+      {
+        "src": "assets/nebesnaya-14-mobile-1200.avif",
+        "width": 1200,
+        "bytes": 37016
       }
     ]
   },
@@ -4085,6 +6057,40 @@
         "width": 1920,
         "bytes": 129478
       }
+    ],
+    "mobile_files": [
+      {
+        "src": "assets/nebesnaya-15-mobile-480.webp",
+        "width": 480,
+        "bytes": 10328
+      },
+      {
+        "src": "assets/nebesnaya-15-mobile-800.webp",
+        "width": 800,
+        "bytes": 23690
+      },
+      {
+        "src": "assets/nebesnaya-15-mobile-1200.webp",
+        "width": 1200,
+        "bytes": 44344
+      }
+    ],
+    "mobile_avif": [
+      {
+        "src": "assets/nebesnaya-15-mobile-480.avif",
+        "width": 480,
+        "bytes": 8370
+      },
+      {
+        "src": "assets/nebesnaya-15-mobile-800.avif",
+        "width": 800,
+        "bytes": 19105
+      },
+      {
+        "src": "assets/nebesnaya-15-mobile-1200.avif",
+        "width": 1200,
+        "bytes": 36190
+      }
     ]
   },
   "nebesnaya-16": {
@@ -4141,6 +6147,40 @@
         "src": "assets/nebesnaya-16-opt-1920.webp",
         "width": 1920,
         "bytes": 386362
+      }
+    ],
+    "mobile_files": [
+      {
+        "src": "assets/nebesnaya-16-mobile-480.webp",
+        "width": 480,
+        "bytes": 9534
+      },
+      {
+        "src": "assets/nebesnaya-16-mobile-800.webp",
+        "width": 800,
+        "bytes": 24156
+      },
+      {
+        "src": "assets/nebesnaya-16-mobile-1200.webp",
+        "width": 1200,
+        "bytes": 71610
+      }
+    ],
+    "mobile_avif": [
+      {
+        "src": "assets/nebesnaya-16-mobile-480.avif",
+        "width": 480,
+        "bytes": 8258
+      },
+      {
+        "src": "assets/nebesnaya-16-mobile-800.avif",
+        "width": 800,
+        "bytes": 20949
+      },
+      {
+        "src": "assets/nebesnaya-16-mobile-1200.avif",
+        "width": 1200,
+        "bytes": 59015
       }
     ]
   },
@@ -4199,6 +6239,40 @@
         "width": 1920,
         "bytes": 187190
       }
+    ],
+    "mobile_files": [
+      {
+        "src": "assets/nebesnaya-17-mobile-480.webp",
+        "width": 480,
+        "bytes": 4556
+      },
+      {
+        "src": "assets/nebesnaya-17-mobile-800.webp",
+        "width": 800,
+        "bytes": 10348
+      },
+      {
+        "src": "assets/nebesnaya-17-mobile-1200.webp",
+        "width": 1200,
+        "bytes": 28562
+      }
+    ],
+    "mobile_avif": [
+      {
+        "src": "assets/nebesnaya-17-mobile-480.avif",
+        "width": 480,
+        "bytes": 4081
+      },
+      {
+        "src": "assets/nebesnaya-17-mobile-800.avif",
+        "width": 800,
+        "bytes": 9362
+      },
+      {
+        "src": "assets/nebesnaya-17-mobile-1200.avif",
+        "width": 1200,
+        "bytes": 24075
+      }
     ]
   },
   "nebesnaya-18": {
@@ -4255,6 +6329,40 @@
         "src": "assets/nebesnaya-18-opt-1920.webp",
         "width": 1920,
         "bytes": 166450
+      }
+    ],
+    "mobile_files": [
+      {
+        "src": "assets/nebesnaya-18-mobile-480.webp",
+        "width": 480,
+        "bytes": 16656
+      },
+      {
+        "src": "assets/nebesnaya-18-mobile-800.webp",
+        "width": 800,
+        "bytes": 35172
+      },
+      {
+        "src": "assets/nebesnaya-18-mobile-1200.webp",
+        "width": 1200,
+        "bytes": 62392
+      }
+    ],
+    "mobile_avif": [
+      {
+        "src": "assets/nebesnaya-18-mobile-480.avif",
+        "width": 480,
+        "bytes": 15135
+      },
+      {
+        "src": "assets/nebesnaya-18-mobile-800.avif",
+        "width": 800,
+        "bytes": 32669
+      },
+      {
+        "src": "assets/nebesnaya-18-mobile-1200.avif",
+        "width": 1200,
+        "bytes": 58177
       }
     ]
   },
@@ -4313,6 +6421,40 @@
         "width": 1920,
         "bytes": 462300
       }
+    ],
+    "mobile_files": [
+      {
+        "src": "assets/nebesnaya-20-mobile-480.webp",
+        "width": 480,
+        "bytes": 11844
+      },
+      {
+        "src": "assets/nebesnaya-20-mobile-800.webp",
+        "width": 800,
+        "bytes": 29154
+      },
+      {
+        "src": "assets/nebesnaya-20-mobile-1200.webp",
+        "width": 1200,
+        "bytes": 72874
+      }
+    ],
+    "mobile_avif": [
+      {
+        "src": "assets/nebesnaya-20-mobile-480.avif",
+        "width": 480,
+        "bytes": 10033
+      },
+      {
+        "src": "assets/nebesnaya-20-mobile-800.avif",
+        "width": 800,
+        "bytes": 24635
+      },
+      {
+        "src": "assets/nebesnaya-20-mobile-1200.avif",
+        "width": 1200,
+        "bytes": 57595
+      }
     ]
   },
   "nebesnaya-21": {
@@ -4369,6 +6511,40 @@
         "src": "assets/nebesnaya-21-opt-1920.webp",
         "width": 1920,
         "bytes": 188652
+      }
+    ],
+    "mobile_files": [
+      {
+        "src": "assets/nebesnaya-21-mobile-480.webp",
+        "width": 480,
+        "bytes": 8552
+      },
+      {
+        "src": "assets/nebesnaya-21-mobile-800.webp",
+        "width": 800,
+        "bytes": 18510
+      },
+      {
+        "src": "assets/nebesnaya-21-mobile-1200.webp",
+        "width": 1200,
+        "bytes": 44188
+      }
+    ],
+    "mobile_avif": [
+      {
+        "src": "assets/nebesnaya-21-mobile-480.avif",
+        "width": 480,
+        "bytes": 7044
+      },
+      {
+        "src": "assets/nebesnaya-21-mobile-800.avif",
+        "width": 800,
+        "bytes": 15686
+      },
+      {
+        "src": "assets/nebesnaya-21-mobile-1200.avif",
+        "width": 1200,
+        "bytes": 35214
       }
     ]
   },
@@ -4427,6 +6603,40 @@
         "width": 1920,
         "bytes": 70300
       }
+    ],
+    "mobile_files": [
+      {
+        "src": "assets/nebesnaya-22-mobile-480.webp",
+        "width": 480,
+        "bytes": 9624
+      },
+      {
+        "src": "assets/nebesnaya-22-mobile-800.webp",
+        "width": 800,
+        "bytes": 17902
+      },
+      {
+        "src": "assets/nebesnaya-22-mobile-1200.webp",
+        "width": 1200,
+        "bytes": 28668
+      }
+    ],
+    "mobile_avif": [
+      {
+        "src": "assets/nebesnaya-22-mobile-480.avif",
+        "width": 480,
+        "bytes": 7103
+      },
+      {
+        "src": "assets/nebesnaya-22-mobile-800.avif",
+        "width": 800,
+        "bytes": 13105
+      },
+      {
+        "src": "assets/nebesnaya-22-mobile-1200.avif",
+        "width": 1200,
+        "bytes": 21089
+      }
     ]
   },
   "nebesnaya-23": {
@@ -4483,6 +6693,40 @@
         "src": "assets/nebesnaya-23-opt-1920.webp",
         "width": 1920,
         "bytes": 112806
+      }
+    ],
+    "mobile_files": [
+      {
+        "src": "assets/nebesnaya-23-mobile-480.webp",
+        "width": 480,
+        "bytes": 7964
+      },
+      {
+        "src": "assets/nebesnaya-23-mobile-800.webp",
+        "width": 800,
+        "bytes": 19166
+      },
+      {
+        "src": "assets/nebesnaya-23-mobile-1200.webp",
+        "width": 1200,
+        "bytes": 37392
+      }
+    ],
+    "mobile_avif": [
+      {
+        "src": "assets/nebesnaya-23-mobile-480.avif",
+        "width": 480,
+        "bytes": 6880
+      },
+      {
+        "src": "assets/nebesnaya-23-mobile-800.avif",
+        "width": 800,
+        "bytes": 16874
+      },
+      {
+        "src": "assets/nebesnaya-23-mobile-1200.avif",
+        "width": 1200,
+        "bytes": 32754
       }
     ]
   },
@@ -4541,6 +6785,40 @@
         "width": 1920,
         "bytes": 146702
       }
+    ],
+    "mobile_files": [
+      {
+        "src": "assets/nebesnaya-24-mobile-480.webp",
+        "width": 480,
+        "bytes": 11948
+      },
+      {
+        "src": "assets/nebesnaya-24-mobile-800.webp",
+        "width": 800,
+        "bytes": 27052
+      },
+      {
+        "src": "assets/nebesnaya-24-mobile-1200.webp",
+        "width": 1200,
+        "bytes": 49852
+      }
+    ],
+    "mobile_avif": [
+      {
+        "src": "assets/nebesnaya-24-mobile-480.avif",
+        "width": 480,
+        "bytes": 9112
+      },
+      {
+        "src": "assets/nebesnaya-24-mobile-800.avif",
+        "width": 800,
+        "bytes": 21801
+      },
+      {
+        "src": "assets/nebesnaya-24-mobile-1200.avif",
+        "width": 1200,
+        "bytes": 42228
+      }
     ]
   },
   "nebesnaya-25": {
@@ -4597,6 +6875,40 @@
         "src": "assets/nebesnaya-25-opt-1920.webp",
         "width": 1920,
         "bytes": 180222
+      }
+    ],
+    "mobile_files": [
+      {
+        "src": "assets/nebesnaya-25-mobile-480.webp",
+        "width": 480,
+        "bytes": 18952
+      },
+      {
+        "src": "assets/nebesnaya-25-mobile-800.webp",
+        "width": 800,
+        "bytes": 37126
+      },
+      {
+        "src": "assets/nebesnaya-25-mobile-1200.webp",
+        "width": 1200,
+        "bytes": 62858
+      }
+    ],
+    "mobile_avif": [
+      {
+        "src": "assets/nebesnaya-25-mobile-480.avif",
+        "width": 480,
+        "bytes": 13308
+      },
+      {
+        "src": "assets/nebesnaya-25-mobile-800.avif",
+        "width": 800,
+        "bytes": 27966
+      },
+      {
+        "src": "assets/nebesnaya-25-mobile-1200.avif",
+        "width": 1200,
+        "bytes": 52838
       }
     ]
   },
@@ -4685,6 +6997,40 @@
         "width": 2880,
         "bytes": 1200530
       }
+    ],
+    "mobile_files": [
+      {
+        "src": "assets/other-03-mobile-480.webp",
+        "width": 480,
+        "bytes": 18312
+      },
+      {
+        "src": "assets/other-03-mobile-800.webp",
+        "width": 800,
+        "bytes": 56194
+      },
+      {
+        "src": "assets/other-03-mobile-1200.webp",
+        "width": 1200,
+        "bytes": 144364
+      }
+    ],
+    "mobile_avif": [
+      {
+        "src": "assets/other-03-mobile-480.avif",
+        "width": 480,
+        "bytes": 13632
+      },
+      {
+        "src": "assets/other-03-mobile-800.avif",
+        "width": 800,
+        "bytes": 40182
+      },
+      {
+        "src": "assets/other-03-mobile-1200.avif",
+        "width": 1200,
+        "bytes": 104074
+      }
     ]
   },
   "other-04": {
@@ -4771,6 +7117,40 @@
         "src": "assets/other-04-opt-2880.webp",
         "width": 2880,
         "bytes": 683888
+      }
+    ],
+    "mobile_files": [
+      {
+        "src": "assets/other-04-mobile-480.webp",
+        "width": 480,
+        "bytes": 27180
+      },
+      {
+        "src": "assets/other-04-mobile-800.webp",
+        "width": 800,
+        "bytes": 62098
+      },
+      {
+        "src": "assets/other-04-mobile-1200.webp",
+        "width": 1200,
+        "bytes": 119402
+      }
+    ],
+    "mobile_avif": [
+      {
+        "src": "assets/other-04-mobile-480.avif",
+        "width": 480,
+        "bytes": 20016
+      },
+      {
+        "src": "assets/other-04-mobile-800.avif",
+        "width": 800,
+        "bytes": 45750
+      },
+      {
+        "src": "assets/other-04-mobile-1200.avif",
+        "width": 1200,
+        "bytes": 90262
       }
     ]
   },
@@ -4859,6 +7239,40 @@
         "width": 2880,
         "bytes": 212416
       }
+    ],
+    "mobile_files": [
+      {
+        "src": "assets/other-05-mobile-480.webp",
+        "width": 480,
+        "bytes": 14302
+      },
+      {
+        "src": "assets/other-05-mobile-800.webp",
+        "width": 800,
+        "bytes": 28228
+      },
+      {
+        "src": "assets/other-05-mobile-1200.webp",
+        "width": 1200,
+        "bytes": 46352
+      }
+    ],
+    "mobile_avif": [
+      {
+        "src": "assets/other-05-mobile-480.avif",
+        "width": 480,
+        "bytes": 11661
+      },
+      {
+        "src": "assets/other-05-mobile-800.avif",
+        "width": 800,
+        "bytes": 22170
+      },
+      {
+        "src": "assets/other-05-mobile-1200.avif",
+        "width": 1200,
+        "bytes": 36955
+      }
     ]
   },
   "other-06": {
@@ -4946,6 +7360,40 @@
         "width": 2880,
         "bytes": 678444
       }
+    ],
+    "mobile_files": [
+      {
+        "src": "assets/other-06-mobile-480.webp",
+        "width": 480,
+        "bytes": 25866
+      },
+      {
+        "src": "assets/other-06-mobile-800.webp",
+        "width": 800,
+        "bytes": 59820
+      },
+      {
+        "src": "assets/other-06-mobile-1200.webp",
+        "width": 1200,
+        "bytes": 118492
+      }
+    ],
+    "mobile_avif": [
+      {
+        "src": "assets/other-06-mobile-480.avif",
+        "width": 480,
+        "bytes": 19137
+      },
+      {
+        "src": "assets/other-06-mobile-800.avif",
+        "width": 800,
+        "bytes": 46161
+      },
+      {
+        "src": "assets/other-06-mobile-1200.avif",
+        "width": 1200,
+        "bytes": 91482
+      }
     ]
   },
   "other-08": {
@@ -5002,6 +7450,40 @@
         "src": "assets/other-08-opt-1920.webp",
         "width": 1920,
         "bytes": 12440
+      }
+    ],
+    "mobile_files": [
+      {
+        "src": "assets/other-08-mobile-480.webp",
+        "width": 480,
+        "bytes": 1930
+      },
+      {
+        "src": "assets/other-08-mobile-800.webp",
+        "width": 800,
+        "bytes": 3756
+      },
+      {
+        "src": "assets/other-08-mobile-1200.webp",
+        "width": 1200,
+        "bytes": 5904
+      }
+    ],
+    "mobile_avif": [
+      {
+        "src": "assets/other-08-mobile-480.avif",
+        "width": 480,
+        "bytes": 1847
+      },
+      {
+        "src": "assets/other-08-mobile-800.avif",
+        "width": 800,
+        "bytes": 2854
+      },
+      {
+        "src": "assets/other-08-mobile-1200.avif",
+        "width": 1200,
+        "bytes": 4098
       }
     ]
   },
@@ -5060,6 +7542,40 @@
         "width": 1920,
         "bytes": 689576
       }
+    ],
+    "mobile_files": [
+      {
+        "src": "assets/other-09-mobile-480.webp",
+        "width": 480,
+        "bytes": 22248
+      },
+      {
+        "src": "assets/other-09-mobile-800.webp",
+        "width": 800,
+        "bytes": 56518
+      },
+      {
+        "src": "assets/other-09-mobile-1200.webp",
+        "width": 1200,
+        "bytes": 140902
+      }
+    ],
+    "mobile_avif": [
+      {
+        "src": "assets/other-09-mobile-480.avif",
+        "width": 480,
+        "bytes": 16222
+      },
+      {
+        "src": "assets/other-09-mobile-800.avif",
+        "width": 800,
+        "bytes": 40115
+      },
+      {
+        "src": "assets/other-09-mobile-1200.avif",
+        "width": 1200,
+        "bytes": 102807
+      }
     ]
   },
   "other-10": {
@@ -5116,6 +7632,40 @@
         "src": "assets/other-10-original.jpg",
         "width": 1920,
         "bytes": 620660
+      }
+    ],
+    "mobile_files": [
+      {
+        "src": "assets/other-10-mobile-480.webp",
+        "width": 480,
+        "bytes": 16692
+      },
+      {
+        "src": "assets/other-10-mobile-800.webp",
+        "width": 800,
+        "bytes": 45046
+      },
+      {
+        "src": "assets/other-10-mobile-1200.webp",
+        "width": 1200,
+        "bytes": 125166
+      }
+    ],
+    "mobile_avif": [
+      {
+        "src": "assets/other-10-mobile-480.avif",
+        "width": 480,
+        "bytes": 13667
+      },
+      {
+        "src": "assets/other-10-mobile-800.avif",
+        "width": 800,
+        "bytes": 35799
+      },
+      {
+        "src": "assets/other-10-mobile-1200.avif",
+        "width": 1200,
+        "bytes": 88612
       }
     ]
   },
@@ -5174,6 +7724,40 @@
         "width": 1920,
         "bytes": 45892
       }
+    ],
+    "mobile_files": [
+      {
+        "src": "assets/other-11-mobile-480.webp",
+        "width": 480,
+        "bytes": 5788
+      },
+      {
+        "src": "assets/other-11-mobile-800.webp",
+        "width": 800,
+        "bytes": 11024
+      },
+      {
+        "src": "assets/other-11-mobile-1200.webp",
+        "width": 1200,
+        "bytes": 18472
+      }
+    ],
+    "mobile_avif": [
+      {
+        "src": "assets/other-11-mobile-480.avif",
+        "width": 480,
+        "bytes": 4666
+      },
+      {
+        "src": "assets/other-11-mobile-800.avif",
+        "width": 800,
+        "bytes": 8108
+      },
+      {
+        "src": "assets/other-11-mobile-1200.avif",
+        "width": 1200,
+        "bytes": 13650
+      }
     ]
   },
   "other-12": {
@@ -5231,6 +7815,40 @@
         "width": 1920,
         "bytes": 172872
       }
+    ],
+    "mobile_files": [
+      {
+        "src": "assets/other-12-mobile-480.webp",
+        "width": 480,
+        "bytes": 3144
+      },
+      {
+        "src": "assets/other-12-mobile-800.webp",
+        "width": 800,
+        "bytes": 8044
+      },
+      {
+        "src": "assets/other-12-mobile-1200.webp",
+        "width": 1200,
+        "bytes": 27444
+      }
+    ],
+    "mobile_avif": [
+      {
+        "src": "assets/other-12-mobile-480.avif",
+        "width": 480,
+        "bytes": 3485
+      },
+      {
+        "src": "assets/other-12-mobile-800.avif",
+        "width": 800,
+        "bytes": 8266
+      },
+      {
+        "src": "assets/other-12-mobile-1200.avif",
+        "width": 1200,
+        "bytes": 23077
+      }
     ]
   },
   "other-cover-shirt": {
@@ -5271,6 +7889,40 @@
         "src": "assets/other-cover-shirt-opt-1920.avif",
         "width": 1920,
         "bytes": 158237
+      }
+    ],
+    "mobile_files": [
+      {
+        "src": "assets/other-cover-shirt-mobile-480.webp",
+        "width": 480,
+        "bytes": 8708
+      },
+      {
+        "src": "assets/other-cover-shirt-mobile-800.webp",
+        "width": 800,
+        "bytes": 21474
+      },
+      {
+        "src": "assets/other-cover-shirt-mobile-1200.webp",
+        "width": 1200,
+        "bytes": 48606
+      }
+    ],
+    "mobile_avif": [
+      {
+        "src": "assets/other-cover-shirt-mobile-480.avif",
+        "width": 480,
+        "bytes": 7378
+      },
+      {
+        "src": "assets/other-cover-shirt-mobile-800.avif",
+        "width": 800,
+        "bytes": 18023
+      },
+      {
+        "src": "assets/other-cover-shirt-mobile-1200.avif",
+        "width": 1200,
+        "bytes": 42731
       }
     ]
   }

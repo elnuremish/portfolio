@@ -68,6 +68,8 @@ def image(key, alt='', eager=False, profile=False, extra='', case=False):
         'src': fallback['src'],
         'srcset': ', '.join(f'{entry["src"]} {entry["width"]}w' for entry in files),
         'sizes': sizes,
+        'data-fallback': fallback['src'],
+        'data-mobile-fallback': data.get('mobile_files', [fallback])[-1]['src'],
         'width': data['width'],
         'height': data['height'],
         'alt': alt,
@@ -78,11 +80,16 @@ def image(key, alt='', eager=False, profile=False, extra='', case=False):
         attributes['fetchpriority'] = 'high'
     markup = ' '.join(f'{name}="{e(value)}"' for name, value in attributes.items())
     img = '<img ' + markup + (' ' + extra if extra else '') + '>'
+    sources = []
+    for field, mime in [('mobile_avif', 'avif'), ('mobile_files', 'webp')]:
+        if data.get(field):
+            srcset = ', '.join(f'{entry["src"]} {entry["width"]}w' for entry in data[field])
+            sources.append(f'<source media="(max-width:809.98px)" type="image/{mime}" srcset="{e(srcset)}" sizes="{e(sizes)}">')
     avif = data.get('case_avif') if case else data.get('avif')
     if avif:
         srcset = ', '.join(f'{entry["src"]} {entry["width"]}w' for entry in avif)
-        return f'<picture><source type="image/avif" srcset="{e(srcset)}" sizes="{e(sizes)}">{img}</picture>'
-    return img
+        sources.append(f'<source type="image/avif" srcset="{e(srcset)}" sizes="{e(sizes)}">')
+    return '<picture>' + ''.join(sources) + img + '</picture>' if sources else img
 
 def contacts():
  return '<nav class="contact-links" aria-label="Контакты"><a class="text-link" href="https://t.me/elnuremish" target="_blank" rel="noopener noreferrer">контакт</a><a class="text-link" href="https://t.me/em16sh" target="_blank" rel="noopener noreferrer">телеграм канал</a><a class="text-link" href="mailto:elnuremish@gmail.com">почта</a></nav>'
@@ -132,20 +139,14 @@ def render_project(slug):
   elif kind=='image':
    sizes='(max-width:809px) 100vw, 100vw'
    parts.append(f'<figure class="media gallery-image" style="--ratio:{ratio}">'+image(item['image'],f'{title} — {index+1}',index==first_image,case=True).replace('sizes="(max-width:809px) calc(100vw - 36px), 100vw"',f'sizes="{sizes}"')+'</figure>')
-  elif kind=='embed':
-   video_title=f'{title} — видео {index+1}'
-   poster = item.get('poster')
-   preview = (f'<img class="video-preview" src="{e(poster)}" width="1280" height="720" alt="" loading="{"eager" if index==0 else "lazy"}" decoding="async">' if poster else '')
-   parts.append(f'''<div class="media embedded-video" style="--ratio:{ratio}" data-embed="{e(item['id'])}" data-title="{e(video_title)}">
-  {preview}
-  <button class="video-button" type="button" aria-label="Воспроизвести: {e(video_title)}"><span class="play-icon" aria-hidden="true">▶</span><span>Смотреть видео</span></button>
-  <span class="video-status" role="status"></span>
-  <a class="video-link" href="https://kinescope.io/{e(item['id'])}" target="_blank" rel="noopener noreferrer">{prose('Открыть в Kinescope ↗')}</a>
-</div>''')
-  elif kind=='video':
+  elif kind in ('embed', 'video'):
+   video_title = f'{title} — видео {index+1}'
+   poster = item.get('poster', 'assets/nebesnaya-motion-poster.webp')
+   poster_attribute = 'poster' if index == 0 else 'data-poster'
    parts.append(f'''<div class="media local-video" style="--ratio:{ratio}">
-  <video data-src="{e(item['src'])}" data-mobile-src="{e(item['mobileSrc'])}" poster="assets/nebesnaya-motion-poster.webp" width="1920" height="1036" loop muted playsinline preload="none" aria-label="Анимация Небесной канцелярии"></video>
-  <button type="button" class="video-toggle">Воспроизвести</button>
+  <video data-src="{e(item['src'])}" data-mobile-src="{e(item['mobileSrc'])}" {poster_attribute}="{e(poster)}" loop muted playsinline preload="none" aria-label="{e(video_title)}"></video>
+  <button class="video-button" type="button" aria-label="Воспроизвести: {e(video_title)}"><span class="play-icon" aria-hidden="true">▶</span><span class="video-label">Смотреть видео</span></button>
+  <span class="video-status" role="status"></span>
   <noscript><a class="video-link" href="{e(item['mobileSrc'])}">Открыть видео ↗</a></noscript>
 </div>''')
  parts.append('</main>')
