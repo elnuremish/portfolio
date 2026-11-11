@@ -146,6 +146,7 @@ def render_project(slug):
    parts.append(f'''<div class="media local-video" style="--ratio:{ratio}">
   <video data-src="{e(item['src'])}" data-mobile-src="{e(item['mobileSrc'])}" {poster_attribute}="{e(poster)}" loop muted playsinline preload="none" aria-label="{e(video_title)}"></video>
   <button class="video-button" type="button" aria-label="Воспроизвести: {e(video_title)}"><span class="play-icon" aria-hidden="true">▶</span><span class="video-label">Смотреть видео</span></button>
+  <button class="video-controls" type="button" aria-pressed="false">Управление</button>
   <span class="video-status" role="status"></span>
   <noscript><a class="video-link" href="{e(item['mobileSrc'])}">Открыть видео ↗</a></noscript>
 </div>''')

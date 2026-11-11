@@ -12,6 +12,7 @@ class Element {
   addEventListener(name, callback) { (this.listeners[name] ||= []).push(callback); }
   emit(name) { for (const callback of this.listeners[name] || []) callback({preventDefault(){}}); }
   querySelector(name) { return this.children[name]; }
+  setAttribute(name,value) { this[name]=value; }
   getAttribute(name) { return this[name] || null; }
   removeAttribute(name) { delete this[name]; }
   append(child) { this.appended = child; }
@@ -20,7 +21,7 @@ class Element {
 function fixture({mobile=true, saveData=false, reduced=false} = {}) {
   const videos = Array.from({length:2}, () => {
     const container = new Element();
-    for (const selector of ['.video-button','.video-label','.video-status']) container.children[selector] = new Element();
+    for (const selector of ['.video-button','.video-label','.video-status','.video-controls']) container.children[selector] = new Element();
     const video = new Element();
     Object.assign(video, {dataset:{src:'desktop.mp4',mobileSrc:'mobile.mp4',poster:'poster.webp'}, paused:true, loads:0, plays:0,
       closest:()=>container, load(){this.loads++; this.error=null;},
@@ -40,7 +41,7 @@ function fixture({mobile=true, saveData=false, reduced=false} = {}) {
   const observers = [];
   const motion = Object.assign(new Element(),{matches:reduced});
   const context = {document:doc,navigator:{connection:{saveData}},
-    matchMedia:query=>query.includes('reduced-motion')?motion:{matches:mobile},
+    matchMedia:query=>query.includes('reduced-motion')?motion:Object.assign(new Element(),{matches:mobile}),
     IntersectionObserver:class {constructor(callback,options){Object.assign(this,{callback,options});observers.push(this);} observe(){}},
     window:{IntersectionObserver:true}, Date};
   vm.runInNewContext(readFileSync(new URL('../site.js',import.meta.url),'utf8'), context);
@@ -55,7 +56,11 @@ assert.equal(normal.videos[0].plays,0);
 assert.equal(normal.videos[1].src,undefined);
 normal.enter(0,true);
 assert.equal(normal.videos[0].paused,false);
+assert.equal(normal.videos[0].controls,false,'mobile autoplay must not show native controls');
+normal.videos[0].container.children['.video-controls'].emit('click');
+assert.equal(normal.videos[0].controls,true,'native controls remain available on request');
 normal.enter(0,false);
+assert.equal(normal.videos[0].controls,false,'hide the overlay when scrolling away');
 assert.equal(normal.videos[0].paused,true);
 normal.enter(0,true);
 assert.equal(normal.videos[0].paused,false,'automatic pause must allow resuming');
@@ -71,6 +76,7 @@ for (const options of [{saveData:true},{reduced:true}]) {
 }
 const desktop=fixture({mobile:false});desktop.enter(0,true);
 assert.equal(desktop.videos[0].src,'desktop.mp4');
+assert.equal(desktop.videos[0].controls,true,'desktop keeps native controls');
 desktop.doc.hidden=true;desktop.doc.emit('visibilitychange');
 assert.equal(desktop.videos[0].paused,true);
 desktop.doc.hidden=false;desktop.doc.emit('visibilitychange');

@@ -163,6 +163,15 @@ for (const video of document.querySelectorAll('video[data-src]')) {
   const button = container.querySelector('.video-button');
   const label = container.querySelector('.video-label');
   const status = container.querySelector('.video-status');
+  const controls = container.querySelector('.video-controls');
+  const mobile = matchMedia('(max-width:809.98px)');
+  const setControls = shown => {
+    video.controls = shown;
+    controls.setAttribute('aria-pressed', String(shown));
+    controls.textContent = shown ? 'Скрыть управление' : 'Управление';
+  };
+  controls.addEventListener('click', () => setControls(!video.controls));
+  mobile.addEventListener('change', () => setControls(!mobile.matches));
   let manuallyPaused = false;
   let automaticPause = false;
   const player = {
@@ -173,7 +182,7 @@ for (const video of document.querySelectorAll('video[data-src]')) {
         delete video.dataset.poster;
       }
       if (video.getAttribute('src') || (!userInitiated && (slowConnection || reducedMotion.matches))) return;
-      video.controls = true;
+      setControls(!mobile.matches);
       video.preload = 'metadata';
       video.src = matchMedia('(max-width:809.98px)').matches || slowConnection
         ? video.dataset.mobileSrc : video.dataset.src;
@@ -190,6 +199,7 @@ for (const video of document.querySelectorAll('video[data-src]')) {
       });
     },
     update() {
+      if (!player.inView && mobile.matches) setControls(false);
       if (player.inView && !document.hidden && !reducedMotion.matches && !slowConnection && !manuallyPaused) {
         player.play();
       } else if (!video.paused) {

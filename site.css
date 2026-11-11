@@ -622,3 +622,24 @@ a.text-link:hover {
     font-size:13px;
   }
 }
+
+/* Safari's native overlay is opt-in on phones, not shown by autoplay. */
+.video-controls {
+  display:none
+}
+@media (max-width:809.98px) {
+  .media.is-ready .video-controls {
+    display:block;
+    position:absolute;
+    top:8px;
+    right:8px;
+    z-index:2;
+    min-height:36px;
+    padding:8px 10px;
+    border:0;
+    border-radius:4px;
+    color:#fff;
+    background:#0008;
+    font-size:11px
+  }
+}
