@@ -21,9 +21,9 @@ class Element {
 function fixture({mobile=true, saveData=false, reduced=false} = {}) {
   const videos = Array.from({length:2}, () => {
     const container = new Element();
-    for (const selector of ['.video-button','.video-label','.video-status','.video-controls']) container.children[selector] = new Element();
+    for (const selector of ['.video-sound','.video-status']) container.children[selector] = new Element();
     const video = new Element();
-    Object.assign(video, {dataset:{src:'desktop.mp4',mobileSrc:'mobile.mp4',poster:'poster.webp'}, paused:true, loads:0, plays:0,
+    Object.assign(video, {dataset:{src:'desktop.mp4',mobileSrc:'mobile.mp4',poster:'poster.webp'}, paused:true, muted:true, loads:0, plays:0,
       closest:()=>container, load(){this.loads++; this.error=null;},
       play(){this.plays++; this.paused=false; this.emit('playing'); return Promise.resolve();},
       pause(){if (!this.paused) {this.paused=true; this.emit('pause');}}, container});
@@ -57,26 +57,33 @@ assert.equal(normal.videos[1].src,undefined);
 normal.enter(0,true);
 assert.equal(normal.videos[0].paused,false);
 assert.equal(normal.videos[0].controls,false,'mobile autoplay must not show native controls');
-normal.videos[0].container.children['.video-controls'].emit('click');
-assert.equal(normal.videos[0].controls,true,'native controls remain available on request');
+const sound = normal.videos[0].container.children['.video-sound'];
+sound.emit('click');
+assert.equal(normal.videos[0].muted,false);
+assert.equal(sound['aria-pressed'],'true');
+assert.equal(normal.videos[0].controls,false,'sound must never reveal native controls');
+sound.emit('click');
+assert.equal(normal.videos[0].muted,true);
+assert.equal(sound['aria-pressed'],'false');
+normal.videos[0].emit('click');
+assert.equal(normal.videos[0].paused,false,'clicking artwork must not pause playback');
 normal.enter(0,false);
-assert.equal(normal.videos[0].controls,false,'hide the overlay when scrolling away');
 assert.equal(normal.videos[0].paused,true);
 normal.enter(0,true);
 assert.equal(normal.videos[0].paused,false,'automatic pause must allow resuming');
-normal.videos[0].pause();
-normal.enter(0,false);normal.enter(0,true);
-assert.equal(normal.videos[0].paused,true,'respect a manual pause');
 for (const options of [{saveData:true},{reduced:true}]) {
   const f=fixture(options);f.observers[0].callback([{target:f.videos[0],isIntersecting:true}]);f.enter(0,true);
   assert.equal(f.videos[0].src,undefined);
   assert.equal(f.videos[0].poster,'poster.webp');
-  f.videos[0].container.children['.video-button'].emit('click');
+  f.videos[0].container.children['.video-sound'].emit('click');
   assert.equal(f.videos[0].paused,false,'manual play remains available');
 }
 const desktop=fixture({mobile:false});desktop.enter(0,true);
 assert.equal(desktop.videos[0].src,'desktop.mp4');
-assert.equal(desktop.videos[0].controls,true,'desktop keeps native controls');
+assert.equal(desktop.videos[0].controls,false,'desktop must also hide native controls');
+desktop.videos[0].container.children['.video-sound'].emit('click');
+assert.equal(desktop.videos[0].muted,false);
+assert.equal(desktop.videos[0].controls,false);
 desktop.doc.hidden=true;desktop.doc.emit('visibilitychange');
 assert.equal(desktop.videos[0].paused,true);
 desktop.doc.hidden=false;desktop.doc.emit('visibilitychange');

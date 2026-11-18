@@ -144,9 +144,14 @@ def render_project(slug):
    poster = item.get('poster', 'assets/nebesnaya-motion-poster.webp')
    poster_attribute = 'poster' if index == 0 else 'data-poster'
    parts.append(f'''<div class="media local-video" style="--ratio:{ratio}">
-  <video data-src="{e(item['src'])}" data-mobile-src="{e(item['mobileSrc'])}" {poster_attribute}="{e(poster)}" loop muted playsinline preload="none" aria-label="{e(video_title)}"></video>
-  <button class="video-button" type="button" aria-label="Воспроизвести: {e(video_title)}"><span class="play-icon" aria-hidden="true">▶</span><span class="video-label">Смотреть видео</span></button>
-  <button class="video-controls" type="button" aria-pressed="false">Управление</button>
+  <video data-src="{e(item['src'])}" data-mobile-src="{e(item['mobileSrc'])}" {poster_attribute}="{e(poster)}" loop muted playsinline disablepictureinpicture preload="none" aria-label="{e(video_title)}"></video>
+  <button class="video-sound" type="button" aria-label="Звук видео" aria-pressed="false" title="Включить звук">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="M11 5 6 9H3v6h3l5 4Z"/>
+      <path class="sound-off" d="m16 9 5 6m0-6-5 6"/>
+      <path class="sound-on" d="M15 8a6 6 0 0 1 0 8m3-11a10 10 0 0 1 0 14"/>
+    </svg>
+  </button>
   <span class="video-status" role="status"></span>
   <noscript><a class="video-link" href="{e(item['mobileSrc'])}">Открыть видео ↗</a></noscript>
 </div>''')

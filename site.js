@@ -160,20 +160,16 @@ const videoObserver = 'IntersectionObserver' in window ? new IntersectionObserve
 
 for (const video of document.querySelectorAll('video[data-src]')) {
   const container = video.closest('.media');
-  const button = container.querySelector('.video-button');
-  const label = container.querySelector('.video-label');
+  const sound = container.querySelector('.video-sound');
   const status = container.querySelector('.video-status');
-  const controls = container.querySelector('.video-controls');
-  const mobile = matchMedia('(max-width:809.98px)');
-  const setControls = shown => {
-    video.controls = shown;
-    controls.setAttribute('aria-pressed', String(shown));
-    controls.textContent = shown ? 'Скрыть управление' : 'Управление';
+  // Never enable native controls: they dim the entire video on hover/tap.
+  video.controls = false;
+  const syncSound = () => {
+    sound.setAttribute('aria-pressed', String(!video.muted));
+    sound.title = video.muted ? 'Включить звук' : 'Выключить звук';
   };
-  controls.addEventListener('click', () => setControls(!video.controls));
-  mobile.addEventListener('change', () => setControls(!mobile.matches));
-  let manuallyPaused = false;
-  let automaticPause = false;
+  syncSound();
+  video.addEventListener('volumechange', syncSound);
   const player = {
     inView:false,
     prepare(userInitiated = false) {
@@ -182,7 +178,6 @@ for (const video of document.querySelectorAll('video[data-src]')) {
         delete video.dataset.poster;
       }
       if (video.getAttribute('src') || (!userInitiated && (slowConnection || reducedMotion.matches))) return;
-      setControls(!mobile.matches);
       video.preload = 'metadata';
       video.src = matchMedia('(max-width:809.98px)').matches || slowConnection
         ? video.dataset.mobileSrc : video.dataset.src;
@@ -194,35 +189,28 @@ for (const video of document.querySelectorAll('video[data-src]')) {
       status.textContent = 'Загрузка видео…';
       video.play().catch(() => {
         if (!video.error) status.textContent = '';
-        // Low Power Mode and browser policies may require a tap.
-        if (!video.error) label.textContent = 'Смотреть видео';
+        // The sound button also supplies a user gesture if autoplay is blocked.
       });
     },
     update() {
-      if (!player.inView && mobile.matches) setControls(false);
-      if (player.inView && !document.hidden && !reducedMotion.matches && !slowConnection && !manuallyPaused) {
+      if (player.inView && !document.hidden && !reducedMotion.matches && !slowConnection) {
         player.play();
       } else if (!video.paused) {
-        automaticPause = true;
         video.pause();
       }
     },
   };
   video.addEventListener('playing', () => {
-    manuallyPaused = false;
     status.textContent = '';
-    container.classList.add('is-ready');
-  });
-  video.addEventListener('pause', () => {
-    if (!automaticPause) manuallyPaused = true;
-    automaticPause = false;
   });
   video.addEventListener('error', () => {
-    container.classList.remove('is-ready');
-    label.textContent = 'Повторить';
-    status.textContent = 'Не удалось загрузить видео';
+    status.textContent = 'Не удалось загрузить видео. Нажмите кнопку звука, чтобы повторить';
   });
-  button.addEventListener('click', () => { manuallyPaused = false; player.play(); });
+  sound.addEventListener('click', () => {
+    video.muted = !video.muted;
+    syncSound();
+    if (video.paused || video.error) player.play();
+  });
   players.set(video, player);
   if (nearbyObserver) nearbyObserver.observe(video);
   else if (video.dataset.poster) video.poster = video.dataset.poster;
