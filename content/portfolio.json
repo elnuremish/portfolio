@@ -421,11 +421,11 @@
         "id": "w2ckw2uQ53FyquZNcr6wfo",
         "ratio": 1.84615,
         "poster": "assets/video-w2ckw2uQ53FyquZNcr6wfo-poster.webp",
-        "src": "assets/video-w2ckw2uQ53FyquZNcr6wfo-fast-1080.mp4",
-        "mobileSrc": "assets/video-w2ckw2uQ53FyquZNcr6wfo-720.mp4",
+        "src": "assets/video-w2ckw2uQ53FyquZNcr6wfo-fast-1080-silent.mp4",
+        "mobileSrc": "assets/video-w2ckw2uQ53FyquZNcr6wfo-720-silent.mp4",
         "sourceSrc": "assets/video-w2ckw2uQ53FyquZNcr6wfo-1080.mp4",
         "preview": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABcQERQRDhcUEhQaGBcbIjklIh8fIkYyNSk5UkhXVVFIUE5bZoNvW2F8Yk5QcptzfIeLkpSSWG2grJ+OqoOPko3/2wBDARgaGiIeIkMlJUONXlBejY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY3/wAARCAA2AGADASIAAhEBAxEB/8QAGgAAAgMBAQAAAAAAAAAAAAAAAAQDBQYCAf/EADUQAAEEAAQFAgIHCQAAAAAAAAEAAgMRBBIhMQUTIkFRFGFxkkJygaHB0eEVIzJDRFORorH/xAAYAQADAQEAAAAAAAAAAAAAAAAAAQIDBP/EABsRAQADAQEBAQAAAAAAAAAAAAABAhExEiFB/9oADAMBAAIRAxEAPwBMljKtr6HtohkjSTQLQfe7Xr4pAC4NoeQFDTyMzS3RcsREmcZOB2BG12uMY7MwZCbacw7EJPmm6cKPekGUkUDmrbyEeMnT1Z4XiOFkl64QyR2lkCnexVtHJC5gZGwZidGEDp/RZBw8eVc4ebklhdrl2J7LXcX537C2flcJB9GMUaaKvwpGObFmphphp35pZkzzhyGtaSDr733RmlEzZQ8HNVtB3T1nw4JKNSAN7hwOhUGOwkeNgLe+7XDsVEXmT9y6gN2+ymgBhzZrN/8AUunEsjJA6GZzJRTmnZdB5a2roeB+av8AimCOLhMsbRzWjT3HhZm3ZurfwkS0MhB6RfuFI10cjqd0P7pDl4jYxSH4sK9yYho1hlr6hKjwNTTxNvQAkbg/glHAA6Cj7pkNmI0ikPxYVy+KR+hgkv6hTjYEoYuuRoPY6p5zxSQ5E7XWIpPkKlDZ3DWKT5CqzV1t8w/gcaY5MhGYdge48K5Y1pDJA+2V00Na8FZkQzf2pPkKuOGTSEFssbxW5LTr7p8E/VhI1r35zeiM+uq5fnJ0Y7/CkbG7L1NN/BUzeUS0vNabBZ/jODGd08A1/mD8VoiHC9DXwVaRIXlzmON2TbSlImcaRCELQBCquOS4mP0zcNI5he8ghta6Ksln4nma2PEPEhGrCRt5UzaInBi94hjfRQtkDM5c7LWakgOPOP8AS/7/AKJPHunl4HE7FPt7ZjmN9ha7bw+KJjnR3/DY6iVFrT+HEaZ/bzqv0p+b9FYYDGethdJyyynVV2s9Dh2YqNspdV7taSKATUbnYThM3pi5rueAOq967oraf05rjQoWadicewAPne1zjQBI1VlwWfETMl9QXEgjLm3pXFtLFmvHNzMLdrFL1CoghCEBU8bdlkwZ8SE/ckpJA/EBwFHJX3oQsrdXHHOOOfhTCRvijYUzMR0ajQCihCUqrwvhAOQRqARRpSSOB4ZiMooeoZp9gQhKOHYYiTOYiRRs0R20T/BqHPAv6Op+1CFdeostEIQtEP/Z",
-        "hasAudio": true
+        "hasAudio": false
       },
       {
         "type": "about",
