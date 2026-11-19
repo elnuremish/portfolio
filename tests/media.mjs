@@ -21,9 +21,9 @@ class Element {
 function fixture({mobile=true, saveData=false, reduced=false} = {}) {
   const videos = Array.from({length:2}, () => {
     const container = new Element();
-    for (const selector of ['.video-sound','.video-status']) container.children[selector] = new Element();
+    for (const selector of ['.video-sound','.video-status','.video-poster']) container.children[selector] = new Element();
     const video = new Element();
-    Object.assign(video, {dataset:{src:'desktop.mp4',mobileSrc:'mobile.mp4',poster:'poster.webp'}, paused:true, muted:true, loads:0, plays:0,
+    Object.assign(video, {dataset:{src:'desktop.mp4',mobileSrc:'mobile.mp4',poster:'poster.webp'}, paused:true, muted:true, currentTime:0, duration:43, loads:0, plays:0,
       closest:()=>container, load(){this.loads++; this.error=null;},
       play(){this.plays++; this.paused=false; this.emit('playing'); return Promise.resolve();},
       pause(){if (!this.paused) {this.paused=true; this.emit('pause');}}, container});
@@ -36,17 +36,19 @@ function fixture({mobile=true, saveData=false, reduced=false} = {}) {
     closest:selector=>selector==='picture'?{querySelectorAll:()=>[source]}:figure});
   const doc = new Element();
   doc.querySelector = () => null;
-  doc.querySelectorAll = selector => selector.startsWith('img') ? [img] : videos;
+  doc.querySelectorAll = selector => selector.startsWith('img') || selector.startsWith('.gallery') ? [img] : videos;
   doc.createElement = () => new Element();
   const observers = [];
   const motion = Object.assign(new Element(),{matches:reduced});
   const context = {document:doc,navigator:{connection:{saveData}},
-    matchMedia:query=>query.includes('reduced-motion')?motion:Object.assign(new Element(),{matches:mobile}),
-    IntersectionObserver:class {constructor(callback,options){Object.assign(this,{callback,options});observers.push(this);} observe(){}},
+    matchMedia:query=>query.includes('reduced-motion')?motion:Object.assign(new Element(),{matches:query.includes('min-width')?!mobile:mobile}),
+    IntersectionObserver:class {constructor(callback,options){Object.assign(this,{callback,options});observers.push(this);} observe(){} unobserve(){}},
     window:{IntersectionObserver:true}, Date};
   vm.runInNewContext(readFileSync(new URL('../site.js',import.meta.url),'utf8'), context);
-  const enter = (index,visible) => observers[1].callback([{target:videos[index],isIntersecting:visible,intersectionRatio:visible?1:0}]);
-  return {videos,doc,motion,observers,enter,img,figure,source};
+  const imageObserver = observers.find(o=>o.options.rootMargin==='2400px 0px');
+  const mediaObservers = observers.filter(o=>o!==imageObserver);
+  const enter = (index,visible) => mediaObservers[1].callback([{target:videos[index],isIntersecting:visible,intersectionRatio:visible?1:0}]);
+  return {videos,doc,motion,observers:mediaObservers,imageObserver,enter,img,figure,source};
 }
 const normal = fixture();
 assert.ok(normal.videos.every(v=>!v.src));
@@ -71,14 +73,24 @@ normal.enter(0,false);
 assert.equal(normal.videos[0].paused,true);
 normal.enter(0,true);
 assert.equal(normal.videos[0].paused,false,'automatic pause must allow resuming');
+normal.videos[0].currentTime=7;
+normal.enter(0,false);
+normal.observers[0].callback([{target:normal.videos[0],isIntersecting:false}]);
+assert.equal(normal.videos[0].src,undefined,'offscreen downloads must be aborted');
+assert.equal(normal.videos[0].container.classes.has('is-playing'),false,'show poster while video is unloaded');
+normal.enter(0,true);
+normal.videos[0].currentTime=0;normal.videos[0].emit('loadedmetadata');
+assert.equal(normal.videos[0].currentTime,7,'return to the previous playback position');
 for (const options of [{saveData:true},{reduced:true}]) {
   const f=fixture(options);f.observers[0].callback([{target:f.videos[0],isIntersecting:true}]);f.enter(0,true);
   assert.equal(f.videos[0].src,undefined);
-  assert.equal(f.videos[0].poster,'poster.webp');
+  assert.equal(f.videos[0].container.children['.video-poster'].loading,'eager');
   f.videos[0].container.children['.video-sound'].emit('click');
   assert.equal(f.videos[0].paused,false,'manual play remains available');
 }
 const desktop=fixture({mobile:false});desktop.enter(0,true);
+desktop.imageObserver.callback([{target:desktop.img,isIntersecting:true}]);
+assert.equal(desktop.img.loading,'eager','desktop images start before reaching the screen');
 assert.equal(desktop.videos[0].src,'desktop.mp4');
 assert.equal(desktop.videos[0].controls,false,'desktop must also hide native controls');
 desktop.videos[0].container.children['.video-sound'].emit('click');

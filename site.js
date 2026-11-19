@@ -140,6 +140,20 @@ for (const img of document.querySelectorAll('img[data-fallback]')) {
   if (img.complete && img.currentSrc && !img.naturalWidth) failed();
 }
 
+// Desktop case panels are tall: start the next images before fast scrolling
+// reaches them. Stop observing once requested; never eagerly load the whole case.
+if ('IntersectionObserver' in window && matchMedia('(min-width:810px)').matches) {
+  const imageObserver = new IntersectionObserver(entries => {
+    for (const entry of entries) {
+      if (!entry.isIntersecting) continue;
+      entry.target.loading = 'eager';
+      imageObserver.unobserve(entry.target);
+    }
+  }, {rootMargin:'2400px 0px'});
+  document.querySelectorAll('.gallery-image img[loading="lazy"], .video-poster[loading="lazy"]')
+    .forEach(img => imageObserver.observe(img));
+}
+
 // Native MP4 playback avoids a separate external player for every animation.
 // Warm only nearby videos; play visible ones and pause the rest.
 const connection = navigator.connection;
@@ -147,7 +161,10 @@ const slowConnection = Boolean(connection?.saveData) || /(^|-)2g$/.test(connecti
 const players = new Map();
 const nearbyObserver = 'IntersectionObserver' in window ? new IntersectionObserver(entries => {
   for (const entry of entries) {
-    if (entry.isIntersecting) players.get(entry.target).prepare();
+    const player = players.get(entry.target);
+    player.nearby = entry.isIntersecting;
+    if (player.nearby) player.prepare();
+    else if (!player.inView) player.release();
   }
 }, {rootMargin:'400px 0px'}) : null;
 const videoObserver = 'IntersectionObserver' in window ? new IntersectionObserver(entries => {
@@ -162,6 +179,7 @@ for (const video of document.querySelectorAll('video[data-src]')) {
   const container = video.closest('.media');
   const sound = container.querySelector('.video-sound');
   const status = container.querySelector('.video-status');
+  const poster = container.querySelector('.video-poster');
   // Never enable native controls: they dim the entire video on hover/tap.
   video.controls = false;
   const syncSound = () => {
@@ -170,13 +188,23 @@ for (const video of document.querySelectorAll('video[data-src]')) {
   };
   syncSound();
   video.addEventListener('volumechange', syncSound);
+  let resumeTime = 0;
+  video.addEventListener('loadedmetadata', () => {
+    if (resumeTime > 0 && resumeTime < video.duration) video.currentTime = resumeTime;
+  });
   const player = {
     inView:false,
+    nearby:false,
+    release() {
+      if (!video.getAttribute('src')) return;
+      if (video.currentTime > 0) resumeTime = video.currentTime;
+      video.pause();
+      container.classList.remove('is-playing');
+      video.removeAttribute('src');
+      video.load(); // Abort the download as well as playback.
+    },
     prepare(userInitiated = false) {
-      if (video.dataset.poster) {
-        video.poster = video.dataset.poster;
-        delete video.dataset.poster;
-      }
+      poster.loading = 'eager';
       if (video.getAttribute('src') || (!userInitiated && (slowConnection || reducedMotion.matches))) return;
       video.preload = 'metadata';
       video.src = matchMedia('(max-width:809.98px)').matches || slowConnection
@@ -195,15 +223,18 @@ for (const video of document.querySelectorAll('video[data-src]')) {
     update() {
       if (player.inView && !document.hidden && !reducedMotion.matches && !slowConnection) {
         player.play();
-      } else if (!video.paused) {
+      } else {
         video.pause();
+        if (!player.nearby || document.hidden) player.release();
       }
     },
   };
   video.addEventListener('playing', () => {
+    container.classList.add('is-playing');
     status.textContent = '';
   });
   video.addEventListener('error', () => {
+    container.classList.remove('is-playing');
     status.textContent = 'Не удалось загрузить видео. Нажмите кнопку звука, чтобы повторить';
   });
   sound.addEventListener('click', () => {
@@ -213,7 +244,7 @@ for (const video of document.querySelectorAll('video[data-src]')) {
   });
   players.set(video, player);
   if (nearbyObserver) nearbyObserver.observe(video);
-  else if (video.dataset.poster) video.poster = video.dataset.poster;
+  else poster.loading = 'eager';
   videoObserver?.observe(video);
 }
 document.addEventListener('visibilitychange', () => players.forEach(player => player.update()));

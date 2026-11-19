@@ -624,3 +624,18 @@ a.text-link:hover {
     font-size:13px;
   }
 }
+
+/* Inline thumbnails paint with the HTML; full artwork replaces them naturally. */
+.gallery-image,.local-video {
+  background-image:var(--preview);
+  background-position:center;
+  background-size:cover
+}
+.video-poster {
+  position:absolute;
+  inset:0;
+  pointer-events:none
+}
+.local-video.is-playing .video-poster {
+  visibility:hidden
+}

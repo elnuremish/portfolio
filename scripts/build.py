@@ -133,18 +133,21 @@ def render_project(slug):
  first_image=next((i for i,item in enumerate(project['items']) if item['type']=='image'),None)
  for index,item in enumerate(project['items']):
   kind=item['type'];ratio=item.get('ratio',16/9)
+  preview = IMAGES[item['image']].get('preview', '') if kind == 'image' else item.get('preview', '')
+  media_style = f"--ratio:{ratio};--preview:url('{preview}')"
   if kind=='about':
    heading='h1' if about_count==0 else 'h2';about_count+=1
    parts.append('<section class="project-about"><'+heading+'>'+prose(item['title'])+'</'+heading+'><div class="project-description">'+''.join('<p>'+prose(p)+'</p>' for p in item['paragraphs'])+'</div></section>')
   elif kind=='image':
    sizes='(max-width:809px) 100vw, 100vw'
-   parts.append(f'<figure class="media gallery-image" style="--ratio:{ratio}">'+image(item['image'],f'{title} — {index+1}',index==first_image,case=True).replace('sizes="(max-width:809px) calc(100vw - 36px), 100vw"',f'sizes="{sizes}"')+'</figure>')
+   parts.append(f'<figure class="media gallery-image" style="{e(media_style)}">'+image(item['image'],f'{title} — {index+1}',index==first_image,case=True).replace('sizes="(max-width:809px) calc(100vw - 36px), 100vw"',f'sizes="{sizes}"')+'</figure>')
   elif kind in ('embed', 'video'):
    video_title = f'{title} — видео {index+1}'
    poster = item.get('poster', 'assets/nebesnaya-motion-poster.webp')
-   poster_attribute = 'poster' if index == 0 else 'data-poster'
-   parts.append(f'''<div class="media local-video" style="--ratio:{ratio}">
-  <video data-src="{e(item['src'])}" data-mobile-src="{e(item['mobileSrc'])}" {poster_attribute}="{e(poster)}" loop muted playsinline disablepictureinpicture preload="none" aria-label="{e(video_title)}"></video>
+
+   parts.append(f'''<div class="media local-video" style="{e(media_style)}">
+  <video data-src="{e(item['src'])}" data-mobile-src="{e(item['mobileSrc'])}" loop muted playsinline disablepictureinpicture preload="none" aria-label="{e(video_title)}"></video>
+  <img class="video-poster" src="{e(poster)}" alt="" loading="{"eager" if index == 0 else "lazy"}" decoding="async">
   <button class="video-sound" type="button" aria-label="Звук видео" aria-pressed="false" title="Включить звук">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
       <path d="M11 5 6 9H3v6h3l5 4Z"/>
