@@ -18,10 +18,11 @@ class Element {
   append(child) { this.appended = child; }
   remove() { this.removed = true; }
 }
-function fixture({mobile=true, saveData=false, reduced=false} = {}) {
+function fixture({mobile=true, saveData=false, reduced=false, hasAudio=true} = {}) {
   const videos = Array.from({length:2}, () => {
     const container = new Element();
     for (const selector of ['.video-sound','.video-status','.video-poster']) container.children[selector] = new Element();
+    if (!hasAudio) delete container.children['.video-sound'];
     const video = new Element();
     Object.assign(video, {dataset:{src:'desktop.mp4',mobileSrc:'mobile.mp4',poster:'poster.webp'}, paused:true, muted:true, currentTime:0, duration:43, loads:0, plays:0,
       closest:()=>container, load(){this.loads++; this.error=null;},
@@ -108,3 +109,14 @@ normal.figure.appended.emit('click');
 assert.match(normal.img.src,/^mobile.webp\?retry=/);
 normal.img.emit('load');assert.equal(normal.figure.appended.removed,true);
 console.log('Media tests passed: mobile/desktop, nearby loading, pause/resume, reduced motion, data saving, image fallback and retry.');
+
+const silent = fixture({hasAudio:false});
+silent.enter(0,true);
+assert.equal(silent.videos[0].paused,false,'silent videos still autoplay');
+silent.enter(0,false);
+assert.equal(silent.videos[0].paused,true);
+silent.enter(0,true);
+assert.equal(silent.videos[0].paused,false,'silent videos resume without a sound button');
+silent.videos[0].emit('volumechange');
+silent.videos[0].emit('error');
+assert.ok(!silent.videos[0].container.children['.video-status'].textContent.includes('кнопку звука'));

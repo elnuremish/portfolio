@@ -183,11 +183,12 @@ for (const video of document.querySelectorAll('video[data-src]')) {
   // Never enable native controls: they dim the entire video on hover/tap.
   video.controls = false;
   const syncSound = () => {
+    if (!sound) return;
     sound.setAttribute('aria-pressed', String(!video.muted));
     sound.title = video.muted ? 'Включить звук' : 'Выключить звук';
   };
   syncSound();
-  video.addEventListener('volumechange', syncSound);
+  if (sound) video.addEventListener('volumechange', syncSound);
   let resumeTime = 0;
   video.addEventListener('loadedmetadata', () => {
     if (resumeTime > 0 && resumeTime < video.duration) video.currentTime = resumeTime;
@@ -235,9 +236,11 @@ for (const video of document.querySelectorAll('video[data-src]')) {
   });
   video.addEventListener('error', () => {
     container.classList.remove('is-playing');
-    status.textContent = 'Не удалось загрузить видео. Нажмите кнопку звука, чтобы повторить';
+    status.textContent = sound
+      ? 'Не удалось загрузить видео. Нажмите кнопку звука, чтобы повторить'
+      : 'Не удалось загрузить видео. Обновите страницу, чтобы повторить';
   });
-  sound.addEventListener('click', () => {
+  sound?.addEventListener('click', () => {
     video.muted = !video.muted;
     syncSound();
     if (video.paused || video.error) player.play();

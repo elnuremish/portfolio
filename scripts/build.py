@@ -145,16 +145,17 @@ def render_project(slug):
    video_title = f'{title} — видео {index+1}'
    poster = item.get('poster', 'assets/nebesnaya-motion-poster.webp')
 
-   parts.append(f'''<div class="media local-video" style="{e(media_style)}">
-  <video data-src="{e(item['src'])}" data-mobile-src="{e(item['mobileSrc'])}" loop muted playsinline disablepictureinpicture preload="none" aria-label="{e(video_title)}"></video>
-  <img class="video-poster" src="{e(poster)}" alt="" loading="{"eager" if index == 0 else "lazy"}" decoding="async">
-  <button class="video-sound" type="button" aria-label="Звук видео" aria-pressed="false" title="Включить звук">
+   sound_button = '''<button class="video-sound" type="button" aria-label="Звук видео" aria-pressed="false" title="Включить звук">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
       <path d="M11 5 6 9H3v6h3l5 4Z"/>
       <path class="sound-off" d="m16 9 5 6m0-6-5 6"/>
       <path class="sound-on" d="M15 8a6 6 0 0 1 0 8m3-11a10 10 0 0 1 0 14"/>
     </svg>
-  </button>
+  </button>''' if item.get('hasAudio', False) else ''
+   parts.append(f'''<div class="media local-video" style="{e(media_style)}">
+  <video data-src="{e(item['src'])}" data-mobile-src="{e(item['mobileSrc'])}" loop muted playsinline disablepictureinpicture preload="none" aria-label="{e(video_title)}"></video>
+  <img class="video-poster" src="{e(poster)}" alt="" loading="{"eager" if index == 0 else "lazy"}" decoding="async">
+{sound_button}
   <span class="video-status" role="status"></span>
   <noscript><a class="video-link" href="{e(item['mobileSrc'])}">Открыть видео ↗</a></noscript>
 </div>''')
