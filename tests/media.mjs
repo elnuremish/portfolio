@@ -18,13 +18,13 @@ class Element {
   append(child) { this.appended = child; }
   remove() { this.removed = true; }
 }
-function fixture({mobile=true, saveData=false, reduced=false, hasAudio=true} = {}) {
-  const videos = Array.from({length:2}, () => {
+function fixture({mobile=true, saveData=false, reduced=false, hasAudio=true, videoCount=2} = {}) {
+  const videos = Array.from({length:videoCount}, () => {
     const container = new Element();
     for (const selector of ['.video-sound','.video-status','.video-poster']) container.children[selector] = new Element();
     if (!hasAudio) delete container.children['.video-sound'];
     const video = new Element();
-    Object.assign(video, {dataset:{src:'desktop.mp4',mobileSrc:'mobile.mp4',poster:'poster.webp'}, paused:true, muted:true, currentTime:0, duration:43, loads:0, plays:0,
+    Object.assign(video, {dataset:{src:'desktop.mp4',mobileSrc:'mobile.mp4'}, paused:true, muted:true, currentTime:0, duration:43, loads:0, plays:0,
       closest:()=>container, load(){this.loads++; this.error=null;},
       play(){this.plays++; this.paused=false; this.emit('playing'); return Promise.resolve();},
       pause(){if (!this.paused) {this.paused=true; this.emit('pause');}}, container});
@@ -108,7 +108,6 @@ assert.ok(normal.figure.appended,'offer manual retry after one fallback');
 normal.figure.appended.emit('click');
 assert.match(normal.img.src,/^mobile.webp\?retry=/);
 normal.img.emit('load');assert.equal(normal.figure.appended.removed,true);
-console.log('Media tests passed: mobile/desktop, nearby loading, pause/resume, reduced motion, data saving, image fallback and retry.');
 
 const silent = fixture({hasAudio:false});
 silent.enter(0,true);
@@ -120,3 +119,9 @@ assert.equal(silent.videos[0].paused,false,'silent videos resume without a sound
 silent.videos[0].emit('volumechange');
 silent.videos[0].emit('error');
 assert.ok(!silent.videos[0].container.children['.video-status'].textContent.includes('кнопку звука'));
+
+const home = fixture({videoCount:0});
+assert.equal(home.observers.length,0,'pages without video must not start media observers');
+assert.equal(home.doc.listeners.visibilitychange,undefined);
+assert.equal(home.motion.listeners.change,undefined);
+console.log('Media tests passed, including silent videos and pages without players.');

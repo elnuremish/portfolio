@@ -156,99 +156,105 @@ if ('IntersectionObserver' in window && matchMedia('(min-width:810px)').matches)
 
 // Native MP4 playback avoids a separate external player for every animation.
 // Warm only nearby videos; play visible ones and pause the rest.
-const connection = navigator.connection;
-const slowConnection = Boolean(connection?.saveData) || /(^|-)2g$/.test(connection?.effectiveType || '');
-const players = new Map();
-const nearbyObserver = 'IntersectionObserver' in window ? new IntersectionObserver(entries => {
-  for (const entry of entries) {
-    const player = players.get(entry.target);
-    player.nearby = entry.isIntersecting;
-    if (player.nearby) player.prepare();
-    else if (!player.inView) player.release();
-  }
-}, {rootMargin:'400px 0px'}) : null;
-const videoObserver = 'IntersectionObserver' in window ? new IntersectionObserver(entries => {
-  for (const entry of entries) {
-    const player = players.get(entry.target);
-    player.inView = entry.isIntersecting && entry.intersectionRatio >= .1;
-    player.update();
-  }
-}, {threshold:[0, .1]}) : null;
+function setupVideos() {
+  const videos = document.querySelectorAll('video[data-src]');
+  if (!videos.length) return;
 
-for (const video of document.querySelectorAll('video[data-src]')) {
-  const container = video.closest('.media');
-  const sound = container.querySelector('.video-sound');
-  const status = container.querySelector('.video-status');
-  const poster = container.querySelector('.video-poster');
-  // Never enable native controls: they dim the entire video on hover/tap.
-  video.controls = false;
-  const syncSound = () => {
-    if (!sound) return;
-    sound.setAttribute('aria-pressed', String(!video.muted));
-    sound.title = video.muted ? 'Включить звук' : 'Выключить звук';
-  };
-  syncSound();
-  if (sound) video.addEventListener('volumechange', syncSound);
-  let resumeTime = 0;
-  video.addEventListener('loadedmetadata', () => {
-    if (resumeTime > 0 && resumeTime < video.duration) video.currentTime = resumeTime;
-  });
-  const player = {
-    inView:false,
-    nearby:false,
-    release() {
-      if (!video.getAttribute('src')) return;
-      if (video.currentTime > 0) resumeTime = video.currentTime;
-      video.pause();
-      container.classList.remove('is-playing');
-      video.removeAttribute('src');
-      video.load(); // Abort the download as well as playback.
-    },
-    prepare(userInitiated = false) {
-      poster.loading = 'eager';
-      if (video.getAttribute('src') || (!userInitiated && (slowConnection || reducedMotion.matches))) return;
-      video.preload = 'metadata';
-      video.src = matchMedia('(max-width:809.98px)').matches || slowConnection
-        ? video.dataset.mobileSrc : video.dataset.src;
-      video.load();
-    },
-    play() {
-      player.prepare(true);
-      if (video.error) video.load();
-      status.textContent = 'Загрузка видео…';
-      video.play().catch(() => {
-        if (!video.error) status.textContent = '';
-        // The sound button also supplies a user gesture if autoplay is blocked.
-      });
-    },
-    update() {
-      if (player.inView && !document.hidden && !reducedMotion.matches && !slowConnection) {
-        player.play();
-      } else {
-        video.pause();
-        if (!player.nearby || document.hidden) player.release();
-      }
-    },
-  };
-  video.addEventListener('playing', () => {
-    container.classList.add('is-playing');
-    status.textContent = '';
-  });
-  video.addEventListener('error', () => {
-    container.classList.remove('is-playing');
-    status.textContent = sound
-      ? 'Не удалось загрузить видео. Нажмите кнопку звука, чтобы повторить'
-      : 'Не удалось загрузить видео. Обновите страницу, чтобы повторить';
-  });
-  sound?.addEventListener('click', () => {
-    video.muted = !video.muted;
+  const connection = navigator.connection;
+  const slowConnection = Boolean(connection?.saveData) || /(^|-)2g$/.test(connection?.effectiveType || '');
+  const players = new Map();
+  const nearbyObserver = 'IntersectionObserver' in window ? new IntersectionObserver(entries => {
+    for (const entry of entries) {
+      const player = players.get(entry.target);
+      player.nearby = entry.isIntersecting;
+      if (player.nearby) player.prepare();
+      else if (!player.inView) player.release();
+    }
+  }, {rootMargin:'400px 0px'}) : null;
+  const videoObserver = 'IntersectionObserver' in window ? new IntersectionObserver(entries => {
+    for (const entry of entries) {
+      const player = players.get(entry.target);
+      player.inView = entry.isIntersecting && entry.intersectionRatio >= .1;
+      player.update();
+    }
+  }, {threshold:[0, .1]}) : null;
+
+  for (const video of videos) {
+    const container = video.closest('.media');
+    const sound = container.querySelector('.video-sound');
+    const status = container.querySelector('.video-status');
+    const poster = container.querySelector('.video-poster');
+    // Never enable native controls: they dim the entire video on hover/tap.
+    video.controls = false;
+    const syncSound = () => {
+      if (!sound) return;
+      sound.setAttribute('aria-pressed', String(!video.muted));
+      sound.title = video.muted ? 'Включить звук' : 'Выключить звук';
+    };
     syncSound();
-    if (video.paused || video.error) player.play();
-  });
-  players.set(video, player);
-  if (nearbyObserver) nearbyObserver.observe(video);
-  else poster.loading = 'eager';
-  videoObserver?.observe(video);
+    if (sound) video.addEventListener('volumechange', syncSound);
+    let resumeTime = 0;
+    video.addEventListener('loadedmetadata', () => {
+      if (resumeTime > 0 && resumeTime < video.duration) video.currentTime = resumeTime;
+    });
+    const player = {
+      inView:false,
+      nearby:false,
+      release() {
+        if (!video.getAttribute('src')) return;
+        if (video.currentTime > 0) resumeTime = video.currentTime;
+        video.pause();
+        container.classList.remove('is-playing');
+        video.removeAttribute('src');
+        video.load(); // Abort the download as well as playback.
+      },
+      prepare(userInitiated = false) {
+        poster.loading = 'eager';
+        if (video.getAttribute('src') || (!userInitiated && (slowConnection || reducedMotion.matches))) return;
+        video.preload = 'metadata';
+        video.src = matchMedia('(max-width:809.98px)').matches || slowConnection
+          ? video.dataset.mobileSrc : video.dataset.src;
+        video.load();
+      },
+      play() {
+        player.prepare(true);
+        if (video.error) video.load();
+        status.textContent = 'Загрузка видео…';
+        video.play().catch(() => {
+          if (!video.error) status.textContent = '';
+          // The sound button also supplies a user gesture if autoplay is blocked.
+        });
+      },
+      update() {
+        if (player.inView && !document.hidden && !reducedMotion.matches && !slowConnection) {
+          player.play();
+        } else {
+          video.pause();
+          if (!player.nearby || document.hidden) player.release();
+        }
+      },
+    };
+    video.addEventListener('playing', () => {
+      container.classList.add('is-playing');
+      status.textContent = '';
+    });
+    video.addEventListener('error', () => {
+      container.classList.remove('is-playing');
+      status.textContent = sound
+        ? 'Не удалось загрузить видео. Нажмите кнопку звука, чтобы повторить'
+        : 'Не удалось загрузить видео. Обновите страницу, чтобы повторить';
+    });
+    sound?.addEventListener('click', () => {
+      video.muted = !video.muted;
+      syncSound();
+      if (video.paused || video.error) player.play();
+    });
+    players.set(video, player);
+    if (nearbyObserver) nearbyObserver.observe(video);
+    else poster.loading = 'eager';
+    videoObserver?.observe(video);
+  }
+  document.addEventListener('visibilitychange', () => players.forEach(player => player.update()));
+  reducedMotion.addEventListener('change', () => players.forEach(player => player.update()));
 }
-document.addEventListener('visibilitychange', () => players.forEach(player => player.update()));
-reducedMotion.addEventListener('change', () => players.forEach(player => player.update()));
+setupVideos();

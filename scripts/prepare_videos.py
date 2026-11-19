@@ -50,8 +50,10 @@ def prepare(item, ffmpeg):
                         '-pix_fmt', 'yuv420p', '-c:a', 'aac', '-b:a', '96k',
                         '-movflags', '+faststart', str(mobile_temp)], check=True)
         mobile_temp.replace(mobile)
-    item['src'] = desktop.relative_to(ROOT).as_posix()
-    item['mobileSrc'] = mobile.relative_to(ROOT).as_posix()
+    # Preserve later optimizations and deliberately silent variants.
+    item.setdefault('sourceSrc', desktop.relative_to(ROOT).as_posix())
+    item.setdefault('src', desktop.relative_to(ROOT).as_posix())
+    item.setdefault('mobileSrc', mobile.relative_to(ROOT).as_posix())
     print(video_id, 'desktop:', desktop.stat().st_size,
           'mobile:', mobile.stat().st_size, flush=True)
 

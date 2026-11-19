@@ -108,6 +108,7 @@ a.text-link:hover {
   gap:18px
 }
 .project-card {
+  position:relative;
   min-width:0
 }
 .project-cover {
@@ -203,15 +204,10 @@ a.text-link:hover {
   background:#000;
   overflow:hidden
 }
-.media img,.media video,.media iframe {
+.media img,.media video {
   width:100%;
   height:100%;
   object-fit:cover
-}
-.media iframe {
-  position:absolute;
-  inset:0;
-  border:0
 }
 .project-about {
   display:grid;
@@ -293,8 +289,6 @@ a.text-link:hover {
   border-radius:50%;
   color:#fff;
   background:#0007;
-  cursor:pointer;
-  touch-action:manipulation
 }
 .video-sound svg {
   width:24px;
@@ -343,9 +337,6 @@ a.text-link:hover {
   border-radius:4px;
   color:#fff;
   background:#000c
-}
-.project-card {
-  position:relative
 }
 /* Hover feedback belongs to interactive elements, not gallery artwork. */
 @media (max-width:809.98px) {
@@ -529,7 +520,6 @@ a.text-link:hover {
     gap:2px
   }
 }
-
 
 /* A fixed shell morphs without moving the project feed. No animation library. */
 .profile.is-enhanced {

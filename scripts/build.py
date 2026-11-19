@@ -62,8 +62,8 @@ def image(key, alt='', eager=False, profile=False, extra='', case=False):
     data = IMAGES[key]
     files = data.get('case_files', data['files']) if case else data['files']
     fallback = files[-1 if profile else min(1, len(files) - 1)]
-    sizes = ('(max-width:809px) 124px, 246px'
-             if profile else '(max-width:809px) calc(100vw - 36px), 100vw')
+    sizes = ('(max-width:809px) 124px, 246px' if profile else
+             '100vw' if case else '(max-width:809px) calc(100vw - 36px), 100vw')
     attributes = {
         'src': fallback['src'],
         'srcset': ', '.join(f'{entry["src"]} {entry["width"]}w' for entry in files),
@@ -93,7 +93,7 @@ def image(key, alt='', eager=False, profile=False, extra='', case=False):
 
 def contacts():
  return '<nav class="contact-links" aria-label="Контакты"><a class="text-link" href="https://t.me/elnuremish" target="_blank" rel="noopener noreferrer">контакт</a><a class="text-link" href="https://t.me/em16sh" target="_blank" rel="noopener noreferrer">телеграм канал</a><a class="text-link" href="mailto:elnuremish@gmail.com">почта</a></nav>'
-def head(title,description,slug):
+def head(title,description):
  return f'''<!doctype html>
 <html lang="ru">
 <head>
@@ -116,7 +116,7 @@ def head(title,description,slug):
 <body>
 <a class="skip-link" href="#main">{prose('К содержимому')}</a>'''
 def render_home():
- home=CONTENT['home'];parts=[head(home['title'],home['description'],'index')]
+ home=CONTENT['home'];parts=[head(home['title'],home['description'])]
  parts.append('<div class="profile-slot"><aside class="profile" aria-label="Профиль дизайнера"><div class="profile-expanded">')
  parts.append(image(home['portrait'],home['name'],True,True,'class="portrait"'))
  parts.append('<div class="profile-info"><h1>'+prose(home['name'])+'</h1><p class="profile-bio">'+'<br>'.join(prose(s) for s in home['bio'])+'</p></div>'+contacts()+'</div>')
@@ -128,7 +128,7 @@ def render_home():
  (ROOT/'index.html').write_text('\n'.join(parts)+'\n')
 def render_project(slug):
  project=CONTENT[slug];title=project['title'];first_about=next(i for i in project['items'] if i['type']=='about');description=' '.join(first_about['paragraphs'])
- parts=[head(title+' — Агабалаев Эльнур',description,slug),'<header class="project-header"><a class="text-link" href="index.html">Назад</a>'+contacts()+'</header>','<main id="main" class="project-gallery">']
+ parts=[head(title+' — Агабалаев Эльнур',description),'<header class="project-header"><a class="text-link" href="index.html">Назад</a>'+contacts()+'</header>','<main id="main" class="project-gallery">']
  about_count=0
  first_image=next((i for i,item in enumerate(project['items']) if item['type']=='image'),None)
  for index,item in enumerate(project['items']):
@@ -139,8 +139,7 @@ def render_project(slug):
    heading='h1' if about_count==0 else 'h2';about_count+=1
    parts.append('<section class="project-about"><'+heading+'>'+prose(item['title'])+'</'+heading+'><div class="project-description">'+''.join('<p>'+prose(p)+'</p>' for p in item['paragraphs'])+'</div></section>')
   elif kind=='image':
-   sizes='(max-width:809px) 100vw, 100vw'
-   parts.append(f'<figure class="media gallery-image" style="{e(media_style)}">'+image(item['image'],f'{title} — {index+1}',index==first_image,case=True).replace('sizes="(max-width:809px) calc(100vw - 36px), 100vw"',f'sizes="{sizes}"')+'</figure>')
+   parts.append(f'<figure class="media gallery-image" style="{e(media_style)}">'+image(item['image'],f'{title} — {index+1}',index==first_image,case=True)+'</figure>')
   elif kind in ('embed', 'video'):
    video_title = f'{title} — видео {index+1}'
    poster = item.get('poster', 'assets/nebesnaya-motion-poster.webp')
