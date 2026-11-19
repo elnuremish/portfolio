@@ -626,7 +626,7 @@ a.text-link:hover {
 }
 
 /* Inline thumbnails paint with the HTML; full artwork replaces them naturally. */
-.gallery-image,.local-video {
+.gallery-image,.local-video,.video-poster {
   background-image:var(--preview);
   background-position:center;
   background-size:cover
