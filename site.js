@@ -1,3 +1,14 @@
+const labels = document.documentElement?.lang === 'en' ? {
+  imageRetry:'Load image', unmute:'Unmute', mute:'Mute', loading:'Loading video…',
+  videoError:'Could not load video. Tap the sound button to retry',
+  silentError:'Could not load video. Refresh the page to retry',
+} : {
+  imageRetry:'Загрузить изображение', unmute:'Включить звук', mute:'Выключить звук',
+  loading:'Загрузка видео…',
+  videoError:'Не удалось загрузить видео. Нажмите кнопку звука, чтобы повторить',
+  silentError:'Не удалось загрузить видео. Обновите страницу, чтобы повторить',
+};
+
 const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
 
 // Only the home page has a profile. Scroll direction uses a small dead zone so
@@ -126,7 +137,7 @@ for (const img of document.querySelectorAll('img[data-fallback]')) {
     } else if (!retry) {
       retry = document.createElement('button');
       retry.className = 'image-retry';
-      retry.textContent = 'Загрузить изображение';
+      retry.textContent = labels.imageRetry;
       retry.addEventListener('click', event => {
         event.preventDefault();
         img.src = `${fallback()}?retry=${Date.now()}`;
@@ -189,7 +200,7 @@ function setupVideos() {
     const syncSound = () => {
       if (!sound) return;
       sound.setAttribute('aria-pressed', String(!video.muted));
-      sound.title = video.muted ? 'Включить звук' : 'Выключить звук';
+      sound.title = video.muted ? labels.unmute : labels.mute;
     };
     syncSound();
     if (sound) video.addEventListener('volumechange', syncSound);
@@ -219,7 +230,7 @@ function setupVideos() {
       play() {
         player.prepare(true);
         if (video.error) video.load();
-        status.textContent = 'Загрузка видео…';
+        status.textContent = labels.loading;
         video.play().catch(() => {
           if (!video.error) status.textContent = '';
           // The sound button also supplies a user gesture if autoplay is blocked.
@@ -241,8 +252,8 @@ function setupVideos() {
     video.addEventListener('error', () => {
       container.classList.remove('is-playing');
       status.textContent = sound
-        ? 'Не удалось загрузить видео. Нажмите кнопку звука, чтобы повторить'
-        : 'Не удалось загрузить видео. Обновите страницу, чтобы повторить';
+        ? labels.videoError
+        : labels.silentError;
     });
     sound?.addEventListener('click', () => {
       video.muted = !video.muted;

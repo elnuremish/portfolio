@@ -1,0 +1,59 @@
+{
+  "home": {
+    "name": "Elnur Agabalaev",
+    "bio": ["communication designer", "product designer"],
+    "title": "Emish — Portfolio",
+    "description": "Communication and product designer",
+    "captions": [
+      "S Cherdakov — visual identity for a flea market and a service that gives unwanted things a new home",
+      "ADAT — a contemporary lifestyle brand bringing together modern aesthetics and the heritage of the Caucasus",
+      "Heavenly Office — a project where human wishes and worries become formal requests to an office in the sky",
+      "Other work — creative explorations and projects in progress"
+    ]
+  },
+  "scherdakov": {
+    "title": "S Cherdakov",
+    "sections": [
+      {"title": "S Cherdakov", "paragraphs": ["S Cherdakov takes in things people no longer need and helps them find new owners. Bears with distinct personalities, silhouettes of everyday objects and colourful stripes tell the story of things moving from home to home."]},
+      {"title": "The brief", "paragraphs": ["The flea market was conceived as an open, welcoming space for celebrations, encounters and unexpected finds. Its wide range of goods also called for a clear way to organise them.", "The visual identity needed to capture the character of the place and communicate both sides of the project: somewhere to bring unwanted things and find something for yourself."]},
+      {"title": "Why a bear?", "paragraphs": ["The bear recalls an old toy kept for the memories attached to it. Its colourful patches suggest an object's past and its new life.", "Different shapes, colours and expressions reflect the variety of the flea market. Most of the characters look upwards, towards the attic — a reference to the name S Cherdakov, meaning ‘from the attics’."]},
+      {"title": "The logo", "paragraphs": ["The bear sits between the two words of the name, becoming part of the wordmark. The brand guidelines bring together logo variations, clear space and usage rules to keep it recognisable across applications."]},
+      {"title": "Colour and type", "paragraphs": ["The palette combines vivid blue and orange with light blue, beige and pink. The warm colours suggest care and the comfort of home; the blues convey trust and reliability.", "Aeroport is used throughout. Bold gives the headings emphasis, while Regular keeps the accompanying information easy to read."]},
+      {"title": "Social media", "paragraphs": ["Post and story templates allow characters, objects and compositions to change. A shared palette, typeface and recurring graphics keep different messages recognisable as part of the same brand."]},
+      {"title": "From home to home", "paragraphs": ["Colourful stripes and rectangles form a pattern that can fill a surface or narrow down to a single line. Alongside the slogan ‘from home to home’, this line connects the two halves of the phrase and traces an object's journey. The device appears on the shopfront, packaging and promotional materials."]},
+      {"title": "An identity made of things", "paragraphs": ["Tableware, clothing, furniture and other finds become simple silhouettes. They hint at the range of goods and complement the characters.", "Objects appear on their own or in compositions. A shared palette brings them together, while texture reinforces the idea of things that have already been part of someone's life."]},
+      {"title": "The result", "paragraphs": ["The project includes characters, object illustrations, a pattern, a logo and communication templates. The identity is shown on packaging, the shopfront, vehicles, outdoor advertising and social media. A brand book sets out the rules for its continued use.", "Today, S Cherdakov is up and running and continues to grow."]}
+    ]
+  },
+  "adat": {
+    "title": "ADAT",
+    "sections": [
+      {"title": "ADAT", "paragraphs": ["A lifestyle brand concept bringing together contemporary aesthetics and the heritage of the Caucasus. It centres on expeditions through the highlands, gathering herbs for tea and sharing tea rituals along the way."]},
+      {"title": "The brief and research", "paragraphs": ["The aim was to bring travel, tea and Caucasian culture together in one brand. The concept centres on the experience of an explorer discovering a region through its routes, flavours and local traditions.", "Research compared adventure clubs, boutique tours and tea brands. This informed a positioning in which an expedition and a tea ritual become parts of the same journey."]},
+      {"title": "Visual language", "paragraphs": ["The exploration considered line drawings, landscapes and animal imagery. Botanical illustrations became the foundation of the final identity, connecting the graphics to herb gathering and tea. Mountain landscapes establish the setting for the journey.", "Muted green, blue and pink distinguish the different design variations. Enlarged botanical details appear on packaging and posters, while smaller illustrations carry over to stickers and badges."]},
+      {"title": "The tea ritual", "paragraphs": ["The graphics extend to tableware, packaging and printed materials. The tea ritual shares the expedition's visual language, and individual objects come together as one coherent brand."]},
+      {"title": "Bringing the journey home", "paragraphs": ["Notebooks, postcards, stickers and badges carry the identity onto objects to take on a trip or keep afterwards. Botanical motifs recur at different scales and across different formats."]},
+      {"title": "Website", "paragraphs": ["The website introduces the brand and helps visitors choose a trip. They can explore expeditions, read about past participants' experiences and book a journey. Landscapes reveal the routes, while botanical graphics connect the website to the packaging and printed materials."]},
+      {"title": "The result", "paragraphs": ["The project develops an identity for expeditions and tea rituals, shown across packaging, tableware, souvenirs, promotional materials and a website. A shared graphic language connects discovering a route, taking the trip and remembering it afterwards."]}
+    ]
+  },
+  "nebesnaya": {
+    "title": "Heavenly Office",
+    "sections": [
+      {"title": "Heavenly Office", "paragraphs": ["A project in which human wishes and worries become formal requests to an office in the sky.", "People write to the heavens, and office staff receive their letters, register them and send them to the right department. The staff are ‘former humans’ who have completed their earthly journeys and now help others."]},
+      {"title": "The brief", "paragraphs": ["The task was to give a fictional organisation a recognisable identity. The starting point was the familiar language of an office where every request has a number, a form and a place in the system.", "Forms, document fields and administrative labels set an official tone, translating personal experiences into the language of bureaucracy."]},
+      {"title": "From paperwork to identity", "paragraphs": ["A folder became a metaphor for a place for every human story. Its shape connects the project's idea to a familiar office object.", "A gradient moves from dark to light, suggesting a transition from a problem to its resolution. White and light blue link the office setting to the sky."]},
+      {"title": "The symbol", "paragraphs": ["The symbol's sharp rays convey an impulse and an answer travelling in different directions. Within the concept, this is the moment a request receives a response from the heavenly administration. The symbol appears on its own and alongside the name on documents and objects."]},
+      {"title": "Inside the office", "paragraphs": ["Spatial compositions develop the image of the office. Repeated shapes, light and transparent surfaces suggest an orderly system that follows its own heavenly rules."]},
+      {"title": "Expanding the system", "paragraphs": ["Motifs from the spatial compositions become flat poster graphics. Shape, colour and administrative labels connect documents, interiors and communications within a single fictional world."]},
+      {"title": "The result", "paragraphs": ["The project creates an identity for a heavenly office, explored through documents, a book, posters, workplace objects, staff clothing and animation. Across these applications, strict order meets a fantastical setting."]}
+    ]
+  },
+  "other": {
+    "title": "Other work",
+    "sections": [
+      {"title": "Kirpich", "paragraphs": ["A concept for a shop selling office bricks."]},
+      {"title": "ICF", "paragraphs": ["Visual identity for the Yakutia mas-wrestling championship."]}
+    ]
+  }
+}

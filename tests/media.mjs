@@ -18,7 +18,7 @@ class Element {
   append(child) { this.appended = child; }
   remove() { this.removed = true; }
 }
-function fixture({mobile=true, saveData=false, reduced=false, hasAudio=true, videoCount=2} = {}) {
+function fixture({mobile=true, saveData=false, reduced=false, hasAudio=true, videoCount=2, lang='ru'} = {}) {
   const videos = Array.from({length:videoCount}, () => {
     const container = new Element();
     for (const selector of ['.video-sound','.video-status','.video-poster']) container.children[selector] = new Element();
@@ -36,6 +36,7 @@ function fixture({mobile=true, saveData=false, reduced=false, hasAudio=true, vid
   Object.assign(img, {dataset:{fallback:'desktop.webp',mobileFallback:'mobile.webp'},
     closest:selector=>selector==='picture'?{querySelectorAll:()=>[source]}:figure});
   const doc = new Element();
+  doc.documentElement = {lang};
   doc.querySelector = () => null;
   doc.querySelectorAll = selector => selector.startsWith('img') || selector.startsWith('.gallery') ? [img] : videos;
   doc.createElement = () => new Element();
@@ -125,3 +126,12 @@ assert.equal(home.observers.length,0,'pages without video must not start media o
 assert.equal(home.doc.listeners.visibilitychange,undefined);
 assert.equal(home.motion.listeners.change,undefined);
 console.log('Media tests passed, including silent videos and pages without players.');
+
+const english = fixture({lang:'en'});
+english.enter(0,true);
+english.videos[0].container.children['.video-sound'].emit('click');
+assert.equal(english.videos[0].container.children['.video-sound'].title,'Mute');
+english.img.emit('error');english.img.emit('error');
+assert.equal(english.figure.appended.textContent,'Load image');
+english.videos[0].emit('error');
+assert.match(english.videos[0].container.children['.video-status'].textContent,/Could not load video/);

@@ -2,9 +2,47 @@
 """Build all static pages from content/ using only Python's standard library."""
 from pathlib import Path
 from html import escape
-import hashlib,json,re
+import copy,hashlib,json,re
 ROOT=Path(__file__).resolve().parents[1]
-CONTENT=json.loads((ROOT/'content/portfolio.json').read_text())
+BASE_CONTENT=json.loads((ROOT/'content/portfolio.json').read_text())
+ENGLISH=json.loads((ROOT/'content/en.json').read_text())
+CONTENT=BASE_CONTENT
+LANG='ru'
+UI={
+ 'ru': {'contacts':'Контакты','contact':'контакт','channel':'телеграм канал','email':'почта',
+        'skip':'К содержимому','profile':'Профиль дизайнера','open':'Открыть проект',
+        'new':'Новый проект','back':'Назад','home':'Вернуться на главную',
+        'next':'Следующий проект','video':'видео','sound':'Звук видео',
+        'unmute':'Включить звук','open_video':'Открыть видео ↗','languages':'Язык'},
+ 'en': {'contacts':'Contacts','contact':'contact','channel':'Telegram channel','email':'email',
+        'skip':'Skip to content','profile':'Designer profile','open':'View project',
+        'new':'New project','back':'Back','home':'Back to home',
+        'next':'Next project','video':'video','sound':'Video sound',
+        'unmute':'Unmute','open_video':'Open video ↗','languages':'Language'},
+}
+def t(key):return UI[LANG][key]
+def page_url(slug,lang=None):return slug+('-en' if (lang or LANG)=='en' else '')+'.html'
+def language_switch(slug):
+ links=[]
+ for lang in ('ru','en'):
+  label=lang.upper()
+  links.append(f'<span aria-current="true">{label}</span>' if lang==LANG else f'<a href="{page_url(slug,lang)}" lang="{lang}" hreflang="{lang}">{label}</a>')
+ return '<nav class="language-switch" aria-label="'+t('languages')+'">'+'<span aria-hidden="true" class="language-divider">/</span>'.join(links)+'</nav>'
+
+def translated_content():
+ content=copy.deepcopy(BASE_CONTENT)
+ home=content['home'];translation=ENGLISH['home']
+ for key in ('name','bio','title','description'):home[key]=translation[key]
+ assert len(home['cards'])==len(translation['captions'])
+ for card,caption in zip(home['cards'],translation['captions']):card['caption']=caption
+ for slug in ORDER:
+  content[slug]['title']=ENGLISH[slug]['title']
+  sections=[i for i in content[slug]['items'] if i['type']=='about']
+  assert len(sections)==len(ENGLISH[slug]['sections']),slug
+  for section,translation in zip(sections,ENGLISH[slug]['sections']):
+   assert len(section['paragraphs'])==len(translation['paragraphs']),slug
+   section.update(translation)
+ return content
 IMAGES=json.loads((ROOT/'content/images.json').read_text())
 ORDER=['scherdakov','adat','nebesnaya','other']
 def e(value):return escape(str(value),quote=True)
@@ -35,6 +73,7 @@ def is_bound_word(token):
 def prose(value):
     """Escape visible text and keep a function-word group on one line."""
     value = str(value)
+    if LANG == 'en':return e(value)
     words = list(re.finditer(r'\S+', value))
     parts = []
     cursor = 0
@@ -92,10 +131,10 @@ def image(key, alt='', eager=False, profile=False, extra='', case=False):
     return '<picture>' + ''.join(sources) + img + '</picture>' if sources else img
 
 def contacts():
- return '<nav class="contact-links" aria-label="Контакты"><a class="text-link" href="https://t.me/elnuremish" target="_blank" rel="noopener noreferrer">контакт</a><a class="text-link" href="https://t.me/em16sh" target="_blank" rel="noopener noreferrer">телеграм канал</a><a class="text-link" href="mailto:elnuremish@gmail.com">почта</a></nav>'
-def head(title,description):
+ return f'<nav class="contact-links" aria-label="{t("contacts")}"><a class="text-link" href="https://t.me/elnuremish" target="_blank" rel="noopener noreferrer">{t("contact")}</a><a class="text-link" href="https://t.me/em16sh" target="_blank" rel="noopener noreferrer">{t("channel")}</a><a class="text-link" href="mailto:elnuremish@gmail.com">{t("email")}</a></nav>'
+def head(title,description,slug):
  return f'''<!doctype html>
-<html lang="ru">
+<html lang="{LANG}">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -104,31 +143,34 @@ def head(title,description):
   <meta property="og:title" content="{e(title)}">
   <meta property="og:description" content="{e(description)}">
   <meta property="og:type" content="website">
+  <link rel="alternate" hreflang="ru" href="{page_url(slug,"ru")}">
+  <link rel="alternate" hreflang="en" href="{page_url(slug,"en")}">
   <link rel="icon" href="favicon.ico?v=16" sizes="16x16 32x32 48x48">
   <link rel="icon" href="favicon.svg?v=16" type="image/svg+xml">
   <link rel="apple-touch-icon" href="apple-touch-icon.png?v=16">
-  <link rel="preload" href="assets/V3j1L0o5vPFKe26Sw4HcpXCfHo.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="assets/UjFZPDy3qGuDktQM4q9CxhKfIa8.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/{"iwWTDc49ENF2tCHbqlNARXw6Ug.woff2" if LANG=="en" else "V3j1L0o5vPFKe26Sw4HcpXCfHo.woff2"}" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/{"qITWJ2WdG0wrgQPDb8lvnYnTXDg.woff2" if LANG=="en" else "UjFZPDy3qGuDktQM4q9CxhKfIa8.woff2"}" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="site.css?v={CSS}">
   <title>{e(title)}</title>
   <script src="site.js?v={JS}" defer></script>
 </head>
 <body>
-<a class="skip-link" href="#main">{prose('К содержимому')}</a>'''
+<a class="skip-link" href="#main">{prose(t('skip'))}</a>
+{language_switch(slug)}'''
 def render_home():
- home=CONTENT['home'];parts=[head(home['title'],home['description'])]
- parts.append('<div class="profile-slot"><aside class="profile" aria-label="Профиль дизайнера"><div class="profile-expanded">')
+ home=CONTENT['home'];parts=[head(home['title'],home['description'],'index')]
+ parts.append(f'<div class="profile-slot"><aside class="profile" aria-label="{t("profile")}"><div class="profile-expanded">')
  parts.append(image(home['portrait'],home['name'],True,True,'class="portrait"'))
  parts.append('<div class="profile-info"><h1>'+prose(home['name'])+'</h1><p class="profile-bio">'+'<br>'.join(prose(s) for s in home['bio'])+'</p></div>'+contacts()+'</div>')
  parts.append('<div class="profile-compact" hidden inert aria-hidden="true">'+contacts()+'</div></aside></div>')
  parts.append('<main id="main" class="portfolio"><div class="project-feed">')
  for number,card in enumerate(home['cards']):
-  slug=card['slug'];title=CONTENT[slug]['title'];parts.append(f'<figure class="project-card"><a class="project-cover" href="{slug}.html" aria-label="Открыть проект {e(title)}">'+image(card['image'],title,eager=number==0)+('<span class="project-badge">Новый проект</span>' if number==0 else '')+'</a><figcaption>'+prose(card['caption'])+'</figcaption></figure>')
+  slug=card['slug'];title=CONTENT[slug]['title'];parts.append(f'<figure class="project-card"><a class="project-cover" href="{page_url(slug)}" aria-label="{t('open')} {e(title)}">'+image(card['image'],title,eager=number==0)+(f'<span class="project-badge">{t("new")}</span>' if number==0 else '')+'</a><figcaption>'+prose(card['caption'])+'</figcaption></figure>')
  parts.append('</div></main></body></html>')
- (ROOT/'index.html').write_text('\n'.join(parts)+'\n')
+ (ROOT/page_url('index')).write_text('\n'.join(parts)+'\n')
 def render_project(slug):
  project=CONTENT[slug];title=project['title'];first_about=next(i for i in project['items'] if i['type']=='about');description=' '.join(first_about['paragraphs'])
- parts=[head(title+' — Агабалаев Эльнур',description),'<header class="project-header"><a class="text-link" href="index.html">Назад</a>'+contacts()+'</header>','<main id="main" class="project-gallery">']
+ parts=[head(title+' — '+CONTENT['home']['name'],description,slug),f'<header class="project-header"><a class="text-link" href="{page_url("index")}">{t("back")}</a>'+contacts()+'</header>','<main id="main" class="project-gallery">']
  about_count=0
  first_image=next((i for i,item in enumerate(project['items']) if item['type']=='image'),None)
  for index,item in enumerate(project['items']):
@@ -141,10 +183,10 @@ def render_project(slug):
   elif kind=='image':
    parts.append(f'<figure class="media gallery-image" style="{e(media_style)}">'+image(item['image'],f'{title} — {index+1}',index==first_image,case=True)+'</figure>')
   elif kind in ('embed', 'video'):
-   video_title = f'{title} — видео {index+1}'
+   video_title = f'{title} — {t("video")} {index+1}'
    poster = item.get('poster', 'assets/nebesnaya-motion-poster.webp')
 
-   sound_button = '''<button class="video-sound" type="button" aria-label="Звук видео" aria-pressed="false" title="Включить звук">
+   sound_button = f'''<button class="video-sound" type="button" aria-label="{t('sound')}" aria-pressed="false" title="{t('unmute')}">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
       <path d="M11 5 6 9H3v6h3l5 4Z"/>
       <path class="sound-off" d="m16 9 5 6m0-6-5 6"/>
@@ -156,13 +198,15 @@ def render_project(slug):
   <img class="video-poster" src="{e(poster)}" alt="" loading="{"eager" if index == 0 else "lazy"}" decoding="async">
 {sound_button}
   <span class="video-status" role="status"></span>
-  <noscript><a class="video-link" href="{e(item['mobileSrc'])}">Открыть видео ↗</a></noscript>
+  <noscript><a class="video-link" href="{e(item['mobileSrc'])}">{prose(t('open_video'))}</a></noscript>
 </div>''')
  parts.append('</main>')
  next_slug=ORDER[(ORDER.index(slug)+1)%len(ORDER)]
- parts.append('<footer class="project-footer"><a href="index.html"><svg class="footer-arrow" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 4-5 5 5 5M4 9h10a6 6 0 0 1 0 12"/></svg><span>'+prose('Вернуться на главную')+'</span></a><a class="next-project" href="'+next_slug+'.html"><span>Следующий проект</span><svg class="footer-arrow" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 4 5 5-5 5m5-5H10a6 6 0 0 0 0 12"/></svg></a></footer></body></html>')
- (ROOT/(slug+'.html')).write_text('\n'.join(parts)+'\n')
+ parts.append('<footer class="project-footer"><a href="'+page_url('index')+'"><svg class="footer-arrow" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 4-5 5 5 5M4 9h10a6 6 0 0 1 0 12"/></svg><span>'+prose(t('home'))+'</span></a><a class="next-project" href="'+page_url(next_slug)+'"><span>'+prose(t('next'))+'</span><svg class="footer-arrow" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 4 5 5-5 5m5-5H10a6 6 0 0 0 0 12"/></svg></a></footer></body></html>')
+ (ROOT/page_url(slug)).write_text('\n'.join(parts)+'\n')
 if __name__=='__main__':
- render_home()
- for slug in ORDER:render_project(slug)
- print('Built 5 pages. No dependencies or browser-side framework required.')
+ for LANG in ('ru','en'):
+  CONTENT=BASE_CONTENT if LANG=='ru' else translated_content()
+  render_home()
+  for slug in ORDER:render_project(slug)
+ print('Built 10 pages in Russian and English. No runtime translation dependencies.')

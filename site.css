@@ -629,3 +629,39 @@ a.text-link:hover {
 .local-video.is-playing .video-poster {
   visibility:hidden
 }
+
+/* Plain links work without JavaScript and keep the current case in either language. */
+.language-switch {
+  position:fixed;
+  right:18px;
+  bottom:18px;
+  z-index:6;
+  display:flex;
+  align-items:center;
+  border:1px solid #e6e6e6;
+  border-radius:4px;
+  background:#fff;
+  color:#000;
+  box-shadow:0 1px 2px #00000008;
+  font-size:14px;
+  line-height:20px
+}
+.language-switch a,.language-switch [aria-current] {
+  display:grid;
+  place-items:center;
+  min-width:44px;
+  min-height:44px
+}
+.language-switch [aria-current] {
+  font-weight:700
+}
+.language-switch a:hover {
+  text-decoration:underline;
+  text-underline-offset:3px
+}
+.language-divider {
+  color:#888
+}
+.project-footer {
+  padding-bottom:90px
+}
