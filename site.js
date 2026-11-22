@@ -16,6 +16,7 @@ const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
 function setupProfile() {
   const profile = document.querySelector('.profile');
   if (!profile) return;
+  const mobile = matchMedia('(max-width:809.98px)');
   const slot = profile.parentElement;
   const expanded = profile.querySelector('.profile-expanded');
   const compact = profile.querySelector('.profile-compact');
@@ -55,6 +56,7 @@ function setupProfile() {
     maxScroll = Math.max(0, document.documentElement.scrollHeight - window.innerHeight);
     previousY = Math.min(maxScroll, Math.max(0, window.scrollY));
     travel = 0;
+    if (mobile.matches && previousY > 0) setCollapsed(true);
   };
 
   const update = () => {
@@ -62,6 +64,13 @@ function setupProfile() {
     const y = Math.min(maxScroll, Math.max(0, window.scrollY));
     const delta = y - previousY;
     previousY = y;
+    // On phones, upward scrolling keeps the full profile out of the artwork.
+    if (mobile.matches) {
+      if (y === 0) setCollapsed(false);
+      else if (collapsed || y > 80) setCollapsed(true);
+      travel = 0;
+      return;
+    }
     if (y <= 24) {
       setCollapsed(false);
       travel = 0;
@@ -81,7 +90,7 @@ function setupProfile() {
   profile.classList.add('is-enhanced');
   slot.classList.add('is-enhanced');
   measure();
-  setCollapsed(previousY > 80);
+  setCollapsed(mobile.matches ? previousY > 0 : previousY > 80);
   requestAnimationFrame(() => profile.classList.add('is-animated'));
   window.addEventListener('scroll', () => {
     if (!scrollFrame) scrollFrame = requestAnimationFrame(update);
@@ -91,7 +100,7 @@ function setupProfile() {
   }, {passive:true});
   window.addEventListener('pageshow', () => {
     measure();
-    setCollapsed(previousY > 80);
+    setCollapsed(mobile.matches ? previousY > 0 : previousY > 80);
   });
   document.fonts.ready.then(measure);
 }

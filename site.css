@@ -630,11 +630,13 @@ a.text-link:hover {
   visibility:hidden
 }
 
-/* Language links occupy their own space instead of covering the artwork. */
+/* Persistent language links share the same position in both versions. */
 .language-switch {
+  position:fixed;
+  right:18px;
+  bottom:18px;
+  z-index:6;
   display:flex;
-  width:max-content;
-  flex:none;
   align-items:center;
   border:1px solid #e6e6e6;
   border-radius:4px;
@@ -660,11 +662,6 @@ a.text-link:hover {
 .language-divider {
   color:#888
 }
-.profile-info .language-switch {
-  margin-top:12px
-}
-.project-navigation {
-  display:flex;
-  align-items:center;
-  gap:12px
+.project-footer {
+  padding-bottom:90px
 }
