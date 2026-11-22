@@ -14,7 +14,7 @@ UI={
         'new':'Новый проект','back':'Назад','home':'Вернуться на главную',
         'next':'Следующий проект','video':'видео','sound':'Звук видео',
         'unmute':'Включить звук','open_video':'Открыть видео ↗','languages':'Язык'},
- 'en': {'contacts':'Contacts','contact':'contact','channel':'Telegram channel','email':'email',
+ 'en': {'contacts':'Contacts','contact':'contact','channel':'telegram channel','email':'email',
         'skip':'Skip to content','profile':'Designer profile','open':'View project',
         'new':'New project','back':'Back','home':'Back to home',
         'next':'Next project','video':'video','sound':'Video sound',
@@ -155,13 +155,12 @@ def head(title,description,slug):
   <script src="site.js?v={JS}" defer></script>
 </head>
 <body>
-<a class="skip-link" href="#main">{prose(t('skip'))}</a>
-{language_switch(slug)}'''
+<a class="skip-link" href="#main">{prose(t('skip'))}</a>'''
 def render_home():
  home=CONTENT['home'];parts=[head(home['title'],home['description'],'index')]
  parts.append(f'<div class="profile-slot"><aside class="profile" aria-label="{t("profile")}"><div class="profile-expanded">')
  parts.append(image(home['portrait'],home['name'],True,True,'class="portrait"'))
- parts.append('<div class="profile-info"><h1>'+prose(home['name'])+'</h1><p class="profile-bio">'+'<br>'.join(prose(s) for s in home['bio'])+'</p></div>'+contacts()+'</div>')
+ parts.append('<div class="profile-info"><h1>'+prose(home['name'])+'</h1><p class="profile-bio">'+'<br>'.join(prose(s) for s in home['bio'])+'</p>'+language_switch('index')+'</div>'+contacts()+'</div>')
  parts.append('<div class="profile-compact" hidden inert aria-hidden="true">'+contacts()+'</div></aside></div>')
  parts.append('<main id="main" class="portfolio"><div class="project-feed">')
  for number,card in enumerate(home['cards']):
@@ -170,7 +169,7 @@ def render_home():
  (ROOT/page_url('index')).write_text('\n'.join(parts)+'\n')
 def render_project(slug):
  project=CONTENT[slug];title=project['title'];first_about=next(i for i in project['items'] if i['type']=='about');description=' '.join(first_about['paragraphs'])
- parts=[head(title+' — '+CONTENT['home']['name'],description,slug),f'<header class="project-header"><a class="text-link" href="{page_url("index")}">{t("back")}</a>'+contacts()+'</header>','<main id="main" class="project-gallery">']
+ parts=[head(title+' — '+CONTENT['home']['name'],description,slug),f'<header class="project-header"><div class="project-navigation"><a class="text-link" href="{page_url("index")}">{t("back")}</a>'+language_switch(slug)+'</div>'+contacts()+'</header>','<main id="main" class="project-gallery">']
  about_count=0
  first_image=next((i for i,item in enumerate(project['items']) if item['type']=='image'),None)
  for index,item in enumerate(project['items']):
